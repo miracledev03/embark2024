@@ -67,7 +67,7 @@
         },
         "default": {
           "fallback": "sans-serif",
-          "font": "Lato",
+          "font": "Embark Sans",
           "font_set": "GOOGLE"
         }
       },
@@ -89,7 +89,7 @@
         },
         "default": {
           "fallback": "serif",
-          "font": "Merriweather",
+          "font": "Embark Sans",
           "font_set": "GOOGLE"
         }
       }
@@ -118,7 +118,7 @@
         "max": 2500,
         "min": 900,
         "suffix": "px",
-        "default": 1240
+        "default": 1315
       }
     ]
   },
@@ -1927,54 +1927,6 @@
         ]
       }
     ]
-  },
-  {
-    "label": "Website footer",
-    "name": "footer",
-    "type": "group",
-    "children": [
-      {
-        "label": "Text",
-        "name": "text",
-        "type": "group",
-        "children": [
-          {
-            "label": "Color",
-            "name": "color",
-            "type": "color",
-            "visibility": {
-              "hidden_subfields": {
-                "opacity": true
-              }
-            },
-            "inherited_value": {
-              "property_value_paths": {
-                "color": "theme.global_fonts.primary.color"
-              }
-            }
-          }
-        ]
-      },
-      {
-        "label": "Background",
-        "name": "background",
-        "type": "group",
-        "children": [
-          {
-            "label": "Color",
-            "name": "color",
-            "type": "color",
-            "inherited_value": {
-              "property_value_paths": {
-                "color": "theme.global_colors.secondary.color"
-              }
-            },
-            "default": {
-              "opacity": 100
-            }
-          }
-        ]
-      }
-    ]
   }
+ 
 ]

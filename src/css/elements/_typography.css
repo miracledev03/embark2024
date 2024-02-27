@@ -1,8 +1,39 @@
 /* The overflow-wrap is meant to prevent long/large words from breaking the mobile responsiveness of a page (e.g. horizontal scrolling). It is preferred to reduce font sizes on mobile to address this, with this CSS specifically helping with extreme scenarios where a reduction in font size is not possible. */
 
+
+@font-face {
+  font-family:'Embark Sans';
+  font-weight:400;
+  src: url('{{ get_asset_url('../../fonts/EmbarkSans-Regular.eot') }}'); 
+  src: url('{{ get_asset_url('../../fonts/EmbarkSans-Regular.eot') }}?#iefix') format('embedded-opentype'), 
+       url('{{ get_asset_url('../../fonts/EmbarkSans-Regular.woff2') }}') format('woff2'), 
+       url('{{ get_asset_url('../../fonts/EmbarkSans-Regular.woff') }}') format('woff'),  
+       url('{{ get_asset_url('../../fonts/EmbarkSans-Regular.ttf') }}')  format('truetype'); 
+}
+@font-face {
+  font-family:'Embark Sans';
+  font-weight:500;
+  src: url('{{ get_asset_url('../../fonts/EmbarkSans-Medium.eot') }}');  
+  src: url('{{ get_asset_url('../../fonts/EmbarkSans-Medium.eot') }}?#iefix') format('embedded-opentype'), 
+       url('{{ get_asset_url('../../fonts/EmbarkSans-Medium.woff2') }}') format('woff2'),  
+       url('{{ get_asset_url('../../fonts/EmbarkSans-Medium.woff') }}') format('woff'),  
+       url('{{ get_asset_url('../../fonts/EmbarkSans-Medium.ttf') }}')  format('truetype');  
+}
+@font-face {
+  font-family:'Embark Sans';
+  font-weight:700;
+  src: url('{{ get_asset_url('../../fonts/EmbarkSans-Bold.eot') }}');  
+  src: url('{{ get_asset_url('../../fonts/EmbarkSans-Bold.eot') }}?#iefix') format('embedded-opentype'), 
+       url('{{ get_asset_url('../../fonts/EmbarkSans-Bold.woff2') }}') format('woff2'),  
+       url('{{ get_asset_url('../../fonts/EmbarkSans-Bold.woff') }}') format('woff'),  
+       url('{{ get_asset_url('../../fonts/EmbarkSans-Bold.ttf') }}')  format('truetype');  
+}
+
 body {
   line-height: 1.4;
   overflow-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Handles word breaking for a few specific languages which handle breaks in words differently. If your content is not translated into these languages, you can safely remove this.  */
@@ -38,7 +69,9 @@ h5,
 h6 {
   margin: 0 0 1.4rem;
 }
-
+img{
+  max-width:100%;
+}
 /* Lists */
 
 ul,

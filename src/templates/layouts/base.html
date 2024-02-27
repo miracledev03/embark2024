@@ -31,7 +31,7 @@
       </main>
 
       {% block footer %}
-        {% global_partial path="../partials/footer.html" %}
+        {% module 'footer_main_wrapper' path='../../modules/global-footer', label='Footer' %}
       {% endblock footer %}
     </div>
     {{ require_js(get_asset_url("../../js/main.js")) }}

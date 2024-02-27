@@ -1,0 +1,152 @@
+<footer class="footer {{ name }}" id="{{ module.advanced.custom_id }}">
+  <div class="footer-container{% if module.design.footer_size == 'centered' %} content-wrapper{% else %} footer-container--wide{% endif %} flex-container">
+    <div class="custom_footer_main">
+      {% if module.left_column_field.show_live %}
+      <div class="footer_left">
+        <div class="col_inner">
+          {% if module.left_column_field.title %}
+          <h3 class="col_title">
+            {{ module.left_column_field.title }}
+          </h3>
+          {% endif %}
+          {% if module.left_column_field.content_type == 'menu' %}
+          <div class="footer__menu">
+            {% menu id="{{ module.left_column_field.menu }}" flyouts=false ,max_levels='1' %}
+          </div>
+          {% else %}
+          {{ module.left_column_field.content_rich_text }}
+          {% endif %}
+        </div>
+      </div>
+      {% endif %}
+      <div class="footer_right">
+        <div class="col_inner">
+          {% if module.right_column_field.column_1.show_live %}
+          <div class="menu_column">
+            <h3 class="col_title">
+              {{ module.right_column_field.column_1.title }}
+            </h3>
+            {% if module.right_column_field.column_1.content_type == 'menu' %}
+            <div class="footer__menu">
+              {% menu id="{{ module.right_column_field.column_1.menu }}" flyouts=false ,max_levels='1' %}
+            </div>
+            {% else %}
+            {{ module.right_column_field.column_1.content_rich_text }}
+            {% endif %}
+          </div>
+          {% endif %}
+          {% if module.right_column_field.column_2.show_live %}
+          <div class="menu_column">
+            <h3 class="col_title">
+              {{ module.right_column_field.column_2.title }}
+            </h3>
+            {% if module.right_column_field.column_2.content_type == 'menu' %}
+            <div class="footer__menu">
+              {% menu id="{{ module.right_column_field.column_2.menu }}" flyouts=false ,max_levels='1' %}
+            </div>
+            {% else %}
+            {{ module.right_column_field.column_2.content_rich_text }}
+            {% endif %}
+          </div>
+          {% endif %}
+          {% if module.right_column_field.column_3.show_live %}
+          <div class="menu_column">
+            <h3 class="col_title">
+              {{ module.right_column_field.column_3.title }}
+            </h3>
+            {% if module.right_column_field.column_3.content_type == 'menu' %}
+            <div class="footer__menu">
+              {% menu id="{{ module.right_column_field.column_3.menu }}" flyouts=false ,max_levels='1' %}
+            </div>
+            {% else %}
+            {{ module.right_column_field.column_3.content_rich_text }}
+            {% endif %}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <div class="footer_copyright">
+      <div class="column content">
+        <div class="footer_text">
+          <p class="footer__copyright-text">Copyright © {{ year }} {{ module.footer_cs_area.copyright_text }}</p>
+        </div>
+        <div class="footer__legal-menu" role="menu">
+          {% menu id="{{ module.footer_cs_area.legal_menu }}" %}
+        </div>
+      </div>
+      <div class="column social_links">
+        <div class="footer__social-link">
+          {% for item in module.footer_cs_area.social_media %}
+          <a href="{{ item.social_link.href }}" rel="noreferrer" class="{{ item.social_icon.name }}">
+            {% icon
+              name="{{ item.social_icon.name }}"
+              style="{{ item.social_icon.type }}"
+              unicode="{{ item.social_icon.unicode }}"
+              icon_set="{{ item.social_icon.icon_set }}"
+              no_wrapper="true"
+            %}
+            <span class="hide-text">{{ item.social_icon.name }}</span>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer_logo">
+    {% set loadingAttr = module.logo.loading != 'disabled' ? '{{ module.logo.loading }}' : '' %}
+    {% logo
+              override_inherited_src="{{ module.logo.override_inherited_src }}"
+              src="{{ module.logo.src }}"
+              alt="{{ module.logo.alt }}"
+              width="{{ module.logo.width }}"
+              height="{{ module.logo.height }}"
+              loading="{{ loadingAttr }}"
+              suppress_company_name="{{ module.logo.suppress_company_name }}"
+              no_wrapper="true"
+            %}
+  </div>
+</footer>
+
+{% require_css %}
+<style>
+  footer {
+    background-color: rgba({{ module.design.background_color.color|convert_rgb }}, {{ module.design.background_color.opacity / 100 }});
+  }
+  .{{ name }} a{
+    color: rgba({{ module.design.links_color.color|convert_rgb }}, {{ module.design.links_color.opacity / 100 }});
+
+  }
+  .footer_right .hs-menu-wrapper > ul > li > a:hover,
+  .{{ name }} a:hover{
+    color: rgba({{ module.design.links_hover_color.color|convert_rgb }}, {{ module.design.links_hover_color.opacity / 100 }});
+  }
+
+  .custom_footer_main h3{
+    text-transform: {{ module.design.first_level_links_text_style }}; 
+    color: rgba({{ module.design.text_color.color|convert_rgb }}, {{ module.design.text_color.opacity / 100 }});
+  }
+
+  .footer__social-link svg{
+    fill:rgba({{ module.design.social_link_color.color|convert_rgb }}, {{ module.design.social_link_color.opacity / 100 }});
+  }
+  .footer__social-link a:hover svg{
+    fill:rgba({{ module.design.social_link_hover_color.color|convert_rgb }}, {{ module.design.social_link_hover_color.opacity / 100 }});
+  }
+  .footer__copyright-text{
+    color: rgba({{ module.design.copyright_text_color.color|convert_rgb }}, {{ module.design.copyright_text_color.opacity / 100 }});
+  }
+  footer{
+    {{ module.style.desktop_spacing.css }};
+  }
+
+  @media(max-width:767px){
+    footer{
+      {{ module.style.mobile_spacing.css }};
+    }
+  }
+
+</style>
+{% end_require_css %}

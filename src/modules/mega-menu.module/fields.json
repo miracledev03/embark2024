@@ -1,0 +1,1933 @@
+[ {
+  "id" : "3d520327-2d6e-d28b-cf0e-05bfb30134b2",
+  "name" : "logo",
+  "display_width" : null,
+  "label" : "Brand Logo",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : false,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Embark2024/images/Embark-Primary%20Logotype-Black.svg",
+    "alt" : "Embark",
+    "loading" : "lazy",
+    "width" : 98,
+    "height" : 21,
+    "max_width" : 98,
+    "max_height" : 21
+  }
+}, {
+  "id" : "d0aec110-fb4f-e535-2c27-109231b0a27d",
+  "name" : "add_link_on_logo",
+  "display_width" : null,
+  "label" : "Add Link On Logo",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "default" : true
+}, {
+  "id" : "41a3929d-50e8-7954-5960-9a09665cf6d4",
+  "name" : "logo_link",
+  "display_width" : null,
+  "label" : "Logo Link",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : null,
+    "controlling_field_path" : "add_link_on_logo",
+    "controlling_value_regex" : "true",
+    "property" : null,
+    "operator" : "EQUAL",
+    "access" : null
+  },
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "b8bbbcbf-c012-0cbb-7737-fc7eae9cda6b",
+  "name" : "menu_items",
+  "display_width" : null,
+  "label" : "Main Menu Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "af24a812-c683-ac09-0071-37bfe2f916a9",
+    "default" : 6
+  },
+  "children" : [ {
+    "id" : "af24a812-c683-ac09-0071-37bfe2f916a9",
+    "name" : "menu_title",
+    "display_width" : null,
+    "label" : "Menu Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Happy Works"
+  }, {
+    "id" : "34ffe82e-9c8f-7367-0422-c365e7b7c818",
+    "name" : "menu_title_link",
+    "display_width" : null,
+    "label" : "Menu Title Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "6575fb5b-d092-31f7-4fe1-04ea192c592e",
+    "name" : "add_child_menu",
+    "display_width" : null,
+    "label" : "Add Child Menu",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "3548bf34-e056-17fd-2052-c8dd4d2bd935",
+    "name" : "child_menu_group",
+    "display_width" : null,
+    "label" : "Child Menu Group",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "menu_items.add_child_menu",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "6a1ccef5-7afb-e836-c189-e5a92bcd42f4",
+      "name" : "left_column",
+      "display_width" : null,
+      "label" : "Left Column",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "menu_items.child_menu_group.hide_left_column",
+        "controlling_value_regex" : "false",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "children" : [ {
+        "id" : "7c51795d-685f-0302-2538-440139463dea",
+        "name" : "title",
+        "display_width" : null,
+        "label" : "Title",
+        "required" : false,
+        "locked" : false,
+        "validation_regex" : "",
+        "allow_new_line" : false,
+        "show_emoji_picker" : false,
+        "type" : "text",
+        "default" : "Embark is bright people helping you overcome today’s business challenges"
+      }, {
+        "id" : "6ecab6b6-8868-7c48-0a51-4412d3505ac5",
+        "name" : "change_title_type",
+        "display_width" : null,
+        "label" : "Change Title Type",
+        "required" : false,
+        "locked" : false,
+        "display" : "select",
+        "choices" : [ [ "h1", "H1" ], [ "h2", "H2" ], [ "h3", "H3" ], [ "h4", "H4" ], [ "h5", "H5" ], [ "h6", "H6" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "default" : "h3"
+      }, {
+        "id" : "2d1825d3-42c0-68f9-f589-875f74f30634",
+        "name" : "content",
+        "display_width" : null,
+        "label" : "Content",
+        "required" : false,
+        "locked" : false,
+        "type" : "richtext"
+      }, {
+        "id" : "48f3abeb-6f67-7f26-3f6f-f41ab6656bee",
+        "name" : "button_type",
+        "display_width" : null,
+        "label" : "Bottom Button Type",
+        "required" : false,
+        "locked" : false,
+        "display" : "select",
+        "choices" : [ [ "normal", "Normal Button" ], [ "cta", "CTA" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "default" : "normal"
+      }, {
+        "id" : "2877eda5-0c38-93cb-3c59-67bd58174975",
+        "name" : "button_link",
+        "display_width" : null,
+        "label" : "Button Link",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "menu_items.child_menu_group.left_column.button_type",
+          "controlling_value_regex" : "normal",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+        "show_advanced_rel_options" : false,
+        "type" : "link",
+        "default" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      }, {
+        "id" : "6c91dd8f-fce8-66bc-038d-51430ff3f331",
+        "name" : "button_text",
+        "display_width" : null,
+        "label" : "Button Text",
+        "required" : false,
+        "locked" : false,
+        "validation_regex" : "",
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "menu_items.child_menu_group.left_column.button_type",
+          "controlling_value_regex" : "normal",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "allow_new_line" : false,
+        "show_emoji_picker" : false,
+        "type" : "text",
+        "default" : "What We Do Overview"
+      }, {
+        "id" : "0f711bf7-b06f-4565-232e-875d75633f64",
+        "name" : "cta",
+        "display_width" : null,
+        "label" : "CTA",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "menu_items.child_menu_group.left_column.button_type",
+          "controlling_value_regex" : "cta",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "type" : "cta"
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "type" : "group",
+      "default" : {
+        "title" : "Embark is bright people helping you overcome today’s business challenges",
+        "change_title_type" : "h3",
+        "button_type" : "normal",
+        "button_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        },
+        "button_text" : "What We Do Overview"
+      }
+    }, {
+      "id" : "3a6256a7-62ac-a17b-2cba-b176f3bcfd1f",
+      "name" : "hide_left_column",
+      "display_width" : null,
+      "label" : "Hide Left Column",
+      "required" : false,
+      "locked" : false,
+      "display" : "toggle",
+      "type" : "boolean",
+      "default" : false
+    }, {
+      "id" : "fa4633bc-e777-a827-a3b8-566e47273ef8",
+      "name" : "middle_column",
+      "display_width" : null,
+      "label" : "Middle Column",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "menu_items.add_child_menu",
+        "controlling_value_regex" : "true",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "children" : [ {
+        "id" : "a1f59532-0316-4a9e-3639-edd5f4b8a6fc",
+        "name" : "title",
+        "display_width" : null,
+        "label" : "Title",
+        "required" : false,
+        "locked" : false,
+        "validation_regex" : "",
+        "allow_new_line" : false,
+        "show_emoji_picker" : false,
+        "type" : "text",
+        "default" : "Solutions"
+      }, {
+        "id" : "27292cd2-231d-fda3-41d6-a859668a4759",
+        "name" : "change_title_type",
+        "display_width" : null,
+        "label" : "Change Title Type",
+        "required" : false,
+        "locked" : false,
+        "display" : "select",
+        "choices" : [ [ "h1", "H1" ], [ "h2", "H2" ], [ "h3", "H3" ], [ "h4", "H4" ], [ "h5", "H5" ], [ "h6", "H6" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "default" : "h5"
+      }, {
+        "id" : "0728d7a5-8b53-1da8-de60-dde7830e66e2",
+        "name" : "left_column_menu",
+        "display_width" : null,
+        "label" : "Left Column menu",
+        "required" : false,
+        "locked" : false,
+        "type" : "simplemenu",
+        "default" : [ {
+          "isPublished" : false,
+          "pageLinkId" : null,
+          "contentGroupId" : null,
+          "pageLinkName" : null,
+          "isDeleted" : null,
+          "categoryId" : null,
+          "subCategory" : null,
+          "contentType" : null,
+          "state" : null,
+          "linkLabel" : "Accounting Efficiencies & Compliance",
+          "linkUrl" : null,
+          "linkParams" : null,
+          "linkTarget" : null,
+          "type" : "PAGE_LINK",
+          "children" : [ ]
+        } ]
+      }, {
+        "id" : "1dfcec5d-e39c-a1b1-fdb7-da2d7f8f7902",
+        "name" : "right_column_menu",
+        "display_width" : null,
+        "label" : "Right Column Menu",
+        "required" : false,
+        "locked" : false,
+        "type" : "simplemenu",
+        "default" : [ {
+          "isPublished" : false,
+          "pageLinkId" : null,
+          "contentGroupId" : null,
+          "pageLinkName" : null,
+          "isDeleted" : null,
+          "categoryId" : null,
+          "subCategory" : null,
+          "contentType" : null,
+          "state" : null,
+          "linkLabel" : "M&A Activity",
+          "linkUrl" : null,
+          "linkParams" : null,
+          "linkTarget" : null,
+          "type" : "PAGE_LINK",
+          "children" : [ ]
+        }, {
+          "isPublished" : false,
+          "pageLinkId" : null,
+          "contentGroupId" : null,
+          "pageLinkName" : null,
+          "isDeleted" : null,
+          "categoryId" : null,
+          "subCategory" : null,
+          "contentType" : null,
+          "state" : null,
+          "linkLabel" : "Project/Change Management",
+          "linkUrl" : null,
+          "linkParams" : null,
+          "linkTarget" : null,
+          "type" : "PAGE_LINK",
+          "children" : [ ]
+        } ]
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "type" : "group",
+      "default" : {
+        "title" : "Solutions",
+        "change_title_type" : "h5",
+        "left_column_menu" : [ {
+          "isPublished" : false,
+          "pageLinkId" : null,
+          "contentGroupId" : null,
+          "pageLinkName" : null,
+          "isDeleted" : null,
+          "categoryId" : null,
+          "subCategory" : null,
+          "contentType" : null,
+          "state" : null,
+          "linkLabel" : "Accounting Efficiencies & Compliance",
+          "linkUrl" : null,
+          "linkParams" : null,
+          "linkTarget" : null,
+          "type" : "PAGE_LINK",
+          "children" : [ ]
+        } ],
+        "right_column_menu" : [ {
+          "isPublished" : false,
+          "pageLinkId" : null,
+          "contentGroupId" : null,
+          "pageLinkName" : null,
+          "isDeleted" : null,
+          "categoryId" : null,
+          "subCategory" : null,
+          "contentType" : null,
+          "state" : null,
+          "linkLabel" : "M&A Activity",
+          "linkUrl" : null,
+          "linkParams" : null,
+          "linkTarget" : null,
+          "type" : "PAGE_LINK",
+          "children" : [ ]
+        }, {
+          "isPublished" : false,
+          "pageLinkId" : null,
+          "contentGroupId" : null,
+          "pageLinkName" : null,
+          "isDeleted" : null,
+          "categoryId" : null,
+          "subCategory" : null,
+          "contentType" : null,
+          "state" : null,
+          "linkLabel" : "Project/Change Management",
+          "linkUrl" : null,
+          "linkParams" : null,
+          "linkTarget" : null,
+          "type" : "PAGE_LINK",
+          "children" : [ ]
+        } ]
+      }
+    }, {
+      "id" : "a9c773ad-b7ed-eb1c-3642-e88ab04d51a6",
+      "name" : "right_column",
+      "display_width" : null,
+      "label" : "Right Column",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "menu_items.child_menu_group.hide_right_column",
+        "controlling_value_regex" : "false",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "children" : [ {
+        "id" : "7db70f2f-7e53-8fdf-91cc-b38ad236cbfc",
+        "name" : "title",
+        "display_width" : null,
+        "label" : "Title",
+        "required" : false,
+        "locked" : false,
+        "validation_regex" : "",
+        "allow_new_line" : false,
+        "show_emoji_picker" : false,
+        "type" : "text",
+        "default" : "Featured Resources"
+      }, {
+        "id" : "383b6233-9979-60b9-75f7-701e7a682082",
+        "name" : "change_title_type",
+        "display_width" : null,
+        "label" : "Change Title Type",
+        "required" : false,
+        "locked" : false,
+        "display" : "select",
+        "choices" : [ [ "h1", "H1" ], [ "h2", "H2" ], [ "h3", "H3" ], [ "h4", "H4" ], [ "h5", "H5" ], [ "h6", "H6" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "default" : "h5"
+      }, {
+        "id" : "16a4d755-da53-e9e0-9caa-bf0322aed0e8",
+        "name" : "content_type",
+        "display_width" : null,
+        "label" : "Content type",
+        "required" : false,
+        "locked" : false,
+        "display" : "select",
+        "choices" : [ [ "rec_posts", "Recent posts" ], [ "richtext", "Richtext" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "default" : "rec_posts"
+      }, {
+        "id" : "363e8e9c-b45a-9231-b72b-e7d86aee7615",
+        "name" : "select_blog",
+        "display_width" : null,
+        "label" : "Select Blog",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "menu_items.child_menu_group.right_column.content_type",
+          "controlling_value_regex" : "rec_posts",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "type" : "blog",
+        "default" : 36760199213
+      }, {
+        "id" : "caa5ebbe-2a94-3798-9cb8-850f1f598c76",
+        "name" : "number_of_posts",
+        "display_width" : null,
+        "label" : "Number of Posts",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "menu_items.child_menu_group.right_column.content_type",
+          "controlling_value_regex" : "rec_posts",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "display" : "text",
+        "max" : 3,
+        "step" : 1,
+        "type" : "number",
+        "default" : 2
+      }, {
+        "id" : "0b44cc2f-b9ee-bd34-e562-2239bc9f64a4",
+        "name" : "rich_text_content",
+        "display_width" : null,
+        "label" : "Rich text content",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : null,
+          "controlling_field_path" : "menu_items.child_menu_group.right_column.content_type",
+          "controlling_value_regex" : "richtext",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "type" : "richtext"
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "type" : "group",
+      "default" : {
+        "title" : "Featured Resources",
+        "change_title_type" : "h5",
+        "content_type" : "rec_posts",
+        "select_blog" : 36760199213,
+        "number_of_posts" : 2
+      }
+    }, {
+      "id" : "6edf19be-80f3-fb91-8938-8975d228878d",
+      "name" : "hide_right_column",
+      "display_width" : null,
+      "label" : "Hide Right Column",
+      "required" : false,
+      "locked" : false,
+      "display" : "toggle",
+      "type" : "boolean",
+      "default" : false
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "left_column" : {
+        "title" : "Embark is bright people helping you overcome today’s business challenges",
+        "change_title_type" : "h3",
+        "button_type" : "normal",
+        "button_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        },
+        "button_text" : "What We Do Overview"
+      },
+      "hide_left_column" : false,
+      "middle_column" : {
+        "title" : "Solutions",
+        "change_title_type" : "h5",
+        "left_column_menu" : [ {
+          "isPublished" : false,
+          "pageLinkId" : null,
+          "contentGroupId" : null,
+          "pageLinkName" : null,
+          "isDeleted" : null,
+          "categoryId" : null,
+          "subCategory" : null,
+          "contentType" : null,
+          "state" : null,
+          "linkLabel" : "Accounting Efficiencies & Compliance",
+          "linkUrl" : null,
+          "linkParams" : null,
+          "linkTarget" : null,
+          "type" : "PAGE_LINK",
+          "children" : [ ]
+        } ],
+        "right_column_menu" : [ {
+          "isPublished" : false,
+          "pageLinkId" : null,
+          "contentGroupId" : null,
+          "pageLinkName" : null,
+          "isDeleted" : null,
+          "categoryId" : null,
+          "subCategory" : null,
+          "contentType" : null,
+          "state" : null,
+          "linkLabel" : "M&A Activity",
+          "linkUrl" : null,
+          "linkParams" : null,
+          "linkTarget" : null,
+          "type" : "PAGE_LINK",
+          "children" : [ ]
+        }, {
+          "isPublished" : false,
+          "pageLinkId" : null,
+          "contentGroupId" : null,
+          "pageLinkName" : null,
+          "isDeleted" : null,
+          "categoryId" : null,
+          "subCategory" : null,
+          "contentType" : null,
+          "state" : null,
+          "linkLabel" : "Project/Change Management",
+          "linkUrl" : null,
+          "linkParams" : null,
+          "linkTarget" : null,
+          "type" : "PAGE_LINK",
+          "children" : [ ]
+        } ]
+      },
+      "right_column" : {
+        "title" : "Featured Resources",
+        "change_title_type" : "h5",
+        "content_type" : "rec_posts",
+        "select_blog" : 36760199213,
+        "number_of_posts" : 2
+      },
+      "hide_right_column" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "menu_title" : "Happy Works",
+    "menu_title_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "add_child_menu" : true,
+    "child_menu_group" : {
+      "left_column" : {
+        "title" : "Embark is bright people helping you overcome today’s business challenges",
+        "change_title_type" : "h3",
+        "button_type" : "normal",
+        "button_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        },
+        "button_text" : "What We Do Overview"
+      },
+      "hide_left_column" : false,
+      "middle_column" : {
+        "title" : "Solutions",
+        "change_title_type" : "h5",
+        "left_column_menu" : [ {
+          "isPublished" : false,
+          "pageLinkId" : null,
+          "contentGroupId" : null,
+          "pageLinkName" : null,
+          "isDeleted" : null,
+          "categoryId" : null,
+          "subCategory" : null,
+          "contentType" : null,
+          "state" : null,
+          "linkLabel" : "Accounting Efficiencies & Compliance",
+          "linkUrl" : null,
+          "linkParams" : null,
+          "linkTarget" : null,
+          "type" : "PAGE_LINK",
+          "children" : [ ]
+        } ],
+        "right_column_menu" : [ {
+          "isPublished" : false,
+          "pageLinkId" : null,
+          "contentGroupId" : null,
+          "pageLinkName" : null,
+          "isDeleted" : null,
+          "categoryId" : null,
+          "subCategory" : null,
+          "contentType" : null,
+          "state" : null,
+          "linkLabel" : "M&A Activity",
+          "linkUrl" : null,
+          "linkParams" : null,
+          "linkTarget" : null,
+          "type" : "PAGE_LINK",
+          "children" : [ ]
+        }, {
+          "isPublished" : false,
+          "pageLinkId" : null,
+          "contentGroupId" : null,
+          "pageLinkName" : null,
+          "isDeleted" : null,
+          "categoryId" : null,
+          "subCategory" : null,
+          "contentType" : null,
+          "state" : null,
+          "linkLabel" : "Project/Change Management",
+          "linkUrl" : null,
+          "linkParams" : null,
+          "linkTarget" : null,
+          "type" : "PAGE_LINK",
+          "children" : [ ]
+        } ]
+      },
+      "right_column" : {
+        "title" : "Featured Resources",
+        "change_title_type" : "h5",
+        "content_type" : "rec_posts",
+        "select_blog" : 36760199213,
+        "number_of_posts" : 2
+      },
+      "hide_right_column" : false
+    }
+  }, {
+    "menu_title" : "Happy Works",
+    "menu_title_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "add_child_menu" : true,
+    "child_menu_group" : {
+      "left_column" : {
+        "title" : "Embark is bright people helping you overcome today’s business challenges",
+        "change_title_type" : "h3",
+        "button_type" : "normal",
+        "button_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        },
+        "button_text" : "What We Do Overview"
+      },
+      "hide_left_column" : false,
+      "middle_column" : {
+        "title" : "Solutions",
+        "change_title_type" : "h5",
+        "left_column_menu" : [ {
+          "isPublished" : false,
+          "pageLinkId" : null,
+          "contentGroupId" : null,
+          "pageLinkName" : null,
+          "isDeleted" : null,
+          "categoryId" : null,
+          "subCategory" : null,
+          "contentType" : null,
+          "state" : null,
+          "linkLabel" : "Accounting Efficiencies & Compliance",
+          "linkUrl" : null,
+          "linkParams" : null,
+          "linkTarget" : null,
+          "type" : "PAGE_LINK",
+          "children" : [ ]
+        } ],
+        "right_column_menu" : [ {
+          "isPublished" : false,
+          "pageLinkId" : null,
+          "contentGroupId" : null,
+          "pageLinkName" : null,
+          "isDeleted" : null,
+          "categoryId" : null,
+          "subCategory" : null,
+          "contentType" : null,
+          "state" : null,
+          "linkLabel" : "M&A Activity",
+          "linkUrl" : null,
+          "linkParams" : null,
+          "linkTarget" : null,
+          "type" : "PAGE_LINK",
+          "children" : [ ]
+        }, {
+          "isPublished" : false,
+          "pageLinkId" : null,
+          "contentGroupId" : null,
+          "pageLinkName" : null,
+          "isDeleted" : null,
+          "categoryId" : null,
+          "subCategory" : null,
+          "contentType" : null,
+          "state" : null,
+          "linkLabel" : "Project/Change Management",
+          "linkUrl" : null,
+          "linkParams" : null,
+          "linkTarget" : null,
+          "type" : "PAGE_LINK",
+          "children" : [ ]
+        } ]
+      },
+      "right_column" : {
+        "title" : "Featured Resources",
+        "change_title_type" : "h5",
+        "content_type" : "rec_posts",
+        "select_blog" : 36760199213,
+        "number_of_posts" : 2
+      },
+      "hide_right_column" : false
+    }
+  }, {
+    "menu_title" : "Happy Works",
+    "menu_title_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "add_child_menu" : true,
+    "child_menu_group" : {
+      "left_column" : {
+        "title" : "Embark is bright people helping you overcome today’s business challenges",
+        "change_title_type" : "h3",
+        "button_type" : "normal",
+        "button_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        },
+        "button_text" : "What We Do Overview"
+      },
+      "hide_left_column" : false,
+      "middle_column" : {
+        "title" : "Solutions",
+        "change_title_type" : "h5",
+        "left_column_menu" : [ {
+          "isPublished" : false,
+          "pageLinkId" : null,
+          "contentGroupId" : null,
+          "pageLinkName" : null,
+          "isDeleted" : null,
+          "categoryId" : null,
+          "subCategory" : null,
+          "contentType" : null,
+          "state" : null,
+          "linkLabel" : "Accounting Efficiencies & Compliance",
+          "linkUrl" : null,
+          "linkParams" : null,
+          "linkTarget" : null,
+          "type" : "PAGE_LINK",
+          "children" : [ ]
+        } ],
+        "right_column_menu" : [ {
+          "isPublished" : false,
+          "pageLinkId" : null,
+          "contentGroupId" : null,
+          "pageLinkName" : null,
+          "isDeleted" : null,
+          "categoryId" : null,
+          "subCategory" : null,
+          "contentType" : null,
+          "state" : null,
+          "linkLabel" : "M&A Activity",
+          "linkUrl" : null,
+          "linkParams" : null,
+          "linkTarget" : null,
+          "type" : "PAGE_LINK",
+          "children" : [ ]
+        }, {
+          "isPublished" : false,
+          "pageLinkId" : null,
+          "contentGroupId" : null,
+          "pageLinkName" : null,
+          "isDeleted" : null,
+          "categoryId" : null,
+          "subCategory" : null,
+          "contentType" : null,
+          "state" : null,
+          "linkLabel" : "Project/Change Management",
+          "linkUrl" : null,
+          "linkParams" : null,
+          "linkTarget" : null,
+          "type" : "PAGE_LINK",
+          "children" : [ ]
+        } ]
+      },
+      "right_column" : {
+        "title" : "Featured Resources",
+        "change_title_type" : "h5",
+        "content_type" : "rec_posts",
+        "select_blog" : 36760199213,
+        "number_of_posts" : 2
+      },
+      "hide_right_column" : false
+    }
+  }, {
+    "menu_title" : "Happy Works",
+    "menu_title_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "add_child_menu" : true,
+    "child_menu_group" : {
+      "left_column" : {
+        "title" : "Embark is bright people helping you overcome today’s business challenges",
+        "change_title_type" : "h3",
+        "button_type" : "normal",
+        "button_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        },
+        "button_text" : "What We Do Overview"
+      },
+      "hide_left_column" : false,
+      "middle_column" : {
+        "title" : "Solutions",
+        "change_title_type" : "h5",
+        "left_column_menu" : [ {
+          "isPublished" : false,
+          "pageLinkId" : null,
+          "contentGroupId" : null,
+          "pageLinkName" : null,
+          "isDeleted" : null,
+          "categoryId" : null,
+          "subCategory" : null,
+          "contentType" : null,
+          "state" : null,
+          "linkLabel" : "Accounting Efficiencies & Compliance",
+          "linkUrl" : null,
+          "linkParams" : null,
+          "linkTarget" : null,
+          "type" : "PAGE_LINK",
+          "children" : [ ]
+        } ],
+        "right_column_menu" : [ {
+          "isPublished" : false,
+          "pageLinkId" : null,
+          "contentGroupId" : null,
+          "pageLinkName" : null,
+          "isDeleted" : null,
+          "categoryId" : null,
+          "subCategory" : null,
+          "contentType" : null,
+          "state" : null,
+          "linkLabel" : "M&A Activity",
+          "linkUrl" : null,
+          "linkParams" : null,
+          "linkTarget" : null,
+          "type" : "PAGE_LINK",
+          "children" : [ ]
+        }, {
+          "isPublished" : false,
+          "pageLinkId" : null,
+          "contentGroupId" : null,
+          "pageLinkName" : null,
+          "isDeleted" : null,
+          "categoryId" : null,
+          "subCategory" : null,
+          "contentType" : null,
+          "state" : null,
+          "linkLabel" : "Project/Change Management",
+          "linkUrl" : null,
+          "linkParams" : null,
+          "linkTarget" : null,
+          "type" : "PAGE_LINK",
+          "children" : [ ]
+        } ]
+      },
+      "right_column" : {
+        "title" : "Featured Resources",
+        "change_title_type" : "h5",
+        "content_type" : "rec_posts",
+        "select_blog" : 36760199213,
+        "number_of_posts" : 2
+      },
+      "hide_right_column" : false
+    }
+  }, {
+    "menu_title" : "Happy Works",
+    "menu_title_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "add_child_menu" : true,
+    "child_menu_group" : {
+      "left_column" : {
+        "title" : "Embark is bright people helping you overcome today’s business challenges",
+        "change_title_type" : "h3",
+        "button_type" : "normal",
+        "button_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        },
+        "button_text" : "What We Do Overview"
+      },
+      "hide_left_column" : false,
+      "middle_column" : {
+        "title" : "Solutions",
+        "change_title_type" : "h5",
+        "left_column_menu" : [ {
+          "isPublished" : false,
+          "pageLinkId" : null,
+          "contentGroupId" : null,
+          "pageLinkName" : null,
+          "isDeleted" : null,
+          "categoryId" : null,
+          "subCategory" : null,
+          "contentType" : null,
+          "state" : null,
+          "linkLabel" : "Accounting Efficiencies & Compliance",
+          "linkUrl" : null,
+          "linkParams" : null,
+          "linkTarget" : null,
+          "type" : "PAGE_LINK",
+          "children" : [ ]
+        } ],
+        "right_column_menu" : [ {
+          "isPublished" : false,
+          "pageLinkId" : null,
+          "contentGroupId" : null,
+          "pageLinkName" : null,
+          "isDeleted" : null,
+          "categoryId" : null,
+          "subCategory" : null,
+          "contentType" : null,
+          "state" : null,
+          "linkLabel" : "M&A Activity",
+          "linkUrl" : null,
+          "linkParams" : null,
+          "linkTarget" : null,
+          "type" : "PAGE_LINK",
+          "children" : [ ]
+        }, {
+          "isPublished" : false,
+          "pageLinkId" : null,
+          "contentGroupId" : null,
+          "pageLinkName" : null,
+          "isDeleted" : null,
+          "categoryId" : null,
+          "subCategory" : null,
+          "contentType" : null,
+          "state" : null,
+          "linkLabel" : "Project/Change Management",
+          "linkUrl" : null,
+          "linkParams" : null,
+          "linkTarget" : null,
+          "type" : "PAGE_LINK",
+          "children" : [ ]
+        } ]
+      },
+      "right_column" : {
+        "title" : "Featured Resources",
+        "change_title_type" : "h5",
+        "content_type" : "rec_posts",
+        "select_blog" : 36760199213,
+        "number_of_posts" : 2
+      },
+      "hide_right_column" : false
+    }
+  }, {
+    "menu_title" : "Happy Works",
+    "menu_title_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "add_child_menu" : true,
+    "child_menu_group" : {
+      "left_column" : {
+        "title" : "Embark is bright people helping you overcome today’s business challenges",
+        "change_title_type" : "h3",
+        "button_type" : "normal",
+        "button_link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        },
+        "button_text" : "What We Do Overview"
+      },
+      "hide_left_column" : false,
+      "middle_column" : {
+        "title" : "Solutions",
+        "change_title_type" : "h5",
+        "left_column_menu" : [ {
+          "isPublished" : false,
+          "pageLinkId" : null,
+          "contentGroupId" : null,
+          "pageLinkName" : null,
+          "isDeleted" : null,
+          "categoryId" : null,
+          "subCategory" : null,
+          "contentType" : null,
+          "state" : null,
+          "linkLabel" : "Accounting Efficiencies & Compliance",
+          "linkUrl" : null,
+          "linkParams" : null,
+          "linkTarget" : null,
+          "type" : "PAGE_LINK",
+          "children" : [ ]
+        } ],
+        "right_column_menu" : [ {
+          "isPublished" : false,
+          "pageLinkId" : null,
+          "contentGroupId" : null,
+          "pageLinkName" : null,
+          "isDeleted" : null,
+          "categoryId" : null,
+          "subCategory" : null,
+          "contentType" : null,
+          "state" : null,
+          "linkLabel" : "M&A Activity",
+          "linkUrl" : null,
+          "linkParams" : null,
+          "linkTarget" : null,
+          "type" : "PAGE_LINK",
+          "children" : [ ]
+        }, {
+          "isPublished" : false,
+          "pageLinkId" : null,
+          "contentGroupId" : null,
+          "pageLinkName" : null,
+          "isDeleted" : null,
+          "categoryId" : null,
+          "subCategory" : null,
+          "contentType" : null,
+          "state" : null,
+          "linkLabel" : "Project/Change Management",
+          "linkUrl" : null,
+          "linkParams" : null,
+          "linkTarget" : null,
+          "type" : "PAGE_LINK",
+          "children" : [ ]
+        } ]
+      },
+      "right_column" : {
+        "title" : "Featured Resources",
+        "change_title_type" : "h5",
+        "content_type" : "rec_posts",
+        "select_blog" : 36760199213,
+        "number_of_posts" : 2
+      },
+      "hide_right_column" : false
+    }
+  } ]
+}, {
+  "id" : "7a4f5049-3d2d-2def-e016-e129eadcc988",
+  "name" : "right_menu_section",
+  "display_width" : null,
+  "label" : "Right Menu Section",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "8efe1bdb-68a8-d290-74a7-6b19597951e0",
+    "name" : "menu_items",
+    "display_width" : null,
+    "label" : "Menu Items",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : "13a8f62b-924a-2375-7b66-148bbf5c95fa",
+      "default" : 3
+    },
+    "children" : [ {
+      "id" : "13a8f62b-924a-2375-7b66-148bbf5c95fa",
+      "name" : "menu_title",
+      "display_width" : null,
+      "label" : "Menu Title",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Offices"
+    }, {
+      "id" : "c3225ace-7571-094d-1733-c7ce7ab72692",
+      "name" : "link",
+      "display_width" : null,
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : [ {
+      "menu_title" : "Offices",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "menu_title" : "Offices",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "menu_title" : "Offices",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "menu_items" : [ {
+      "menu_title" : "Offices",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "menu_title" : "Offices",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "menu_title" : "Offices",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }
+}, {
+  "id" : "deabdfa2-272a-7080-b940-7fcc1b27d234",
+  "name" : "additional_changes_for_mobile_view",
+  "display_width" : null,
+  "label" : "Additional Changes (For Mobile View)",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "66fc9544-40ec-c78b-6fcb-d01f498862a4",
+    "name" : "menu_background_image_mobile_view",
+    "display_width" : null,
+    "label" : "Menu Background Image (Mobile View)",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Embark2024/images/Embark%20Brand%20System%20Illustration%204.svg",
+      "alt" : "Embark Brand System Illustration 4",
+      "loading" : "lazy",
+      "width" : null,
+      "height" : null,
+      "max_width" : null,
+      "max_height" : null
+    }
+  }, {
+    "id" : "f97034f3-d1a5-a12c-02de-f3cc08133092",
+    "name" : "button_type",
+    "display_width" : null,
+    "label" : "Button Type",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "normal", "Normal" ], [ "cta", "CTA" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "normal"
+  }, {
+    "id" : "11fe6e4e-d595-c9b2-e64d-1d7a74759cb8",
+    "name" : "button_link",
+    "display_width" : null,
+    "label" : "Button Link",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "additional_changes_for_mobile_view.button_type",
+      "controlling_value_regex" : "normal",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "2ef07958-296c-4014-ef6a-f48b53099ff1",
+    "name" : "button_text",
+    "display_width" : null,
+    "label" : "Button Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "additional_changes_for_mobile_view.button_type",
+      "controlling_value_regex" : "normal",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Text with a real person"
+  }, {
+    "id" : "61bde1c4-f89a-cee8-6530-44666c3d282f",
+    "name" : "cta",
+    "display_width" : null,
+    "label" : "CTA",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "additional_changes_for_mobile_view.button_type",
+      "controlling_value_regex" : "cta",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "type" : "cta"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "menu_background_image_mobile_view" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Embark2024/images/Embark%20Brand%20System%20Illustration%204.svg",
+      "alt" : "Embark Brand System Illustration 4",
+      "loading" : "lazy",
+      "width" : null,
+      "height" : null,
+      "max_width" : null,
+      "max_height" : null
+    },
+    "button_type" : "normal",
+    "button_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "button_text" : "Text with a real person"
+  }
+}, {
+  "id" : "baa1f810-88c2-5cfc-d59d-e05bdc48aef1",
+  "name" : "module_theme_settings",
+  "display_width" : null,
+  "label" : "Module Theme Settings",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "3c1b07ae-759b-ef02-a93c-1714371c77ca",
+    "name" : "main_menu_background_color",
+    "display_width" : null,
+    "label" : "Main Menu Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#027FF1",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "36569491-d532-985f-d95c-0dfa35b75aa4",
+    "name" : "main_menu_link_color",
+    "display_width" : null,
+    "label" : "Main Menu Link Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#ffffff",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "65620ae6-4cee-c1dc-c42a-81a3f9f91c9a",
+    "name" : "main_menu_link_hover_color",
+    "display_width" : null,
+    "label" : "Main Menu Link Hover Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#ffffff",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "2912735a-68fd-e2de-52e1-7aa57b1cfa06",
+    "name" : "main_menu_bottom_border_color_on_hover",
+    "display_width" : null,
+    "label" : "Main Menu Bottom Border Color (On Hover)",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#FEDD00",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "c6882f0b-5a82-520c-a217-876abc86874e",
+    "name" : "child_menu_background_color",
+    "display_width" : null,
+    "label" : "Child Menu Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "827bcff7-0681-81bd-9808-a7e98cd93d74",
+    "name" : "child_menu_border_color",
+    "display_width" : null,
+    "label" : "Child Menu Border Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#80BFF8",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "86fa7913-14c9-0e29-e3c0-732a5023ccd7",
+    "name" : "child_menu_text_color",
+    "display_width" : null,
+    "label" : "Child Menu Text Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#000000",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "f351ece5-c161-b365-c807-8189025ee797",
+    "name" : "button_group",
+    "display_width" : null,
+    "label" : "Button Group",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "dcd59eb4-b736-6862-6822-e71b63a249c5",
+      "name" : "desktop_view",
+      "display_width" : null,
+      "label" : "Desktop View",
+      "required" : false,
+      "locked" : false,
+      "children" : [ {
+        "id" : "02c279a7-a0e9-b7ee-e950-fb6bdda4d602",
+        "name" : "button_background_color",
+        "display_width" : null,
+        "label" : "Button Background Color",
+        "required" : false,
+        "locked" : false,
+        "type" : "color",
+        "default" : {
+          "color" : "#027FF1",
+          "opacity" : 100
+        }
+      }, {
+        "id" : "e9bbc61c-5130-fa7e-7725-0059bd7448af",
+        "name" : "button_border_color",
+        "display_width" : null,
+        "label" : "Button Border Color",
+        "required" : false,
+        "locked" : false,
+        "type" : "color",
+        "default" : {
+          "color" : "#027FF1",
+          "opacity" : 100
+        }
+      }, {
+        "id" : "b2f055d5-fc74-b332-389d-033e96f98613",
+        "name" : "button_text_color",
+        "display_width" : null,
+        "label" : "Button Text Color",
+        "required" : false,
+        "locked" : false,
+        "type" : "color",
+        "default" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        }
+      }, {
+        "id" : "a674b8ef-6b5d-c21a-b016-c30c4e8a5d94",
+        "name" : "button_hover_text_color",
+        "display_width" : null,
+        "label" : "Button Hover Text Color",
+        "required" : false,
+        "locked" : false,
+        "type" : "color",
+        "default" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        }
+      }, {
+        "id" : "c6e4de80-33ca-04e1-ed19-4c30284338c7",
+        "name" : "button_hover_background_color",
+        "display_width" : null,
+        "label" : "Button Hover Background Color",
+        "required" : false,
+        "locked" : false,
+        "type" : "color",
+        "default" : {
+          "color" : "#0a63b7",
+          "opacity" : 100
+        }
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "type" : "group",
+      "default" : {
+        "button_background_color" : {
+          "color" : "#027FF1",
+          "opacity" : 100
+        },
+        "button_border_color" : {
+          "color" : "#027FF1",
+          "opacity" : 100
+        },
+        "button_text_color" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        },
+        "button_hover_text_color" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        },
+        "button_hover_background_color" : {
+          "color" : "#0a63b7",
+          "opacity" : 100
+        }
+      }
+    }, {
+      "id" : "d4846216-6246-68fa-1c41-89660f7ffede",
+      "name" : "mobile_view",
+      "display_width" : null,
+      "label" : "Mobile View",
+      "required" : false,
+      "locked" : false,
+      "children" : [ {
+        "id" : "58be40d1-190d-8299-4990-a99921ee6974",
+        "name" : "button_background_color",
+        "display_width" : null,
+        "label" : "Button Background Color",
+        "required" : false,
+        "locked" : false,
+        "type" : "color",
+        "default" : {
+          "color" : "#F277C6",
+          "opacity" : 100
+        }
+      }, {
+        "id" : "d70f85af-503e-5b1f-6df6-d62ae858bcde",
+        "name" : "button_text_color",
+        "display_width" : null,
+        "label" : "Button Text Color",
+        "required" : false,
+        "locked" : false,
+        "type" : "color",
+        "default" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        }
+      }, {
+        "id" : "4bb48152-b821-12f5-ad8f-b6fe66f6f602",
+        "name" : "button_hover_text_color",
+        "display_width" : null,
+        "label" : "Button Hover Text Color",
+        "required" : false,
+        "locked" : false,
+        "type" : "color",
+        "default" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        }
+      }, {
+        "id" : "7ca02157-d457-d595-caa4-75158d46c1e7",
+        "name" : "button_hover_background_color",
+        "display_width" : null,
+        "label" : "Button Hover Background Color",
+        "required" : false,
+        "locked" : false,
+        "type" : "color",
+        "default" : {
+          "color" : "#F277C6",
+          "opacity" : 100
+        }
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "type" : "group",
+      "default" : {
+        "button_background_color" : {
+          "color" : "#F277C6",
+          "opacity" : 100
+        },
+        "button_text_color" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        },
+        "button_hover_text_color" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        },
+        "button_hover_background_color" : {
+          "color" : "#F277C6",
+          "opacity" : 100
+        }
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "desktop_view" : {
+        "button_background_color" : {
+          "color" : "#027FF1",
+          "opacity" : 100
+        },
+        "button_border_color" : {
+          "color" : "#027FF1",
+          "opacity" : 100
+        },
+        "button_text_color" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        },
+        "button_hover_text_color" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        },
+        "button_hover_background_color" : {
+          "color" : "#0a63b7",
+          "opacity" : 100
+        }
+      },
+      "mobile_view" : {
+        "button_background_color" : {
+          "color" : "#F277C6",
+          "opacity" : 100
+        },
+        "button_text_color" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        },
+        "button_hover_text_color" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        },
+        "button_hover_background_color" : {
+          "color" : "#F277C6",
+          "opacity" : 100
+        }
+      }
+    }
+  }, {
+    "id" : "b34e6fa9-f365-5136-294b-5c8088263210",
+    "name" : "child_menu_link_color",
+    "display_width" : null,
+    "label" : "Child Menu Link Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#0047BB",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "4a769488-5098-ee4c-9fe5-cf7108f392c0",
+    "name" : "child_menu_link_hover_color",
+    "display_width" : null,
+    "label" : "Child Menu Link Hover Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#0047BB",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "7b600104-8fab-5534-94cf-9805ba9dbf38",
+    "name" : "blog_tag_color",
+    "display_width" : null,
+    "label" : "Blog Tag Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#F277C6",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "8531fc65-00d2-f04c-114e-63338b879453",
+    "name" : "blog_date_color",
+    "display_width" : null,
+    "label" : "Blog Date Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#8F857B",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "main_menu_background_color" : {
+      "color" : "#027FF1",
+      "opacity" : 100
+    },
+    "main_menu_link_color" : {
+      "color" : "#ffffff",
+      "opacity" : 100
+    },
+    "main_menu_link_hover_color" : {
+      "color" : "#ffffff",
+      "opacity" : 100
+    },
+    "main_menu_bottom_border_color_on_hover" : {
+      "color" : "#FEDD00",
+      "opacity" : 100
+    },
+    "child_menu_background_color" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    },
+    "child_menu_border_color" : {
+      "color" : "#80BFF8",
+      "opacity" : 100
+    },
+    "child_menu_text_color" : {
+      "color" : "#000000",
+      "opacity" : 100
+    },
+    "button_group" : {
+      "desktop_view" : {
+        "button_background_color" : {
+          "color" : "#027FF1",
+          "opacity" : 100
+        },
+        "button_border_color" : {
+          "color" : "#027FF1",
+          "opacity" : 100
+        },
+        "button_text_color" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        },
+        "button_hover_text_color" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        },
+        "button_hover_background_color" : {
+          "color" : "#0a63b7",
+          "opacity" : 100
+        }
+      },
+      "mobile_view" : {
+        "button_background_color" : {
+          "color" : "#F277C6",
+          "opacity" : 100
+        },
+        "button_text_color" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        },
+        "button_hover_text_color" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        },
+        "button_hover_background_color" : {
+          "color" : "#F277C6",
+          "opacity" : 100
+        }
+      }
+    },
+    "child_menu_link_color" : {
+      "color" : "#0047BB",
+      "opacity" : 100
+    },
+    "child_menu_link_hover_color" : {
+      "color" : "#0047BB",
+      "opacity" : 100
+    },
+    "blog_tag_color" : {
+      "color" : "#F277C6",
+      "opacity" : 100
+    },
+    "blog_date_color" : {
+      "color" : "#8F857B",
+      "opacity" : 100
+    }
+  }
+} ]

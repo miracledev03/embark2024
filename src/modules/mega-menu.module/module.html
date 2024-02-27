@@ -1,0 +1,448 @@
+<div class="hs-megaMenu-section">
+  <div class="content-wrapper">
+    <div class="mega_menu">
+      <div class="logo">
+        {% if module.add_link_on_logo %}
+        {% set href = module.logo_link.url.href %}
+        {% if module.logo_link.url.type is equalto "EMAIL_ADDRESS" %}
+        {% set href = "mailto:" + href %}
+        {% endif %}
+        <a href="{{ href }}"
+           {% if module.logo_link.open_in_new_tab %}target="_blank"{% endif %}
+           {% if module.logo_link.rel %}rel="{{ module.logo_link.rel }}"{% endif %}
+           >{% endif %}
+          <img src="{{ module.logo.src }}" alt="{{ module.logo.alt }}">
+          {% if module.add_link_on_logo %}</a>{% endif %}
+      </div>
+      <div class="custom-menu-primary desktop_view">        
+        <ul>
+          {% for item in module.menu_items %}
+          <li{% if item.add_child_menu %} class="hs-item-has-children"{% endif %}>
+            {% set href = item.menu_title_link.url.href %}
+            {% if item.menu_title_link.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+            {% endif %}
+            <a href="{{ href }}"
+               {% if item.menu_title_link.open_in_new_tab %}target="_blank"{% endif %}
+               {% if item.menu_title_link.rel %}rel="{{ item.menu_title_link.rel }}"{% endif %}
+               >
+              {{ item.menu_title }}
+              {% if item.add_child_menu %}
+              <div class="child_arrow">    
+                <div class="child_arrow_in">                
+                </div>
+              </div>
+              {% endif %}
+            </a>
+            {% if item.add_child_menu %}
+            <ul class="hs-menu-children-wrapper">
+              <div class="child_menu-group {% if item.child_menu_group.hide_left_column or item.child_menu_group.hide_right_column %}without_leftRight_col{% endif %} clearfix">
+                {% if not item.child_menu_group.hide_left_column %}
+                <div class="child-menu-column left-column">
+                  <div class="left-column-inner">
+                    <div class="left-column-title">
+                      {% if item.child_menu_group.left_column.change_title_type %}<{{ item.child_menu_group.left_column.change_title_type }} class="left_title"> {% else %}<h3 class="left_title">{% endif %}
+                      {{ item.child_menu_group.left_column.title }}
+                      {% if item.child_menu_group.left_column.change_title_type %}</{{ item.child_menu_group.left_column.change_title_type }}> {% else %}</h3>{% endif %}
+                      </div>
+                      {% if item.child_menu_group.left_column.content %}
+                      <div class="left_content">
+                        {{ item.child_menu_group.left_column.content }}
+                      </div>  
+                      {% endif %}
+                      {% if item.child_menu_group.left_column.button_type %}
+                      <div class="left-column-btn">
+                        {% if item.child_menu_group.left_column.button_type =="normal" %}
+                        {% set href = item.child_menu_group.left_column.button_link.url.href %}
+                        {% if item.child_menu_group.left_column.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+                        {% set href = "mailto:" + href %}
+                        {% endif %}
+                        <a href="{{ href }}"
+                           {% if item.child_menu_group.left_column.button_link.open_in_new_tab %}target="_blank"{% endif %}
+                           {% if item.child_menu_group.left_column.button_link.rel %}rel="{{ item.child_menu_group.left_column.button_link.rel }}"{% endif %}
+                           >
+                          {{ item.child_menu_group.left_column.button_text }}
+                        </a>
+                        {% else %}
+                        {% cta guid="{{ item.child_menu_group.left_column.cta }}" %}
+                        {% endif %}
+                      </div>
+                      {% endif %}
+                    </div>
+                  </div>
+                  {% endif %}
+                  <div class="child-menu-column mid_menu_column">
+                    <div class="mid_menu_column_inner">
+                      {% if item.child_menu_group.middle_column.title %}
+                      <div class="mid_title">
+                        {% if item.child_menu_group.middle_column.change_title_type %}<{{ item.child_menu_group.middle_column.change_title_type }}> {% else %}<h5>{% endif %}
+                        {{ item.child_menu_group.middle_column.title }}
+                        {% if item.child_menu_group.middle_column.change_title_type %}</{{ item.child_menu_group.middle_column.change_title_type }}> {% else %}</h5>{% endif %}
+                      </div>
+                      {% endif %}
+                      <div class="mid-column-inner-menu clearfix">
+                        <div class="mid-column-inner-item left">
+                          {% simple_menu menu_tree="{{ item.child_menu_group.middle_column.left_column_menu }}" %}
+                        </div>
+                        <div class="mid-column-inner-item right">
+                          {% simple_menu menu_tree="{{ item.child_menu_group.middle_column.right_column_menu }}" %}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {% if not item.child_menu_group.hide_right_column %}    
+                  <div class="child-menu-column right_blog_column">
+                    <div class="right-column-inner">
+                      {% if item.child_menu_group.right_column.title %}
+                      <div class="right_title">
+                        {% if item.child_menu_group.right_column.change_title_type %}<{{ item.child_menu_group.right_column.change_title_type }}> {% else %}<h5>{% endif %}
+                        {{ item.child_menu_group.right_column.title }}
+                        {% if item.child_menu_group.right_column.change_title_type %}</{{ item.child_menu_group.right_column.change_title_type }}> {% else %}</h5>{% endif %}
+                      </div>
+                      {% endif %}
+                      <div class="right_bottom_section">
+                        {% if item.child_menu_group.right_column.content_type == "rec_posts" %}
+                        {% set rec_posts = blog_recent_posts(item.child_menu_group.right_column.select_blog, item.child_menu_group.right_column.number_of_posts) %}
+                        {% for rec_post in rec_posts %}
+                        <div class="recent-post-item">  
+                          {% if post.tag_list %}
+                          <div class="recentTags">
+                            {% for tag in post.tag_list %}
+                            <a href="{{ blog_tag_url(group.id, tag.slug) }}" rel="tag">{{ tag.name }}</a>{% if not loop.last %},{% endif %}
+                            {% endfor %}
+                          </div>
+                          {% endif %}
+                          <div class="recent-post-title"><a href="{{ post.absolute_url }}">{{ rec_post.name }}</a></div> 
+                          <div class="authorDate">
+                            {% if post.blog_post_author %}by {{ post.blog_post_author.display_name }},{% endif %} {{ post.publish_date_local_time.strftime('%d %b %Y') }}
+                          </div> 
+                        </div>
+                        {% endfor %}
+                        {% else %}
+                        {% if item.child_menu_group.right_column.rich_text_content %}
+                        {{ item.child_menu_group.right_column.rich_text_content }}
+                        {% endif %}
+                        {% endif %}
+                      </div>
+                    </div>
+                  </div>
+                  {% endif %}   
+                </div>
+                </ul>
+              {% endif %}
+              </li>
+            {% endfor %}
+        </ul>
+      </div>
+      <div class="menu-search">
+        <a style="cursor:pointer;">
+          <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27.3573 27.7436L20.7994 21.1856M20.7994 21.1856C22.5743 19.4107 23.5714 17.0034 23.5714 14.4932C23.5714 11.9831 22.5743 9.5758 20.7994 7.80088C19.0244 6.02595 16.6171 5.02881 14.107 5.02881C11.5969 5.02881 9.18957 6.02595 7.41464 7.80088C5.63972 9.5758 4.64258 11.9831 4.64258 14.4932C4.64258 17.0034 5.63972 19.4107 7.41464 21.1856C9.18957 22.9605 11.5969 23.9577 14.107 23.9577C16.6171 23.9577 19.0244 22.9605 20.7994 21.1856Z" stroke="white" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+      <div class="mobile-trigger">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="custom-menu-primary mobile_view">
+      <div class="hs-menu-wrapper firstLavel">
+        <ul>
+          {% for item in module.menu_items %}
+          <li{% if item.add_child_menu %} class="hs-item-has-children"{% endif %}>
+            {% set href = item.menu_title_link.url.href %}
+            {% if item.menu_title_link.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+            {% endif %}
+            <a href="{{ href }}"
+               {% if item.menu_title_link.open_in_new_tab %}target="_blank"{% endif %}
+               {% if item.menu_title_link.rel %}rel="{{ item.menu_title_link.rel }}"{% endif %}
+               >
+              {{ item.menu_title }}
+            </a>
+            {% if item.add_child_menu %}
+            <ul class="hs-menu-children-wrapper">
+              <div class="child_menu-group {% if item.child_menu_group.hide_left_column or item.child_menu_group.hide_right_column %}without_leftRight_col{% endif %} clearfix">
+                {% if not item.child_menu_group.hide_left_column %}
+                <div class="child-menu-column left-column">
+                  <div class="left-column-inner">
+                    <div class="left-column-title">
+                      {% if item.child_menu_group.left_column.change_title_type %}<{{ item.child_menu_group.left_column.change_title_type }} class="left_title"> {% else %}<h3 class="left_title">{% endif %}
+                      {{ item.child_menu_group.left_column.title }}
+                      {% if item.child_menu_group.left_column.change_title_type %}</{{ item.child_menu_group.left_column.change_title_type }}> {% else %}</h3>{% endif %}
+                      </div>
+                      {% if item.child_menu_group.left_column.content %}
+                      <div class="left_content">
+                        {{ item.child_menu_group.left_column.content }}
+                      </div>  
+                      {% endif %}
+                      {% if item.child_menu_group.left_column.button_type %}
+                      <div class="left-column-btn">
+                        {% if item.child_menu_group.left_column.button_type =="normal" %}
+                        {% set href = item.child_menu_group.left_column.button_link.url.href %}
+                        {% if item.child_menu_group.left_column.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+                        {% set href = "mailto:" + href %}
+                        {% endif %}
+                        <a href="{{ href }}"
+                           {% if item.child_menu_group.left_column.button_link.open_in_new_tab %}target="_blank"{% endif %}
+                           {% if item.child_menu_group.left_column.button_link.rel %}rel="{{ item.child_menu_group.left_column.button_link.rel }}"{% endif %}
+                           >
+                          {{ item.child_menu_group.left_column.button_text }}
+                        </a>
+                        {% else %}
+                        {% cta guid="{{ item.child_menu_group.left_column.cta }}" %}
+                        {% endif %}
+                      </div>
+                      {% endif %}
+                    </div>
+                  </div>
+                  {% endif %}
+                  <div class="child-menu-column mid_menu_column">
+                    <div class="mid_menu_column_inner">
+                      {% if item.child_menu_group.middle_column.title %}
+                      <div class="mid_title">
+                        {% if item.child_menu_group.middle_column.change_title_type %}<{{ item.child_menu_group.middle_column.change_title_type }}> {% else %}<h5>{% endif %}
+                        {{ item.child_menu_group.middle_column.title }}
+                        {% if item.child_menu_group.middle_column.change_title_type %}</{{ item.child_menu_group.middle_column.change_title_type }}> {% else %}</h5>{% endif %}
+                      </div>
+                      {% endif %}
+                      <div class="mid-column-inner-menu clearfix">
+                        <div class="mid-column-inner-item left">
+                          {% simple_menu menu_tree="{{ item.child_menu_group.middle_column.left_column_menu }}" %}
+                        </div>
+                        <div class="mid-column-inner-item right">
+                          {% simple_menu menu_tree="{{ item.child_menu_group.middle_column.right_column_menu }}" %}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {% if not item.child_menu_group.hide_right_column %}    
+                  <div class="child-menu-column right_blog_column">
+                    <div class="right-column-inner">
+                      {% if item.child_menu_group.right_column.title %}
+                      <div class="right_title">
+                        {% if item.child_menu_group.right_column.change_title_type %}<{{ item.child_menu_group.right_column.change_title_type }}> {% else %}<h5>{% endif %}
+                        {{ item.child_menu_group.right_column.title }}
+                        {% if item.child_menu_group.right_column.change_title_type %}</{{ item.child_menu_group.right_column.change_title_type }}> {% else %}</h5>{% endif %}
+                      </div>
+                      {% endif %}
+                      <div class="right_bottom_section">
+                        {% if item.child_menu_group.right_column.content_type == "rec_posts" %}
+                        {% set rec_posts = blog_recent_posts(item.child_menu_group.right_column.select_blog, item.child_menu_group.right_column.number_of_posts) %}
+                        {% for rec_post in rec_posts %}
+                        <div class="recent-post-item">  
+                          {% if post.tag_list %}
+                          <div class="recentTags">
+                            {% for tag in post.tag_list %}
+                            <a href="{{ blog_tag_url(group.id, tag.slug) }}" rel="tag">{{ tag.name }}</a>{% if not loop.last %},{% endif %}
+                            {% endfor %}
+                          </div>
+                          {% endif %}
+                          <div class="recent-post-title"><a href="{{ post.absolute_url }}">{{ rec_post.name }}</a></div> 
+                          <div class="authorDate">
+                           {% if post.blog_post_author %}by {{ post.blog_post_author.display_name }},{% endif %} {{ post.publish_date_local_time.strftime('%d %b %Y') }}
+                          </div> 
+                        </div>
+                        {% endfor %}
+                        {% else %}
+                        {% if item.child_menu_group.right_column.rich_text_content %}
+                        {{ item.child_menu_group.right_column.rich_text_content }}
+                        {% endif %}
+                        {% endif %}
+                      </div>
+                    </div>
+                  </div>
+                  {% endif %}   
+                </div>
+                </ul>
+              {% endif %}
+              </li>
+            {% endfor %}
+        </ul>
+      </div>
+      <div class="outer_right_menu mobile">
+        <ul>
+          {% for item in module.right_menu_section.menu_items %}
+          <li>
+            {% set href = item.link.url.href %}
+            {% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+            {% endif %}
+            <a href="{{ href }}"
+               {% if item.link.open_in_new_tab %}target="_blank"{% endif %}
+               {% if item.link.rel %}rel="{{ item.link.rel }}"{% endif %}
+               >
+              {{ item.menu_title }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% if module.additional_changes_for_mobile_view.button_text %}
+      <div class="mobileMenu_btn">
+        {% if module.additional_changes_for_mobile_view.button_type=="normal" %}
+        {% set href = module.additional_changes_for_mobile_view.button_link.url.href %}
+        {% if module.additional_changes_for_mobile_view.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+        {% set href = "mailto:" + href %}
+        {% endif %}
+        <a href="{{ href }}"
+           {% if module.additional_changes_for_mobile_view.button_link.open_in_new_tab %}target="_blank"{% endif %}
+           {% if module.additional_changes_for_mobile_view.button_link.rel %}rel="{{ module.additional_changes_for_mobile_view.button_link.rel }}"{% endif %}
+           >
+          {{ module.additional_changes_for_mobile_view.button_text }}
+        </a>
+        {% else %}
+        {% cta guid="{{ module.additional_changes_for_mobile_view.cta }}" %}
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+    <div class="outer_right_menu desktop">
+      <ul>
+        {% for item in module.right_menu_section.menu_items %}
+        <li>
+          {% set href = item.link.url.href %}
+          {% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+          {% endif %}
+
+          {% if item.link.url.type is equalto "PHONE_NUMBER" %}
+          {% set href = "tel:" + href %}
+          {% endif %}
+
+          <a href="{{ href }}"
+             {% if item.link.open_in_new_tab %}target="_blank"{% endif %}
+             {% if item.link.rel %}rel="{{ item.link.rel }}"{% endif %}
+             >
+            {{ item.menu_title }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+{% require_css %}
+<style>
+  {% scope_css %}
+  .hs-megaMenu-section .mega_menu {
+    background: rgba({{ module.module_theme_settings.main_menu_background_color.color|convert_rgb }},{{ module.module_theme_settings.main_menu_background_color.opacity/100 }});
+  }
+  .hs-megaMenu-section .custom-menu-primary > ul > li > a {
+    color: rgba({{ module.module_theme_settings.main_menu_link_color.color|convert_rgb }}, {{ module.module_theme_settings.main_menu_link_color.opacity/100 }});
+  }
+  .hs-megaMenu-section .custom-menu-primary > ul > li:hover > a {
+    color: rgba({{ module.module_theme_settings.main_menu_link_hover_color.color|convert_rgb }}, {{ module.module_theme_settings.main_menu_link_hover_color.opacity/100 }});
+  }
+  .hs-megaMenu-section .child_menu-group {
+    color: rgba({{ module.module_theme_settings.child_menu_text_color.color|convert_rgb }}, {{ module.module_theme_settings.child_menu_text_color.opacity/100 }});
+    border-color: rgba({{ module.module_theme_settings.child_menu_border_color.color|convert_rgb }}, {{ module.module_theme_settings.child_menu_border_color.opacity/100 }});
+    background-color: rgba({{ module.module_theme_settings.child_menu_background_color.color|convert_rgb }}, {{ module.module_theme_settings.child_menu_background_color.opacity/100 }});
+  }
+  .hs-megaMenu-section .child_menu-group .child-menu-column.left-column {
+    border-right-color: rgba({{ module.module_theme_settings.child_menu_border_color.color|convert_rgb }}, {{ module.module_theme_settings.child_menu_border_color.opacity/100 }});
+  }
+  .hs-megaMenu-section .custom-menu-primary .child_arrow .child_arrow_in {
+    border-bottom-color:rgba({{ module.module_theme_settings.child_menu_background_color.color|convert_rgb }}, {{ module.module_theme_settings.child_menu_background_color.opacity/100 }});
+  }
+  .hs-megaMenu-section .custom-menu-primary .child_arrow {
+    border-bottom-color: rgba({{ module.module_theme_settings.child_menu_border_color.color|convert_rgb }}, {{ module.module_theme_settings.child_menu_border_color.opacity/100 }});
+  }
+  .hs-megaMenu-section .left-column-title .left_title,
+  .hs-megaMenu-section .custom-menu-primary .mid_menu_column_inner .mid_title > *, 
+  .hs-megaMenu-section .custom-menu-primary .right-column-inner .right_title > *,
+  .hs-megaMenu-section .recent-post-item .recent-post-title a,
+  .hs-megaMenu-section .child_menu-group h1,
+  .hs-megaMenu-section .child_menu-group h2,
+  .hs-megaMenu-section .child_menu-group h3,
+  .hs-megaMenu-section .child_menu-group h4,
+  .hs-megaMenu-section .child_menu-group h5,
+  .hs-megaMenu-section .child_menu-group h6,
+  .hs-megaMenu-section .outer_right_menu ul li a {
+    color: rgba({{ module.module_theme_settings.child_menu_text_color.color|convert_rgb }}, {{ module.module_theme_settings.child_menu_text_color.opacity/100 }});
+  }
+  .hs-megaMenu-section .left-column-btn a {
+    background-color: rgba({{ module.module_theme_settings.button_group.desktop_view.button_background_color.color|convert_rgb }}, {{ module.module_theme_settings.button_group.desktop_view.button_background_color.opacity/100 }});
+    color: rgba({{ module.module_theme_settings.button_group.desktop_view.button_text_color.color|convert_rgb }}, {{ module.module_theme_settings.button_group.desktop_view.button_text_color.opacity/100 }});
+    border-color: rgba({{ module.module_theme_settings.button_group.desktop_view.button_border_color.color|convert_rgb }}, {{ module.module_theme_settings.button_group.desktop_view.button_border_color.opacity/100 }});
+  }
+  .hs-megaMenu-section .left-column-btn a:hover {
+    border-color: rgba({{ module.module_theme_settings.button_group.desktop_view.button_border_color.color|convert_rgb }}, {{ module.module_theme_settings.button_group.desktop_view.button_border_color.opacity/100 }});
+    color:rgba({{ module.module_theme_settings.button_group.desktop_view.button_hover_text_color.color|convert_rgb }}, {{ module.module_theme_settings.button_group.desktop_view.button_hover_text_color.opacity/100 }});
+    background-color: rgba({{ module.module_theme_settings.button_group.desktop_view.button_hover_background_color.color|convert_rgb }}, {{ module.module_theme_settings.button_group.desktop_view.button_hover_background_color.opacity/100 }});
+  }
+  .hs-megaMenu-section .recent-post-item .recentTags a {
+    color: rgba({{ module.module_theme_settings.blog_tag_color.color|convert_rgb }}, {{ module.module_theme_settings.blog_tag_color.opacity/100 }});
+  }
+  .hs-megaMenu-section .recent-post-item .authorDate {
+    color: rgba({{ module.module_theme_settings.blog_date_color.color|convert_rgb }}, {{ module.module_theme_settings.blog_date_color.opacity/100 }});
+  }
+  .hs-megaMenu-section .mid-column-inner-menu .mid-column-inner-item .hs-menu-wrapper ul li a {
+    color: rgba({{ module.module_theme_settings.child_menu_link_color.color|convert_rgb }}, {{ module.module_theme_settings.child_menu_link_color.opacity/100 }});
+  }
+  .hs-megaMenu-section .mid-column-inner-menu .mid-column-inner-item .hs-menu-wrapper ul li a:hover {
+    color: rgba({{ module.module_theme_settings.child_menu_link_hover_color.color|convert_rgb }}, {{ module.module_theme_settings.child_menu_link_hover_color.opacity/100 }});
+  }
+  .hs-megaMenu-section .mid-column-inner-menu .mid-column-inner-item .child-trigger-inner i {
+    background: rgba({{ module.module_theme_settings.child_menu_link_color.color|convert_rgb }}, {{ module.module_theme_settings.child_menu_link_color.opacity/100 }});
+  }
+  .hs-megaMenu-section .mid-column-inner-menu .mid-column-inner-item .child-trigger-inner i:after {
+    content: "";
+    background: rgba({{ module.module_theme_settings.child_menu_link_color.color|convert_rgb }}, {{ module.module_theme_settings.child_menu_link_color.opacity/100 }});
+  }
+
+
+  .hs-megaMenu-section .mobileMenu_btn a {
+    background-color: rgba({{ module.module_theme_settings.button_group.mobile_view.button_background_color.color|convert_rgb }}, {{ module.module_theme_settings.button_group.mobile_view.button_background_color.opacity/100 }});
+    color: rgba({{ module.module_theme_settings.button_group.mobile_view.button_text_color.color|convert_rgb }}, {{ module.module_theme_settings.button_group.mobile_view.button_text_color.opacity/100 }});
+  }
+  .hs-megaMenu-section .mobileMenu_btn a:hover {
+    color:rgba({{ module.module_theme_settings.button_group.mobile_view.button_hover_text_color.color|convert_rgb }}, {{ module.module_theme_settings.button_group.mobile_view.button_hover_text_color.opacity/100 }});
+    background-color: rgba({{ module.module_theme_settings.button_group.mobile_view.button_hover_background_color.color|convert_rgb }}, {{ module.module_theme_settings.button_group.mobile_view.button_hover_background_color.opacity/100 }});
+  }
+  .hs-megaMenu-section .mobile-trigger span {
+    background: rgba({{ module.module_theme_settings.main_menu_link_color.color|convert_rgb }}, {{ module.module_theme_settings.main_menu_link_color.opacity/100 }});
+  }
+  .hs-megaMenu-section .menu-search svg path {
+    stroke: rgba({{ module.module_theme_settings.main_menu_link_color.color|convert_rgb }}, {{ module.module_theme_settings.main_menu_link_color.opacity/100 }});
+  }
+
+  @media (min-width:1024px) {
+    .hs-megaMenu-section .custom-menu-primary > ul > li > a:after {
+      content: "";
+      background: rgba({{ module.module_theme_settings.main_menu_bottom_border_color_on_hover.color|convert_rgb }}, {{ module.module_theme_settings.main_menu_bottom_border_color_on_hover.opacity/100 }});
+    }
+  }
+  @media (max-width:1023px) {
+    .hs-megaMenu-section .custom-menu-primary.mobile_view {
+      background-image:url('{{ module.additional_changes_for_mobile_view.menu_background_image_mobile_view.src }}');
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-size: auto;
+        }
+    .hs-megaMenu-section .custom-menu-primary .hs-menu-wrapper.firstLavel > ul > li > a,
+    .hs-megaMenu-section .outer_right_menu ul li a {
+      color: rgba({{ module.module_theme_settings.main_menu_link_color.color|convert_rgb }}, {{ module.module_theme_settings.main_menu_link_color.opacity/100 }});
+    }
+    .hs-megaMenu-section .custom-menu-primary .hs-menu-wrapper.firstLavel > ul > li > a:hover,
+    .hs-megaMenu-section .outer_right_menu ul li a:hover {
+      color: rgba({{ module.module_theme_settings.main_menu_link_hover_color.color|convert_rgb }}, {{ module.module_theme_settings.main_menu_link_hover_color.opacity/100 }});
+    }
+    .hs-megaMenu-section .child-trigger svg path {
+      stroke: rgba({{ module.module_theme_settings.main_menu_link_color.color|convert_rgb }}, {{ module.module_theme_settings.main_menu_link_color.opacity/100 }});
+    }
+    .hs-megaMenu-section .custom-menu-primary .hs-menu-wrapper.firstLavel > ul > li:hover .child-trigger svg path {
+      stroke: rgba({{ module.module_theme_settings.main_menu_link_hover_color.color|convert_rgb }}, {{ module.module_theme_settings.main_menu_link_hover_color.opacity/100 }});
+    }
+    .hs-megaMenu-section .mid-column-inner-menu .mid-column-inner-item .child-trigger svg path {
+      stroke: rgba({{ module.module_theme_settings.child_menu_link_color.color|convert_rgb }}, {{ module.module_theme_settings.child_menu_link_color.opacity/100 }}) !important;
+    }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+
