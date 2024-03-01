@@ -1,6 +1,8 @@
 /* The overflow-wrap is meant to prevent long/large words from breaking the mobile responsiveness of a page (e.g. horizontal scrolling). It is preferred to reduce font sizes on mobile to address this, with this CSS specifically helping with extreme scenarios where a reduction in font size is not possible. */
 
-
+html{
+  scroll-behavior: smooth;
+}
 @font-face {
   font-family:'Embark Sans';
   font-weight:400;
@@ -9,6 +11,20 @@
        url('{{ get_asset_url('../../fonts/EmbarkSans-Regular.woff2') }}') format('woff2'), 
        url('{{ get_asset_url('../../fonts/EmbarkSans-Regular.woff') }}') format('woff'),  
        url('{{ get_asset_url('../../fonts/EmbarkSans-Regular.ttf') }}')  format('truetype'); 
+}
+
+@font-face {
+  font-family:'Embark Sans Headline';
+  src: url('{{ get_asset_url('../../fonts/EmbarkSansHeadline-Regular.eot') }}?#iefix') format('embedded-opentype'), 
+       url('{{ get_asset_url('../../fonts/EmbarkSansHeadline-Regular.woff2') }}') format('woff2'),  
+       url('{{ get_asset_url('../../fonts/EmbarkSansHeadline-Regular.woff') }}') format('woff'),  
+       url('{{ get_asset_url('../../fonts/EmbarkSansHeadline-Regular.ttf') }}')  format('truetype'),
+       url('{{ get_asset_url('../../fonts/EmbarkSansHeadline-Regular.otf') }}') format("opentype");
+}
+@font-face {
+    font-family:'Embark Sans Headline';
+    font-weight: 500;
+    src: url("{{ get_asset_url('../../fonts/EmbarkSansHeadline-Medium.otf') }}") format("opentype");
 }
 @font-face {
   font-family:'Embark Sans';
@@ -49,7 +65,6 @@ html[lang^="ko"] body {
 /* Paragraphs */
 
 p {
-  font-size: 1rem;
   margin: 0 0 1.4rem;
 }
 

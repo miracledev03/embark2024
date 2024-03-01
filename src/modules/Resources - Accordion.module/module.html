@@ -1,0 +1,63 @@
+<div class="resource-full-width {{ name }}">
+  <div class="content-wrapper">
+    <div class="row-inner">
+      <div class="left-col">
+        <div class="col-inner"> 
+          <div class="section-title">
+            <h3>
+              {{ module.heading }}
+            </h3>
+          </div>
+          <div class="list-items">
+            <ul>
+              {% for item in module.list_items %}
+              <li>
+                <h6>
+                  {{ item.text }}
+                </h6>
+                <div class="content">
+                  {{ item.details }}
+                </div>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="richtext-content">
+            {{ module.rich_text_content }}
+          </div>
+        </div>
+      </div>
+      <div class="right-col form-template">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<style>
+   {% scope_css %}
+  .resource-full-width {
+    background: rgba({{ module.style.background_color.color|convert_rgb }},{{ module.style.background_color.opacity * 0.01 }});
+    {{ module.style.desktop_spacing.css }};
+  }
+  @media(max-width:767px){
+    .resource-full-width {
+      {{ module.style.mobile_spacing.css }};
+    }
+  }
+  {% end_scope_css%}    
+</style>
+
+{% require_js %}
+  <script>
+    $(document).ready(function(){
+      $(".{{ name }} .list-items h6").on("click",function(){
+        $(this).parent().siblings().removeClass("active");
+        $(this).parent().siblings().find(".content").slideUp(200);
+        $(this).parent().toggleClass("active");
+        $(this).next(".content").slideToggle(200);
+      });
+    });
+  </script>
+{% end_require_js %}

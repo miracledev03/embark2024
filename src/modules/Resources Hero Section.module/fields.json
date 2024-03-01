@@ -1,0 +1,329 @@
+[ {
+  "id" : "9eaa1952-8a8c-3051-c95e-bef3d5c5462d",
+  "name" : "add_breadcrumb_temp_",
+  "display_width" : null,
+  "label" : "Add Breadcrumb [Temp]",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "3e313b64-44c6-1480-a4e6-da16165e1572",
+    "default" : 2
+  },
+  "children" : [ {
+    "id" : "3e313b64-44c6-1480-a4e6-da16165e1572",
+    "name" : "text",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Home"
+  }, {
+    "id" : "1d5ce3f9-1bd0-fece-518f-74d35223c55c",
+    "name" : "link",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "text" : "Home",
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "text" : "Home",
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ]
+}, {
+  "id" : "3e7d8aee-8f2f-3053-e380-5dbc3b835085",
+  "name" : "bold_paragraph_title",
+  "display_width" : null,
+  "label" : "Bold Paragraph Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Discover our range of Embark Guides, Templates, and Checklists. Join our Webinars and tune into our Podcasts for more insights"
+}, {
+  "id" : "4dbfffe5-6168-341b-34fd-fdb5fabde306",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "5b786087-0f51-5667-8c46-53ca0ded3d41",
+    "name" : "background_color",
+    "display_width" : null,
+    "label" : "Background color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#00B74F",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "72c3166a-1211-9f12-1283-9f7f7e73b3df",
+    "name" : "desktop_spacing",
+    "display_width" : null,
+    "label" : "Desktop spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 80,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : null,
+          "units" : null
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "fd4e3ed7-7431-a3d5-5d55-c9989970cd6a",
+    "name" : "mobile_spacing",
+    "display_width" : null,
+    "label" : "Mobile spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 80,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : null,
+          "units" : null
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "background_color" : {
+      "color" : "#00B74F",
+      "opacity" : 100
+    },
+    "desktop_spacing" : {
+      "padding" : {
+        "top" : {
+          "value" : 80,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : null,
+          "units" : null
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    },
+    "mobile_spacing" : {
+      "padding" : {
+        "top" : {
+          "value" : 80,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : null,
+          "units" : null
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }
+}, {
+  "id" : "558dca8e-e294-13ba-7fa7-d1d73493c520",
+  "name" : "main_title",
+  "display_width" : null,
+  "label" : "Main Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Resources"
+}, {
+  "id" : "994943b7-7d8b-aea2-c20a-2b08010fc067",
+  "name" : "article",
+  "display_width" : null,
+  "label" : "Article",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "8ba6f359-0fe8-1a08-364c-23acfab733fa",
+    "name" : "image",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Imported%20images/insight3.png",
+      "alt" : "insight3",
+      "loading" : "lazy",
+      "width" : 410,
+      "height" : 231,
+      "max_width" : 410,
+      "max_height" : 231
+    }
+  }, {
+    "id" : "d9f95215-c8c9-6a91-bf33-8a2a0607b8c2",
+    "name" : "tag",
+    "display_width" : null,
+    "label" : "Tag",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Accounting Efficiencies "
+  }, {
+    "id" : "7c8494e6-c347-ad85-c2ad-9da118b162d9",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Mastering Workflow: Anaplan Setup & Customization Tips for New Workflow Users"
+  }, {
+    "id" : "263e76bc-ab17-3e3b-2c85-c071c810cd67",
+    "name" : "date",
+    "display_width" : null,
+    "label" : "Date",
+    "required" : false,
+    "locked" : false,
+    "type" : "date",
+    "default" : 1709100000000
+  }, {
+    "id" : "eea37b57-ae58-7daf-84e0-936d9d803f65",
+    "name" : "link_field",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Imported%20images/insight3.png",
+      "alt" : "insight3",
+      "loading" : "lazy",
+      "width" : 410,
+      "height" : 231,
+      "max_width" : 410,
+      "max_height" : 231
+    },
+    "tag" : "Accounting Efficiencies ",
+    "title" : "Mastering Workflow: Anaplan Setup & Customization Tips for New Workflow Users",
+    "date" : 1709100000000,
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+} ]

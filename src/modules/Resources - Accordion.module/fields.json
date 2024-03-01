@@ -1,0 +1,201 @@
+[ {
+  "id" : "29362411-25dc-4696-010d-325af8661f48",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Close faster & more accurately"
+}, {
+  "id" : "cce8d8c9-4c15-3998-cdf6-eee74d2b5c58",
+  "name" : "list_items",
+  "display_width" : null,
+  "label" : "Accordion items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "03746845-01ec-7f2c-5a4d-7c58fcbd51b0",
+    "default" : 5
+  },
+  "children" : [ {
+    "id" : "03746845-01ec-7f2c-5a4d-7c58fcbd51b0",
+    "name" : "text",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Ensure you properly include and organize all line items"
+  }, {
+    "id" : "a11004ae-5380-53e7-3fd0-03f46005bfa1",
+    "name" : "details",
+    "display_width" : null,
+    "label" : "Details",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p><strong>Lorem Ipsum</strong><span>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</span></p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "text" : "Ensure you properly include and organize all line items",
+    "details" : "<p><strong>Lorem Ipsum</strong><span>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</span></p>"
+  }, {
+    "text" : "Ensure you properly include and organize all line items",
+    "details" : "<p><strong>Lorem Ipsum</strong><span>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</span></p>"
+  }, {
+    "text" : "Ensure you properly include and organize all line items",
+    "details" : "<p><strong>Lorem Ipsum</strong><span>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</span></p>"
+  }, {
+    "text" : "Ensure you properly include and organize all line items",
+    "details" : "<p><strong>Lorem Ipsum</strong><span>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</span></p>"
+  }, {
+    "text" : "Ensure you properly include and organize all line items",
+    "details" : "<p><strong>Lorem Ipsum</strong><span>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</span></p>"
+  } ]
+}, {
+  "id" : "6ee50f8a-5cae-4a0b-bee8-59cf47571556",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "74d37052-5f35-96f6-d82c-1a5af71b4bd7",
+    "name" : "background_color",
+    "display_width" : null,
+    "label" : "Background color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#141B4D",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "ddb3ca37-e354-0895-080a-d6cd4319f38f",
+    "name" : "desktop_spacing",
+    "display_width" : null,
+    "label" : "Desktop spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 77,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 171,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "6fa3c787-c7c9-9e6e-876f-b19e11dda390",
+    "name" : "mobile_spacing",
+    "display_width" : null,
+    "label" : "Mobile spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 46,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 60,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "background_color" : {
+      "color" : "#141B4D",
+      "opacity" : 100
+    },
+    "desktop_spacing" : {
+      "padding" : {
+        "top" : {
+          "value" : 77,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 171,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    },
+    "mobile_spacing" : {
+      "padding" : {
+        "top" : {
+          "value" : 46,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 60,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }
+}, {
+  "id" : "a1c71f79-60bf-d898-84bc-c8911d823a62",
+  "name" : "rich_text_content",
+  "display_width" : null,
+  "label" : "Rich Text Content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<h3>What does our template cover?</h3>\n<p>Embark’s template is ideal for companies not yet ready to invest in an automated, comprehensive accounting system, helping you maintain a clean, informative balance sheet for stakeholders &amp; investors by tracking fixed assets with dedicated &amp; linked worksheets.</p>"
+} ]

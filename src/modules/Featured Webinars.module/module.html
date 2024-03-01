@@ -1,0 +1,169 @@
+<div class="featured-webinars-wrapper {{ name }}">
+  <div class="content-wrapper">
+    <div class="top-pane">
+      <div class="left-col title">
+        {% if module.heading %}
+        <{{ module.heading_choice }}>
+        {{ module.heading }}
+        </{{ module.heading_choice }}>
+        {% endif %}
+      </div>
+        <div class="button-group right-col">
+          {% set href = module.top_pane_button.link.url.href %}
+          {% if module.top_pane_button.link.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+          {% endif %}
+          {% if module.top_pane_button.link.url.type is equalto "PHONE_NUMBER" %}
+          {% set href = "tel:" + href %}
+          {% endif %}
+          {% if module.enable_button %}
+          <a class="custom-transparent-btn" href="{{ href }}"
+             {% if module.top_pane_button.link.open_in_new_tab %}target="_blank"{% endif %}
+             {% if module.top_pane_button.link.rel %}rel="{{ module.top_pane_button.link.rel }}"{% endif %}
+             >
+            {{ module.top_pane_button.button_label }}
+            <span class="arrow">
+              <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.73228 0.381592L11.7431 4.45433L6.73228 8.52707C7.02973 6.85679 7.18989 5.7814 7.23565 5.00346L0.25708 5.48395V3.42471L7.23565 3.9052C7.18989 3.12726 7.05261 2.05187 6.73228 0.381592Z" fill="#027FF1"/>
+              </svg>
+            </span>
+          </a>
+          {% endif %}
+        </div>
+        </div>
+        <div class="featured-post">
+          <div class="row-inner">
+            <div class="post-item" style="background-color:rgba({{ module.featured_post.background_color.color|convert_rgb }},{{ module.featured_post.background_color.opacity * 0.01 }})">
+              <div class="col-inner">
+                {% if module.featured_post.tag %}
+                <div class="tag">
+                  {{ module.featured_post.tag }}
+                </div>
+                {% endif %}
+                {% if module.featured_post.title %}
+                <h2>
+                  <a href="">
+                    {{ module.featured_post.title }}
+                  </a>
+                </h2>
+                {% endif %}
+                {% if module.featured_post.post_excerpt %}
+                <div class="post-excerpt">
+                  {{ module.featured_post.post_excerpt }}
+                </div>
+                {% endif %}
+                <div class="button-wrapper">
+                  {% if module.featured_post.enable_primary_button %}
+                  {% set href = module.featured_post.primary_button.button_link.url.href %}
+                  {% if module.featured_post.primary_button.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+                  {% set href = "mailto:" + href %}
+                  {% endif %}
+                  {% if module.featured_post.primary_button.button_link.url.type is equalto "PHONE_NUMBER" %}
+                  {% set href = "tel:" + href %}
+                  {% endif %}
+                  <a class="custom-transparent-btn" href="{{ href }}"
+                     {% if module.featured_post.primary_button.button_link.open_in_new_tab %}target="_blank"{% endif %}
+                     {% if module.featured_post.primary_button.button_link.rel %}rel="{{ module.featured_post.primary_button.button_link.rel }}"{% endif %}
+                     >
+                    {{ module.featured_post.primary_button.button_label }}
+                    <span class="arrow">
+                      <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.73228 0.381592L11.7431 4.45433L6.73228 8.52707C7.02973 6.85679 7.18989 5.7814 7.23565 5.00346L0.25708 5.48395V3.42471L7.23565 3.9052C7.18989 3.12726 7.05261 2.05187 6.73228 0.381592Z" fill="#027FF1"/>
+                      </svg>
+                    </span>
+                  </a>
+                  {% endif %}
+                  {% if module.featured_post.enable_secondary_button %}
+                  {% set href = module.featured_post.secondary_button.button_link.url.href %}
+                  {% if module.featured_post.secondary_button.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+                  {% set href = "mailto:" + href %}
+                  {% endif %}
+                  {% if module.featured_post.secondary_button.button_link.url.type is equalto "PHONE_NUMBER" %}
+                  {% set href = "tel:" + href %}
+                  {% endif %}
+                  <a class="custom-dark-btn" href="{{ href }}"
+                     {% if module.featured_post.secondary_button.button_link.open_in_new_tab %}target="_blank"{% endif %}
+                     {% if module.featured_post.secondary_button.button_link.rel %}rel="{{ module.featured_post.secondary_button.button_link.rel }}"{% endif %}
+                     >
+                    {{ module.featured_post.secondary_button.button_label }}
+                  </a>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-posts-wrapper">
+          <div class="row-inner">
+            {% for item in module.post_column_contents %}
+            {% set href = item.link_group.link.url.href %}
+            {% if item.link_group.link.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+            {% endif %}
+            {% if item.link_group.link.url.type is equalto "PHONE_NUMBER" %}
+            {% set href = "tel:" + href %}
+            {% endif %}
+            <div class="b_post_item">
+              <div class="col-inner" style="background:rgba({{ item.card_background_color.color|convert_rgb }},{{ item.card_background_color.opacity * 0.01 }})">
+                <div class="top_bar">
+                  {% if item.reading_minutes %}<span class="time">{{ item.reading_minutes }}</span>{% endif %}
+                  {% if item.date %}<span class="date">{{ item.date|format_datetime('dd MMM YYYY') }}</span>{% endif %}
+                </div>
+                {% if item.title %}
+                <h6>
+                  <a href="{{ href }}"
+                     {% if item.link_group.link.open_in_new_tab %}target="_blank"{% endif %}
+                     {% if item.link_group.link.rel %}rel="{{ item.link_group.link.rel }}"{% endif %}
+                     >{{ item.title }}
+                  </a>
+                </h6>
+                {% endif %}
+                {% if item.link_group.link_label %}
+                <div class="more-link">
+                  <a href="{{ href }}"
+                     {% if item.link_group.link.open_in_new_tab %}target="_blank"{% endif %}
+                     {% if item.link_group.link.rel %}rel="{{ item.link_group.link.rel }}"{% endif %}
+                     >{{ item.link_group.link_label }}
+                  </a>
+                </div>
+                {% endif %}
+              </div>
+            </div>
+            {% endfor %}
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <style>
+      .{{ name }} .featured-post{
+        position:relative;
+      }
+      @media(min-width:768px){
+        .{{ name }} .featured-post::after{
+          content:"";
+          background-image:url({{ get_asset_url('../../images/Embark_Illustration.svg') }});
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-position: right bottom;
+        }  
+      }
+
+      {% scope_css %}
+      .featured-webinars-wrapper {
+        background: rgba({{ module.style.background_color.color|convert_rgb }},{{ module.style.background_color.opacity * 0.01 }});
+        {{ module.style.desktop_spacing.css }};
+      }
+      @media(max-width:767px){
+        .featured-webinars-wrapper {
+          {{ module.style.mobile_spacing.css }};
+        }
+      }
+      {% end_scope_css%}
+    </style>

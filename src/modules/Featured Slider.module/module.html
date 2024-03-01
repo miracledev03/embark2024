@@ -1,0 +1,145 @@
+<div class="featured-slider-wrapper {{ name }}">
+  <div class="slider-group"> 
+    <div class="row-inner">
+      <div class="left-col image">
+        {% if module.image.src %}
+        {% set sizeAttrs = 'width="{{ module.image.width }}" height="{{ module.image.height }}"' %}
+        {% if module.image.size_type == 'auto' %}
+        {% set sizeAttrs = 'width="{{ module.image.width }}" height="{{ module.image.height }}" style="max-width: 100%; height: auto;"' %}
+        {% elif module.image.size_type == 'auto_custom_max' %}
+        {% set sizeAttrs = 'width="{{ module.image.max_width }}" height="{{ module.image.max_height }}" style="max-width: 100%; height: auto;"' %}
+        {% endif %}
+        {% set loadingAttr = module.image.loading != 'disabled' ? 'loading="{{ module.image.loading }}"' : '' %}
+        <img src="{{ module.image.src }}" alt="{{ module.image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+        {% endif %}
+      </div>
+      <div class="right-col">
+        <div class="col-inner">
+          <div class="top-bar">
+            {% if module.title %}
+            <div class="title">
+              {{ module.title }}
+            </div>
+            {% endif %}
+            <div class="slider-arrow">
+              <a href="" class="prev{{ name }}">
+                <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.58219 2L1.99549 8.5866C1.62417 8.9633 1.41602 9.471 1.41602 10C1.41602 10.529 1.62417 11.0367 1.99549 11.4134L8.58219 18" stroke="#8F857B" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <a href="" class="next{{ name }}">
+                <svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.41781 2L8.00451 8.5866C8.37583 8.9633 8.58398 9.471 8.58398 10C8.58398 10.529 8.37583 11.0367 8.00451 11.4134L1.41781 18" stroke="#8F857B" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="slider-wrapper">
+            {% for item in module.slider_contents %}
+            <div class="slide-items">
+              <div class="col-inner">
+                <div class="featured-logo">
+                  {% if item.logo.src %}
+                  {% set sizeAttrs = 'width="{{ item.logo.width }}" height="{{ item.logo.height }}"' %}
+                  {% if item.logo.size_type == 'auto' %}
+                  {% set sizeAttrs = 'width="{{ item.logo.width }}" height="{{ item.logo.height }}" style="max-width: 100%; height: auto;"' %}
+                  {% elif item.logo.size_type == 'auto_custom_max' %}
+                  {% set sizeAttrs = 'width="{{ item.logo.max_width }}" height="{{ item.logo.max_height }}" style="max-width: 100%; height: auto;"' %}
+                  {% endif %}
+                  {% set loadingAttr = item.logo.loading != 'disabled' ? 'loading="{{ item.logo.loading }}"' : '' %}
+                  <img src="{{ item.logo.src }}" alt="{{ item.logo.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                  {% endif %}
+                </div>
+                <div class="tags">
+                  {% for item2 in item.tags %}
+                  <span>{{ item2 }}</span>
+                  {% endfor %}
+                </div>
+                <div class="featured-title">
+                  {{ item.title }}
+                </div>
+                <div class="button-wrapper">
+                  {% if item.enable_primary_button %}
+                  {% set href = item.primary_button.button_link.url.href %}
+                  {% if item.primary_button.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+                  {% set href = "mailto:" + href %}
+                  {% endif %}
+                  {% if item.primary_button.button_link.url.type is equalto "PHONE_NUMBER" %}
+                  {% set href = "tel:" + href %}
+                  {% endif %}
+                  <a class="custom-dark-btn" href="{{ href }}"
+                     {% if item.primary_button.button_link.open_in_new_tab %}target="_blank"{% endif %}
+                     {% if item.primary_button.button_link.rel %}rel="{{ item.primary_button.button_link.rel }}"{% endif %}
+                     >
+                    {{ item.primary_button.button_text }}
+                  </a>
+                  {% endif %}
+                  {% if item.enable_secondary_button %}
+                  {% set href = item.secondary_button.button_link.url.href %}
+                  {% if item.secondary_button.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+                  {% set href = "mailto:" + href %}
+                  {% endif %}
+                  
+                  {% if item.secondary_button.button_link.url.type is equalto "PHONE_NUMBER" %}
+                  {% set href = "tel:" + href %}
+                  {% endif %}
+                  <a class="custom-transparent-btn" href="{{ href }}"
+                     {% if item.secondary_button.button_link.open_in_new_tab %}target="_blank"{% endif %}
+                     {% if item.secondary_button.button_link.rel %}rel="{{ item.secondary_button.button_link.rel }}"{% endif %}
+                     >
+                    {{ item.secondary_button.button_text }}
+                    <span class="arrow">
+                      <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.73228 0.381592L11.7431 4.45433L6.73228 8.52707C7.02973 6.85679 7.18989 5.7814 7.23565 5.00346L0.25708 5.48395V3.42471L7.23565 3.9052C7.18989 3.12726 7.05261 2.05187 6.73228 0.381592Z" fill="#027FF1"/>
+                      </svg>
+                    </span>
+                  </a>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{% require_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.0/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+  $(document).ready(function(){
+    $(".{{ name }} .slider-wrapper").each(function () {
+      var slider = $(this);
+      slider.slick({
+      infinite: true,
+      dots:false,
+      {% if module.slider_setting.autoplay %}
+      autoplay:true,
+      {% endif %}
+      autoplaySpeed: {{ module.slider_setting.autoplay_speed }},
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow: $('.prev{{name}}'),
+      nextArrow: $('.next{{name}}')
+    });
+  });
+  });
+</script>
+
+{% end_require_js %}
+
+<style>
+
+{% scope_css %}
+  .featured-slider-wrapper .slider-group .right-col {
+    background: rgba({{ module.style.background_color.color|convert_rgb }},{{ module.style.background_color.opacity * 0.01 }});
+  }
+ 
+{% end_scope_css%}
+</style>

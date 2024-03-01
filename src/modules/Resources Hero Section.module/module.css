@@ -1,0 +1,124 @@
+.resources-hero-section {
+  background: #00B74F;
+  padding: 80px 0 0;
+}
+
+.resources-hero-section .hs-bmenu {
+  margin: 0 0 50px;
+}
+.resources-hero-section .hs-bmenu > a {
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-block;
+  color: #000;
+}
+.resources-hero-section .hs-bmenu > a:not(:last-child):after {
+  border-right: 2px solid #fff;
+  border-top: 2px solid #fff;
+  content: "";
+  height: 6px;
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 6px;
+}
+.resources-hero-section .hs-bmenu > a:not(:last-child) {
+  color: #fff;
+  padding-right: 20px;
+  position: relative;
+}
+.resources-hero-section .hs-top {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  align-items:center;
+}
+.resources-hero-section .hs-top .hs-left {
+  width: 40%;
+  margin-bottom:108px;
+}
+
+.resources-hero-section .hs-top .hs-right {
+  width: 31.2%;
+}
+.resources-hero-section .hs-top .hs-left .bold-paragraph {
+  font-family: Embark Sans, sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 38px;
+  padding: 0;
+  margin: 0;
+}
+.resources-hero-section h1 {
+  color: #fff;
+  font-size: 190px;
+  font-family: 'Embark Sans Headline',sans-serif;
+  line-height: .715;
+  margin: 30px 0 0;
+  padding: 0;
+}
+
+
+
+
+
+
+.resources-hero-section .post-item .meta-info {
+  display: flex;
+  justify-content: space-between; 
+  font-family: Embark Sans,sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12px;
+  color: #fff;
+  margin: 17px 0 9px;
+}
+
+.resources-hero-section .post-item .featured-img {
+  line-height: 0;
+}
+
+.resources-hero-section .post-item .meta-info .tag {
+  text-transform: uppercase;
+}
+
+.resources-hero-section .post-item .meta-info .date {
+  opacity: 50%;
+  color: #000; 
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+}
+@media(max-width:1360px){
+  .resources-hero-section h1 {
+    font-size: 160px;
+    line-height: .71;
+  }
+}
+@media(max-width:991px){
+  .resources-hero-section h1 {
+    font-size: 120px;
+    line-height: .71;
+  }
+}
+@media(max-width:767px){
+  .resources-hero-section .hs-top .hs-left {
+    width: 100%;
+    margin-bottom: 80px;
+  }
+  .resources-hero-section .hs-top .hs-right {
+    width: 100%;
+  }
+  .resources-hero-section .post-item .featured-img img {
+    width: 100%;
+  }
+  .resources-hero-section .hs-bmenu {
+    margin-bottom: 40px;
+  }
+  .resources-hero-section h1 {
+    font-size: 56px;
+    line-height: .7;
+    margin-top: 60px;
+  }
+}

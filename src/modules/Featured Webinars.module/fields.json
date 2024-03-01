@@ -1,0 +1,636 @@
+[ {
+  "id" : "6260fd3f-c510-0d54-26cb-eb8528d3d488",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Featured Webinars"
+}, {
+  "id" : "54623e86-dcb5-6aeb-b1df-520a37074b1e",
+  "name" : "heading_choice",
+  "display_width" : null,
+  "label" : "Heading type choice",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "h1", "H1" ], [ "h2", "H2" ], [ "h3", "H3" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "default" : "h2"
+}, {
+  "id" : "6f5535e4-35d8-8afa-a729-2654d627df7a",
+  "name" : "enable_button",
+  "display_width" : null,
+  "label" : "Enable Button (Top Pane)",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "default" : true
+}, {
+  "id" : "59afadcb-458d-299f-7061-e1b35cbab2ff",
+  "name" : "top_pane_button",
+  "display_width" : null,
+  "label" : "Top pane Button",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : null,
+    "controlling_field_path" : "enable_button",
+    "controlling_value_regex" : "true",
+    "property" : null,
+    "operator" : "EQUAL",
+    "access" : null
+  },
+  "children" : [ {
+    "id" : "4bd930b5-cd6c-ada4-21e1-1bf6e9276d23",
+    "name" : "button_label",
+    "display_width" : null,
+    "label" : "Button label",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "View all"
+  }, {
+    "id" : "c082d6d3-9bd2-0f4c-f4d1-42ed2004e3af",
+    "name" : "link",
+    "display_width" : null,
+    "label" : "Button Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "button_label" : "View all",
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+}, {
+  "id" : "bad8ad08-aacc-3e11-646c-7dcf44c1c540",
+  "name" : "featured_post",
+  "display_width" : null,
+  "label" : "Featured Post",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "c7df1d0f-40e3-708c-287d-9a6d8064edfd",
+    "name" : "background_color",
+    "display_width" : null,
+    "label" : "Card Background color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#FEDD00",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "babd8439-86b7-7c9a-9331-7b4833aa22ae",
+    "name" : "tag",
+    "display_width" : null,
+    "label" : "Tag",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "ON-DEMAND WEBINAR"
+  }, {
+    "id" : "570f5128-f92e-139e-9385-1a4d387b2bd1",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "5 ways embark's unique comp plan benefits ex-big 4 cpas"
+  }, {
+    "id" : "1c0d2585-a6bd-d5e1-f0c9-c43c54bbfb13",
+    "name" : "post_excerpt",
+    "display_width" : null,
+    "label" : "Post Excerpt",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Is it possible to boost your income and enjoy a healthier work-life balance?&nbsp;What’s it like transitioning from a fixed salary to equitable earnings?&nbsp;How does Embark deliver billable hours and job security?</p>"
+  }, {
+    "id" : "4297f8e9-29a7-dd00-52fd-e799192f9650",
+    "name" : "enable_primary_button",
+    "display_width" : null,
+    "label" : "Enable Primary Button",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "90665b3c-c40e-14f8-59f0-243be2bd7b01",
+    "name" : "primary_button",
+    "display_width" : null,
+    "label" : "Primary Button",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "featured_post.enable_primary_button",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "e038d08a-7351-7470-c71b-0fce29e88bf6",
+      "name" : "button_link",
+      "display_width" : null,
+      "label" : "Button link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "id" : "82ddd048-c8ae-5cf0-7e22-edf372445a0f",
+      "name" : "button_label",
+      "display_width" : null,
+      "label" : "Button label",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "View details"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "button_label" : "View details"
+    }
+  }, {
+    "id" : "35131595-1d84-a449-4476-fe25d0fb339d",
+    "name" : "enable_secondary_button",
+    "display_width" : null,
+    "label" : "Enable Secondary Button",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "667d884a-c0a0-db1e-d4d4-30591c18f65c",
+    "name" : "secondary_button",
+    "display_width" : null,
+    "label" : "Secondary Button",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "featured_post.enable_secondary_button",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "8333514d-e993-4dcf-91f1-61a6a28b28a2",
+      "name" : "button_link",
+      "display_width" : null,
+      "label" : "Button link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "id" : "1258b630-72b5-445b-9e27-4c1e73d5ccc1",
+      "name" : "button_label",
+      "display_width" : null,
+      "label" : "Button label",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Register now"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "button_label" : "Register now"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "background_color" : {
+      "color" : "#FEDD00",
+      "opacity" : 100
+    },
+    "tag" : "ON-DEMAND WEBINAR",
+    "title" : "5 ways embark's unique comp plan benefits ex-big 4 cpas",
+    "post_excerpt" : "<p>Is it possible to boost your income and enjoy a healthier work-life balance?&nbsp;What’s it like transitioning from a fixed salary to equitable earnings?&nbsp;How does Embark deliver billable hours and job security?</p>",
+    "enable_primary_button" : true,
+    "primary_button" : {
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "button_label" : "View details"
+    },
+    "enable_secondary_button" : true,
+    "secondary_button" : {
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "button_label" : "Register now"
+    }
+  }
+}, {
+  "id" : "525de443-2089-82f7-e86d-b802fc0039e5",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "3eb346c1-100f-8052-7cf3-a7f0dd8058ae",
+    "name" : "background_color",
+    "display_width" : null,
+    "label" : "Background color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#fff",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "abe4d3c5-fc16-9645-a4a9-f4584bb383e6",
+    "name" : "desktop_spacing",
+    "display_width" : null,
+    "label" : "Desktop spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 80,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 93,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  }, {
+    "id" : "a7c16f11-6fc2-49ec-ec65-fd1b9900ee85",
+    "name" : "mobile_spacing",
+    "display_width" : null,
+    "label" : "Mobile spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 120,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "background_color" : {
+      "color" : "#fff",
+      "opacity" : 100
+    },
+    "desktop_spacing" : {
+      "padding" : {
+        "top" : {
+          "value" : 80,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 93,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    },
+    "mobile_spacing" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 120,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  }
+}, {
+  "id" : "d1c4d77b-79c6-10f6-a4a8-ce9e8e2ba53e",
+  "name" : "post_column_contents",
+  "display_width" : null,
+  "label" : "Post Column Contents",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "165d4011-25ed-9947-9447-235ffc403fb6",
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "905a7cc9-c94c-3e64-01e9-d8e542892a24",
+    "name" : "card_background_color",
+    "display_width" : null,
+    "label" : "Card Background color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#EDE8E3",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "2c7362a0-9001-955e-cf57-19278f4cfe7d",
+    "name" : "reading_minutes",
+    "display_width" : null,
+    "label" : "Reading Minutes",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "30 mins 11 secs"
+  }, {
+    "id" : "16672f20-de77-c256-7ff4-2c010cf0974b",
+    "name" : "date",
+    "display_width" : null,
+    "label" : "Date",
+    "required" : false,
+    "locked" : false,
+    "type" : "date",
+    "default" : 1709013600000
+  }, {
+    "id" : "165d4011-25ed-9947-9447-235ffc403fb6",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Mastering Workflow: Anaplan Setup & Customization Tips for New Workflow Users"
+  }, {
+    "id" : "e7758ddb-ac93-451b-fda7-aa47763d74a1",
+    "name" : "link_group",
+    "display_width" : null,
+    "label" : "Link Group",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "93929521-fa71-f4ce-42c7-2e2567c641d1",
+      "name" : "link",
+      "display_width" : null,
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "id" : "284bdd62-e339-8791-38be-66f6efd6f6f7",
+      "name" : "link_label",
+      "display_width" : null,
+      "label" : "Link label",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "View details"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "link_label" : "View details"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "reading_minutes" : "30 mins 11 secs",
+    "date" : 1709013600000,
+    "title" : "Mastering Workflow: Anaplan Setup & Customization Tips for New Workflow Users",
+    "link_group" : {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "link_label" : "View details"
+    },
+    "card_background_color" : {
+      "color" : "#EDE8E3",
+      "opacity" : 100
+    }
+  }, {
+    "reading_minutes" : "30 mins 11 secs",
+    "date" : 1709013600000,
+    "title" : "Mastering Workflow: Anaplan Setup & Customization Tips for New Workflow Users",
+    "link_group" : {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "link_label" : "View details"
+    },
+    "card_background_color" : {
+      "color" : "#EDE8E3",
+      "opacity" : 100
+    }
+  }, {
+    "reading_minutes" : "30 mins 11 secs",
+    "date" : 1709013600000,
+    "title" : "Mastering Workflow: Anaplan Setup & Customization Tips for New Workflow Users",
+    "link_group" : {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "link_label" : "View details"
+    },
+    "card_background_color" : {
+      "color" : "#EDE8E3",
+      "opacity" : 100
+    }
+  } ]
+} ]

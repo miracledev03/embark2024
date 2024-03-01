@@ -1,0 +1,75 @@
+<div class="case-study-hero-section {{ name }}">
+  <div class="content-wrapper"> 
+    <div class="row-inner">
+      <div class="left-col">
+        <div class="col-inner">
+          <div class="top-bar">
+            {% if module.title %}
+            <div class="title">
+              <h3>
+                {{ module.title }}
+              </h3>
+            </div>
+            {% endif %}
+            {% if module.enable_primary_button %}
+            <div class="button-wrapper">
+              {% set href = module.primary_button.button_link.url.href %}
+              {% if module.primary_button.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+              {% endif %}
+              <a class="custom-dark-btn" href="{{ href }}"
+                 {% if module.primary_button.button_link.open_in_new_tab %}target="_blank"{% endif %}
+                 {% if module.primary_button.button_link.rel %}rel="{{ module.primary_button.button_link.rel }}"{% endif %}
+                 >
+                {{ module.primary_button.button_text }}
+              </a>
+            </div>
+            {% endif %}
+          </div>
+          <div class="logo">
+            {% if module.logo.src %}
+            {% set sizeAttrs = 'width="{{ module.logo.width }}" height="{{ module.logo.height }}"' %}
+            {% if module.logo.size_type == 'auto' %}
+            {% set sizeAttrs = 'width="{{ module.logo.width }}" height="{{ module.logo.height }}" style="max-width: 100%; height: auto;"' %}
+            {% elif module.logo.size_type == 'auto_custom_max' %}
+            {% set sizeAttrs = 'width="{{ module.logo.max_width }}" height="{{ module.logo.max_height }}" style="max-width: 100%; height: auto;"' %}
+            {% endif %}
+            {% set loadingAttr = module.logo.loading != 'disabled' ? 'loading="{{ module.logo.loading }}"' : '' %}
+            <img src="{{ module.logo.src }}" alt="{{ module.logo.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      <div class="right-col image">
+        {% if module.image.src %}
+        {% set sizeAttrs = 'width="{{ module.image.width }}" height="{{ module.image.height }}"' %}
+        {% if module.image.size_type == 'auto' %}
+        {% set sizeAttrs = 'width="{{ module.image.width }}" height="{{ module.image.height }}" style="max-width: 100%; height: auto;"' %}
+        {% elif module.image.size_type == 'auto_custom_max' %}
+        {% set sizeAttrs = 'width="{{ module.image.max_width }}" height="{{ module.image.max_height }}" style="max-width: 100%; height: auto;"' %}
+        {% endif %}
+        {% set loadingAttr = module.image.loading != 'disabled' ? 'loading="{{ module.image.loading }}"' : '' %}
+        <img src="{{ module.image.src }}" alt="{{ module.image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<style>
+
+  {% scope_css %}
+
+  .case-study-hero-section {
+    background: rgba({{ module.style.background_color.color|convert_rgb }},{{ module.style.background_color.opacity * 0.01 }});
+    {{ module.style.desktop_spacing.css }};
+  }
+  @media(max-width:767px){
+    .case-study-hero-section {
+      {{ module.style.mobile_spacing.css }};
+    }
+  }
+  {% end_scope_css%}
+</style>

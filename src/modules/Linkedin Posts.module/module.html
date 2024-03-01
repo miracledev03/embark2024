@@ -1,0 +1,127 @@
+<div class="linkedin-posts {{ name }}">
+  <div class="content-wrapper">
+    <div class="top-pane">
+      <div class="left-col title">
+        {% if module.heading %}
+        <{{ module.heading_choice }}>
+        {{ module.heading }}
+        </{{ module.heading_choice }}>
+        {% endif %}
+      </div>
+        <div class="button-group right-col">
+          {% if module.enable_button %}
+          {% set href = module.top_pane_button.link.url.href %}
+          {% if module.top_pane_button.link.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+          {% endif %}
+          {% if module.top_pane_button.link.url.type is equalto "PHONE_NUMBER" %}
+          {% set href = "tel:" + href %}
+          {% endif %}
+          <a class="custom-transparent-btn" href="{{ href }}"
+             {% if module.top_pane_button.link.open_in_new_tab %}target="_blank"{% endif %}
+             {% if module.top_pane_button.link.rel %}rel="{{ module.top_pane_button.link.rel }}"{% endif %}
+             >
+            {{ module.top_pane_button.button_label }}
+            <span class="arrow">
+              <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.73228 0.381592L11.7431 4.45433L6.73228 8.52707C7.02973 6.85679 7.18989 5.7814 7.23565 5.00346L0.25708 5.48395V3.42471L7.23565 3.9052C7.18989 3.12726 7.05261 2.05187 6.73228 0.381592Z" fill="#027FF1"/>
+              </svg>
+            </span>
+          </a>
+          {% endif %}
+        </div>
+        </div>
+
+        <div class="bottom-posts-wrapper">
+          <div class="row-inner">
+            {% for item in module.post_column_contents %}
+            {% set href = item.link_group.link.url.href %}
+            {% if item.link_group.link.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+            {% endif %}
+            {% if item.link_group.link.url.type is equalto "PHONE_NUMBER" %}
+            {% set href = "tel:" + href %}
+            {% endif %}
+            <div class="b_post_item">
+              <div class="col-inner">
+                <div class="top_bar">
+                  {% if item.author.src %}
+                  {% set sizeAttrs = 'width="{{ item.author.width }}" height="{{ item.author.height }}"' %}
+                  {% if item.author.size_type == 'auto' %}
+                  {% set sizeAttrs = 'width="{{ item.author.width }}" height="{{ item.author.height }}" style="max-width: 100%; height: auto;"' %}
+                  {% elif item.author.size_type == 'auto_custom_max' %}
+                  {% set sizeAttrs = 'width="{{ item.author.max_width }}" height="{{ item.author.max_height }}" style="max-width: 100%; height: auto;"' %}
+                  {% endif %}
+                  {% set loadingAttr = item.author.loading != 'disabled' ? 'loading="{{ item.author.loading }}"' : '' %}
+                  <img src="{{ item.author.src }}" alt="{{ item.author.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                  {% endif %}
+                  <h6>
+                    <a href="{{ href }}"
+                       {% if item.link_group.link.open_in_new_tab %}target="_blank"{% endif %}
+                       {% if item.link_group.link.rel %}rel="{{ item.link_group.link.rel }}"{% endif %}
+                       >
+                      {{ item.title }}
+                    </a>
+                  </h6>
+
+                </div>
+                <div class="content">
+                  {% if item.content %}
+                  <div class="excerpt">
+                    {{ item.content }}
+                  </div>
+                  {% endif %}
+                  <div class="media">
+                    {% if item.featured_image.src %}
+                    {% set sizeAttrs = 'width="{{ item.featured_image.width }}" height="{{ item.featured_image.height }}"' %}
+                    {% if item.featured_image.size_type == 'auto' %}
+                    {% set sizeAttrs = 'width="{{ item.featured_image.width }}" height="{{ item.featured_image.height }}" style="max-width: 100%; height: auto;"' %}
+                    {% elif item.featured_image.size_type == 'auto_custom_max' %}
+                    {% set sizeAttrs = 'width="{{ item.featured_image.max_width }}" height="{{ item.featured_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+                    {% endif %}
+                    {% set loadingAttr = item.featured_image.loading != 'disabled' ? 'loading="{{ item.featured_image.loading }}"' : '' %}
+                    <img src="{{ item.featured_image.src }}" alt="{{ item.featured_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                    {% endif %}
+                  </div>
+                </div>
+                <div class="meta-info">
+                  {% if item.like.src %}
+                  <span class="image">
+                    {% set sizeAttrs = 'width="{{ item.like.width }}" height="{{ item.like.height }}"' %}
+                    {% if item.like.size_type == 'auto' %}
+                    {% set sizeAttrs = 'width="{{ item.like.width }}" height="{{ item.like.height }}" style="max-width: 100%; height: auto;"' %}
+                    {% elif item.like.size_type == 'auto_custom_max' %}
+                    {% set sizeAttrs = 'width="{{ item.like.max_width }}" height="{{ item.like.max_height }}" style="max-width: 100%; height: auto;"' %}
+                    {% endif %}
+                    {% set loadingAttr = item.like.loading != 'disabled' ? 'loading="{{ item.like.loading }}"' : '' %}
+                    <img src="{{ item.like.src }}" alt="{{ item.like.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                  </span>
+                  {% endif %}
+                  {% if item.comment %}
+                  <span class="comment">
+                    {{ item.comment }}
+                  </span>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <style>
+      {% scope_css %}
+      .linkedin-posts {
+        background: rgba({{ module.style.background_color.color|convert_rgb }},{{ module.style.background_color.opacity * 0.01 }});
+        {{ module.style.desktop_spacing.css }};
+      }
+      @media(max-width:767px){
+        .linkedin-posts {
+          {{ module.style.mobile_spacing.css }};
+        }
+      }
+      {% end_scope_css%}    
+    </style>

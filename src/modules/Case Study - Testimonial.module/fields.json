@@ -1,0 +1,188 @@
+[ {
+  "id" : "6260fd3f-c510-0d54-26cb-eb8528d3d488",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Our clients are happy.  We’re happy.  Everybody’s happy."
+}, {
+  "id" : "54623e86-dcb5-6aeb-b1df-520a37074b1e",
+  "name" : "heading_choice",
+  "display_width" : null,
+  "label" : "Heading type choice",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "h1", "H1" ], [ "h2", "H2" ], [ "h3", "H3" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "default" : "h2"
+}, {
+  "id" : "f8176745-9085-a03f-de3d-fff9b33d8e45",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "0a038cb6-1c01-38e5-92cd-4c48b16c828b",
+    "name" : "background_color",
+    "display_width" : null,
+    "label" : "Background color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#5BC2E7",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "13e351e1-0b29-05c6-f6e5-9e49afba0ede",
+    "name" : "desktop_spacing",
+    "display_width" : null,
+    "label" : "Desktop spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 80,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 93,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  }, {
+    "id" : "20f4592e-6d5f-cc2e-74b2-7d5d532c53af",
+    "name" : "mobile_spacing",
+    "display_width" : null,
+    "label" : "Mobile spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 39,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "background_color" : {
+      "color" : "#5BC2E7",
+      "opacity" : 100
+    },
+    "desktop_spacing" : {
+      "padding" : {
+        "top" : {
+          "value" : 80,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 93,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    },
+    "mobile_spacing" : {
+      "padding" : {
+        "top" : {
+          "value" : 39,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  }
+}, {
+  "id" : "65b96c27-4938-dd94-81c9-51b1800ae862",
+  "name" : "testimonial_content",
+  "display_width" : null,
+  "label" : "Testimonial content",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "35723137-8e87-3834-c75b-d50a1753426f",
+    "name" : "quote",
+    "display_width" : null,
+    "label" : "Quote",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</h3>"
+  }, {
+    "id" : "26b1e584-f15b-996c-7875-e62da11a1b54",
+    "name" : "author",
+    "display_width" : null,
+    "label" : "Author",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Jason Larkin, National Head of Hospitality"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "quote" : "<h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</h3>",
+    "author" : "Jason Larkin, National Head of Hospitality"
+  }
+} ]

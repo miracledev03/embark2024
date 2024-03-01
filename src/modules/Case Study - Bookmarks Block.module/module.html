@@ -1,0 +1,172 @@
+<div class="cs-bookmark-block">
+  <div class="content-wrapper">
+    <div class="row-inner">
+      <div class="left-col full-width-block">
+        {% for item in module.text_block_items %}
+        <div class="fl-text">
+          <div class="richtext custom-bookmarkid">
+            {{ item.text_block }}
+          </div>
+          {% if item2 %}
+          <div class="btn-links-group">
+            {% for item2 in item.button_links %}
+            <div class="btn-links"> 
+              {% set href = item2.button_link.url.href %}
+              {% if item2.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+              {% endif %}
+              <a href="{{ href }}"
+                 {% if item2.button_link.open_in_new_tab %}target="_blank"{% endif %}
+                 {% if item2.button_link.rel %}rel="{{ item2.button_link.rel }}"{% endif %}
+                 >
+                {{ item2.button_label }}
+                <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.3125 7.81689L4.6875 4.44189L1.3125 1.06689" stroke="#027FF1" stroke-width="1.5"/>
+                </svg>
+              </a>
+            </div>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+      <div class="right-col index-group">
+        <div class="col-inner">
+          <h6>
+            {{ module.bookmark_title }}
+          </h6>
+          <div class="custom-post-content">
+            <ul id="resource-content">
+              
+            </ul>
+          </div>
+          
+
+          <div class="pdf-group">
+            {% if module.pdf_group.text %}
+            <div class="title">
+              {{ module.pdf_group.text }}
+            </div>
+            {% endif %}
+            <div class="button-wrapper">
+              {% set href = module.pdf_group.button.link.url.href %}
+              {% if module.pdf_group.button.link.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+              {% endif %}
+              {% if module.pdf_group.button.link.url.type is equalto "PHONE_NUMBER" %}
+              {% set href = "tel:" + href %}
+              {% endif %}
+              {% if module.pdf_group.button.blabel %}
+              <a class="custom-transparent-btn" href="{{ href }}"
+                 {% if module.pdf_group.button.link.open_in_new_tab %}target="_blank"{% endif %}
+                 {% if module.pdf_group.button.link.rel %}rel="{{ module.pdf_group.button.link.rel }}"{% endif %}
+                 >
+                {{ module.pdf_group.button.blabel }}
+              </a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% require_js %}
+<script>
+  (() => {
+    const contentTable = document.querySelector('#resource-content');
+    if(contentTable){
+      const postContent = document.querySelector('.custom-bookmarkid');
+      const listItems = [];
+      const intersectors = [];
+      let currentItem = 1;
+      const ob = new IntersectionObserver(e => {
+        e.forEach(e => {
+          const order = parseInt(e.target.getAttribute('data-order'),10);
+          if(e.boundingClientRect.top >= -100 && e.boundingClientRect.top <= 100){
+            if(e.isIntersecting){
+              if(currentItem !== order){
+                listItems.forEach(e => {
+                  if(parseInt(e.getAttribute('data-order'), 10) === order){
+                    e.classList.add('active');
+                  }
+                  else{
+                    e.classList.remove('active');
+                  }
+                });
+                currentItem = order;
+              }
+            }
+            else{
+              listItems.forEach(e => {
+                if(parseInt(e.getAttribute('data-order'), 10) === order){
+                  e.classList.add('active');
+                }
+                else{
+                  e.classList.remove('active');
+                }
+              });
+              currentItem = order;
+            }
+          }
+        });
+      });
+      document.querySelectorAll('.custom-bookmarkid h3').forEach((e, i) => {
+        const index = i + 1;
+        const li = document.createElement('li');
+        const span = document.createElement('a');
+        const intersector = document.createElement('div');
+        intersector.style.height = '1px';
+        intersector.style.transform = 'translateY(-60px)';
+        intersector.setAttribute('data-order', index.toString());
+        e.parentElement.insertBefore(intersector, e);
+        ob.observe(intersector);
+        intersectors.push(intersector);
+        span.innerText =  e.innerText.replace(/(\r\n|\n|\r)/gm, "");
+        if(index === 1){
+          li.classList.add('active');
+        }
+        li.setAttribute('data-order', index.toString());
+        li.className = 'mt-50 mb-50';
+        li.append(span);
+        contentTable.append(li);
+        listItems.push(li);
+      });
+      listItems.forEach(e => {
+        e.addEventListener('click', e => {
+          const target = e.currentTarget;
+          ob.disconnect();
+          document.querySelector('div[data-order="'+ target.getAttribute('data-order') +'"]').scrollIntoView(true);
+          listItems.forEach(e => {
+            if(e === target){
+              e.classList.add('active');
+            }
+            else{
+              e.classList.remove('active');
+            }
+          });
+          setTimeout(() => {
+            intersectors.forEach(e => {
+              ob.observe(e);
+            });
+          }, 500);
+        });
+      })
+    }
+  })()
+  
+  
+  $(document).on('click', '#resource-content a', function (event) {
+    event.preventDefault();
+
+      $('html, body').animate({
+          scrollTop: $($.attr(this, 'href')).offset().top
+      }, 500);
+  });
+</script>
+{% end_require_js %}
+

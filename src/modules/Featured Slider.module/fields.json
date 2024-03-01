@@ -1,0 +1,391 @@
+[ {
+  "id" : "22f66f63-2b7e-b339-0340-ae440b801bd0",
+  "name" : "image",
+  "display_width" : null,
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Embark2024/images/img_ratio.png",
+    "alt" : "img_ratio",
+    "loading" : "lazy",
+    "width" : 740,
+    "height" : 416,
+    "max_width" : 740,
+    "max_height" : 416
+  }
+}, {
+  "id" : "0e6bad5a-3571-c53e-27f0-6257e06824f5",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Featured Case Studies"
+}, {
+  "id" : "e868aa91-6fb6-e361-deea-4b5afdebd45a",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "4de9abd5-0630-3098-ea8e-fe2e94e21930",
+    "name" : "background_color",
+    "display_width" : null,
+    "label" : "Background color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#EDE8E3",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "background_color" : {
+      "color" : "#EDE8E3",
+      "opacity" : 100
+    }
+  }
+}, {
+  "id" : "3f40e002-9c32-5fe6-b614-8f0702306766",
+  "name" : "slider_contents",
+  "display_width" : null,
+  "label" : "Slider Contents",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "ccce6e16-9798-bcea-83b7-9566d876afb3",
+    "default" : 2
+  },
+  "children" : [ {
+    "id" : "38d8fca2-27e0-87d2-18ec-ee6e5bc4c76b",
+    "name" : "logo",
+    "display_width" : null,
+    "label" : "Logo",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Embark2024/images/HelloFresh.svg",
+      "alt" : "HelloFresh",
+      "loading" : "lazy",
+      "width" : 122,
+      "height" : 60,
+      "max_width" : 122,
+      "max_height" : 60
+    }
+  }, {
+    "id" : "2b0e39e7-f05c-1967-16e5-af6e94ed3bf1",
+    "name" : "tags",
+    "display_width" : null,
+    "label" : "Tags",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 2
+    },
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : [ "ESG", "ESG" ]
+  }, {
+    "id" : "ccce6e16-9798-bcea-83b7-9566d876afb3",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Praetorian relied on Embark to get its financials and processes audit-ready as the company prepared for a round of private equity funding"
+  }, {
+    "id" : "cb483083-1049-c1c4-c4eb-d3d117d2d844",
+    "name" : "enable_primary_button",
+    "display_width" : null,
+    "label" : "Enable Primary Button",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "07548085-5650-0fe1-a971-ea951a6db6da",
+    "name" : "primary_button",
+    "display_width" : null,
+    "label" : "Primary Button",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "slider_contents.enable_primary_button",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "080fb2c3-b05d-376c-9fd6-41b6a97307ac",
+      "name" : "button_text",
+      "display_width" : null,
+      "label" : "Button text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "View case study"
+    }, {
+      "id" : "37657423-2a08-883b-e80c-8dc171c38a7c",
+      "name" : "button_link",
+      "display_width" : null,
+      "label" : "Button link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "button_text" : "View case study",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }
+  }, {
+    "id" : "52f343d2-6926-1a2f-3540-66c504d151d1",
+    "name" : "enable_secondary_button",
+    "display_width" : null,
+    "label" : "Enable Secondary Button",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "6e490383-71e6-4345-d633-7829f8ec4198",
+    "name" : "secondary_button",
+    "display_width" : null,
+    "label" : "Secondary Button",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "slider_contents.enable_secondary_button",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "c51e85b7-93ad-cad4-7215-a85c3c8c9ba9",
+      "name" : "button_text",
+      "display_width" : null,
+      "label" : "Button text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "View all "
+    }, {
+      "id" : "e9d34354-a258-4808-24e6-12768b2dcae8",
+      "name" : "button_link",
+      "display_width" : null,
+      "label" : "Button link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "button_text" : "View all ",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "logo" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Embark2024/images/HelloFresh.svg",
+      "alt" : "HelloFresh",
+      "loading" : "lazy",
+      "width" : 122,
+      "height" : 60,
+      "max_width" : 122,
+      "max_height" : 60
+    },
+    "tags" : [ "ESG", "ESG" ],
+    "title" : "Praetorian relied on Embark to get its financials and processes audit-ready as the company prepared for a round of private equity funding",
+    "enable_primary_button" : true,
+    "primary_button" : {
+      "button_text" : "View case study",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    },
+    "enable_secondary_button" : true,
+    "secondary_button" : {
+      "button_text" : "View all ",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }
+  }, {
+    "logo" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Embark2024/images/HelloFresh.svg",
+      "alt" : "HelloFresh",
+      "loading" : "lazy",
+      "width" : 122,
+      "height" : 60,
+      "max_width" : 122,
+      "max_height" : 60
+    },
+    "tags" : [ "ESG", "ESG" ],
+    "title" : "Praetorian relied on Embark to get its financials and processes audit-ready as the company prepared for a round of private equity funding",
+    "enable_primary_button" : true,
+    "primary_button" : {
+      "button_text" : "View case study",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    },
+    "enable_secondary_button" : true,
+    "secondary_button" : {
+      "button_text" : "View all ",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }
+  } ]
+}, {
+  "id" : "9d2456a0-83ec-639e-95e9-e8627c24d2b7",
+  "name" : "slider_setting",
+  "display_width" : null,
+  "label" : "Slider Setting",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "36456b11-1fbe-72d8-165f-f53a863e9217",
+    "name" : "autoplay",
+    "display_width" : null,
+    "label" : "Autoplay",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "463366e7-0a0e-00d7-06f2-1e62cc55dc11",
+    "name" : "autoplay_speed",
+    "display_width" : null,
+    "label" : "Autoplay speed",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "2000"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "autoplay" : true,
+    "autoplay_speed" : "2000"
+  }
+} ]

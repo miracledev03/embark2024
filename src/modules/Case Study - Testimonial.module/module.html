@@ -1,0 +1,42 @@
+<div class="case-study-testimonial {{ name }}">
+  <div class="content-wrapper">
+    <div class="row-inner">
+      <div class="left-col title">
+          {% if module.heading %}
+          <{{ module.heading_choice }}>
+          {{ module.heading }}
+          </{{ module.heading_choice }}>
+          {% endif %}
+        <div class="quote_image">
+          <img src="{{ get_asset_url('../../images/mobile_quote.svg') }}" alt="Quote">
+        </div>
+      </div>
+      <div class="testimonial-wrapper right-col">
+        <div class="col-inner">
+          <div class="quote">
+            {{ module.testimonial_content.quote }}
+            {% if module.testimonial_content.author %}
+            <p>
+              {{ module.testimonial_content.author }}
+            </p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+ </div>
+</div>
+    
+<style>
+   {% scope_css %}
+  .case-study-testimonial {
+    background: rgba({{ module.style.background_color.color|convert_rgb }},{{ module.style.background_color.opacity * 0.01 }});
+    {{ module.style.desktop_spacing.css }};
+  }
+  @media(max-width:767px){
+    .case-study-testimonial {
+      {{ module.style.mobile_spacing.css }};
+    }
+  }
+  {% end_scope_css%}    
+</style>

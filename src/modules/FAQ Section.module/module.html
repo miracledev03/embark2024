@@ -1,0 +1,61 @@
+<div class="faq-section-wrapper {{ name }}" id="{{ module.bookmark_id }}">
+  <div class="content-wrapper">
+    <div class="faq-left">
+      {% if module.text %}
+      <div class="fl-text fullwidth custom-bookmarkid">
+          {{ module.text }}
+      </div>
+      {% endif %}
+      <div class="fl-rows fullwidth">
+        {% for item in module.add_faq %}
+        <div class="fl-row fullwidth">
+          {% if item.question %}<h6>{{ item.question }}</h6>{% endif %}
+          {% if item.answer %}<div class="flr-text fullwidth">{{ item.answer }}</div>{% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</div> 
+
+
+
+
+
+<style>
+
+  {% scope_css %}
+  .faq-section-wrapper {
+    background: rgba({{ module.style.background_color.color|convert_rgb }},{{ module.style.background_color.opacity * 0.01 }});
+    {{ module.style.desktop_spacing.css }};
+  }
+  .faq-section-wrapper h3{
+    color:rgba({{ module.style.color.title.color|convert_rgb }},{{ module.style.color.title.opacity * 0.01 }});
+  }
+  .faq-section-wrapper .fl-row h6{
+    color:rgba({{ module.style.color.accordion_title_color.color|convert_rgb }},{{ module.style.color.accordion_title_color.opacity * 0.01 }});
+  }
+  @media(max-width:767px){
+    .faq-section-wrapper {
+      {{ module.style.mobile_spacing.css }};
+    }
+  }
+
+  {% end_scope_css%}
+</style>
+
+
+
+{% require_js %}
+<script>
+  $(document).ready(function(){
+    $(".{{ name }} .fl-rows h6").on("click",function(){
+      $(this).parent().siblings().removeClass("active");
+    $(this).parent().siblings().find(".flr-text").slideUp(200);
+    $(this).parent().toggleClass("active");
+    $(this).next(".flr-text").slideToggle(200);
+  });
+  });
+</script>
+{% end_require_js %}

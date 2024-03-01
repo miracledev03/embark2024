@@ -1,0 +1,14 @@
+<div class="image-block-wrapper">
+  <div class="full-width-block">
+    {% if module.image.src %}
+    {% set sizeAttrs = 'width="{{ module.image.width }}" height="{{ module.image.height }}"' %}
+    {% if module.image.size_type == 'auto' %}
+    {% set sizeAttrs = 'width="{{ module.image.width }}" height="{{ module.image.height }}" style="max-width: 100%; height: auto;"' %}
+    {% elif module.image.size_type == 'auto_custom_max' %}
+    {% set sizeAttrs = 'width="{{ module.image.max_width }}" height="{{ module.image.max_height }}" style="max-width: 100%; height: auto;"' %}
+    {% endif %}
+    {% set loadingAttr = module.image.loading != 'disabled' ? 'loading="{{ module.image.loading }}"' : '' %}
+    <img src="{{ module.image.src }}" alt="{{ module.image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+    {% endif %}
+  </div>
+</div>

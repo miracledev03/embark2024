@@ -1,0 +1,54 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Resource Case Study
+  screenshotPath: ../images/template-previews/home.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+
+{# All templates are recommended to have an h1 present for both accessibility and SEO best practice. This should be at the top of the template before any other textual content. The h1 element below is within a dnd area to allow content editors the ability to adjust the content and alignment of the text. #}
+
+    {% dnd_area "dnd_area" label="Main section", class="body-container body-container--resource-post" %}
+     
+      {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
+        {% dnd_module "module_rhs" path="./../modules/Case Study - Hero Section", label="Case Study - Hero Section" %}{% end_dnd_module %}
+      {% end_dnd_section %}
+        
+      {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
+        {% dnd_module "module_bookmark" path="./../modules/Case Study - Bookmarks Block", label="Case Study - Bookmarks Block" %}{% end_dnd_module %}
+      {% end_dnd_section %}
+      
+      {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
+        {% dnd_module "module_faq" path="./../modules/FAQ Section", label="FAQ Section" %}{% end_dnd_module %}
+      {% end_dnd_section %}
+      
+      {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
+        {% dnd_module "module_faq" path="./../modules/Case Study - Testimonial", label="Case Study - Testimonial" %}{% end_dnd_module %}
+      {% end_dnd_section %}
+
+      {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
+        {% dnd_module "module_txtblock" path="./../modules/Text Block", label="Text Block" %}{% end_dnd_module %}
+      {% end_dnd_section %}
+
+      {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
+        {% dnd_module "module_imgblock" path="./../modules/Image Block", label="Image Block" %}{% end_dnd_module %}
+      {% end_dnd_section %}
+
+      {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
+        {% dnd_module "module_txtblock2" path="./../modules/Text Block", label="Text Block" %}{% end_dnd_module %}
+      {% end_dnd_section %}
+
+      {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
+        {% dnd_module "module_txttitle" path="./../modules/Case Study - Title With Text Block", label="Title With Text Block" %}{% end_dnd_module %}
+      {% end_dnd_section %}
+
+      {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
+        {% dnd_module "module_txtbloc3" path="./../modules/Text Block", label="Text Block" %}{% end_dnd_module %}
+      {% end_dnd_section %}
+
+       
+
+{% end_dnd_area %}
+{% endblock body %}

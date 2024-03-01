@@ -304,8 +304,7 @@ button:active,
 {###########################################################################}
 {##############################   5. Forms   ###############################}
 {###########################################################################}
-
-form,
+ 
 .submitted-message {
   {{ body_font.style }};
   {{ form_border }};
@@ -319,18 +318,6 @@ form,
 
 /* Form title */
 
-.form-title {
-  {{ form_title_border}};
-  {{ form_title_spacing }};
-  {{ form_title_font.style }};
-  border-top-left-radius: {{ form_title_top_left_corner_radius }};
-  border-top-right-radius: {{ form_title_top_right_corner_radius }};
-  border-bottom-left-radius: {{ form_title_bottom_left_corner_radius }};
-  border-bottom-right-radius: {{ form_title_bottom_right_corner_radius }};
-  font-size: {{ form_title_font.size  ~ form_title_font.size_unit }};
-  color: {{ form_title_font.color }};
-  background-color: {{ form_title_bg_color }};
-}
 
 
 /* Labels */
@@ -736,3 +723,26 @@ tfoot td {
   color: {{ h3_font.color }};
   font-size: {{ h3_font.size ~ h3_font.size_unit }};
 }
+
+
+
+body { background:#fff; margin: 0; padding: 0; font-size: 18px; line-height: 27px; font-family: Embark Sans,sans-serif; font-weight: 400; color: #000000; }
+
+img{
+  max-width:100%;
+  height:auto;
+}
+h1 { margin: 0; font-size: 60px; line-height: 1.2; font-family: Embark Sans,sans-serif; color: #000; font-weight: 500; padding-bottom: 10px; } 
+h2 { margin: 0; font-size: 48px; line-height: 1.2; font-family: Embark Sans,sans-serif; color: #000; font-weight: 500; padding-bottom: 10px; } 
+h3 { margin: 0; font-size: 32px; line-height: 1.2; font-family: Embark Sans,sans-serif; color: #000; font-weight: 500; padding-bottom: 10px; } 
+h4 { margin: 0; font-size: 28px; line-height: 1.2; font-family: Embark Sans,sans-serif; color: #000; font-weight: 500; padding-bottom: 10px; }
+h5 { margin: 0; font-size: 22px; line-height: 1.2; font-family: Embark Sans,sans-serif; color: #000; font-weight: 500; padding-bottom: 10px; }
+h6 { margin: 0; font-size: 18px; line-height: 1.2; font-family: Embark Sans,sans-serif; color: #000; font-weight: 500; padding-bottom: 10px; }
+
+@media(max-width:767px){
+  h2 { 
+    font-size: 32px;
+    line-height:1.1; 
+  }
+}
+

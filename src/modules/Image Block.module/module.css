@@ -1,0 +1,7 @@
+.image-block-wrapper .full-width-block{
+  line-height:0;
+} 
+.image-block-wrapper img{
+  width:100%;
+  max-width:100%;
+}

@@ -1,0 +1,60 @@
+<div class="resource-post-temp {{ name }}">
+  <div class="content-wrapper">
+    <div class="row-inner">
+      <div class="left-col">
+        <div class="col-inner">
+          {% if module.title %}
+          <div class="small-title">
+            {{ module.title }}
+          </div>
+          {% endif %}
+          {% if module.heading %}
+          <{{ module.heading_choice }}>
+          {{ module.heading }}
+          </{{ module.heading_choice }}>
+          {% endif %}
+          <div class="richtext-content">
+            {{ module.rich_text_content }}
+          </div>
+        </div>
+      </div>
+      <div class="right-col form-template">
+        <div class="col-inner">
+          <div class="form-top-wrapper">
+            {% if module.form_content.form_title %}<h3>{{ module.form_content.form_title }}</h3>{% endif %}
+            {% if module.form_content.form_sub_title %}<p>{{ module.form_content.form_sub_title }}</p>{% endif %}
+          </div>
+          {% if module.form_content.show_hide_form %}
+          {% form
+            form_to_use="{{ module.form_content.form.form_id }}"
+            response_response_type="{{ module.form_content.form.response_type }}"
+            response_message="{{ module.form_content.form.message }}"
+            response_redirect_id="{{ module.form_content.form.redirect_id }}"
+            response_redirect_url="{{module.form_content.form.redirect_url}}"
+            gotowebinar_webinar_key="{{ module.form_content.form.gotowebinar_webinar_key }}"
+          %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<style>
+  {% scope_css %}
+  .resource-post-temp {
+    background: rgba({{ module.style.background_color.color|convert_rgb }},{{ module.style.background_color.opacity * 0.01 }});
+    {{ module.style.desktop_spacing.css }};
+  }
+  .resource-post-temp .right-col.form-template .col-inner {
+    background: rgba({{ module.form_background_color.color|convert_rgb }},{{ module.form_background_color.opacity * 0.01 }});
+  }
+
+  @media(max-width:767px){
+    .resource-post-temp {
+      {{ module.style.mobile_spacing.css }};
+    }
+  }
+  {% end_scope_css%}    
+</style>

@@ -1,3 +1,11 @@
+.hs-header-bg {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+  z-index:999;
+}
+
 .hs-megaMenu-section {
   position:relative;
 }
@@ -437,7 +445,7 @@
   }
   .hs-megaMenu-section .mega_menu {
     position: relative;
-    padding: 13px 16px;
+    padding: 16px 16px;
   }
   .show-mobile-nav .hs-megaMenu-section .mega_menu {
     border-radius: 0;

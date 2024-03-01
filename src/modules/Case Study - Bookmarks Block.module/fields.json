@@ -1,0 +1,333 @@
+[ {
+  "id" : "e168cb9a-6695-83c5-22eb-7b476e0ee46e",
+  "name" : "text_block_items",
+  "display_width" : null,
+  "label" : "Text block Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "ec690295-3726-b1b0-fcb0-f87118a80e03",
+    "default" : 2
+  },
+  "children" : [ {
+    "id" : "18e1cb3b-f6c6-459a-cbbd-ae883687cf46",
+    "name" : "bookmark_id",
+    "display_width" : null,
+    "label" : "Bookmark id",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "introduction"
+  }, {
+    "id" : "ec690295-3726-b1b0-fcb0-f87118a80e03",
+    "name" : "text_block",
+    "display_width" : null,
+    "label" : "Text Block",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<h3>Introduction</h3>\n<p>Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>"
+  }, {
+    "id" : "4febdd22-e364-97fc-fb38-a099701918c8",
+    "name" : "button_links",
+    "display_width" : null,
+    "label" : "Buttons",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : "a5a47cdd-eba7-12ee-10c3-f9c0a9c13ecb",
+      "default" : 4
+    },
+    "children" : [ {
+      "id" : "a5a47cdd-eba7-12ee-10c3-f9c0a9c13ecb",
+      "name" : "button_label",
+      "display_width" : null,
+      "label" : "Button label",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Analytics & Automation"
+    }, {
+      "id" : "3e442828-77e2-28d8-97d8-a9c9403fac4e",
+      "name" : "button_link",
+      "display_width" : null,
+      "label" : "Button Link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : [ {
+      "button_label" : "Analytics & Automation",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "button_label" : "Analytics & Automation",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "button_label" : "Analytics & Automation",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "button_label" : "Analytics & Automation",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "bookmark_id" : "introduction",
+    "text_block" : "<h3>Introduction</h3>\n<p>Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+    "button_links" : [ {
+      "button_label" : "Analytics & Automation",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "button_label" : "Analytics & Automation",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "button_label" : "Analytics & Automation",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "button_label" : "Analytics & Automation",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }, {
+    "bookmark_id" : "introduction",
+    "text_block" : "<h3>Introduction</h3>\n<p>Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+    "button_links" : [ {
+      "button_label" : "Analytics & Automation",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "button_label" : "Analytics & Automation",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "button_label" : "Analytics & Automation",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "button_label" : "Analytics & Automation",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  } ]
+}, {
+  "id" : "4689ce45-5187-b6c2-ea63-13cb10447f8a",
+  "name" : "bookmark_title",
+  "display_width" : null,
+  "label" : "Bookmark Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Index"
+}, {
+  "id" : "c64f2a21-57e0-72fe-392e-f9286317c125",
+  "name" : "pdf_group",
+  "display_width" : null,
+  "label" : "PDF Group",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "349bad77-b435-16e4-dd23-3b083a3ee3e7",
+    "name" : "text",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Download the PDF and take this resource with you."
+  }, {
+    "id" : "26f6e03f-9c0b-96dd-8a76-6ff173e04459",
+    "name" : "button",
+    "display_width" : null,
+    "label" : "Button",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "843a47ae-9cf6-bd0f-dbc9-302657fe04b2",
+      "name" : "blabel",
+      "display_width" : null,
+      "label" : "Label",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Download the PDF "
+    }, {
+      "id" : "28c68a8e-91cc-4365-42b1-e26c5472d0c5",
+      "name" : "link",
+      "display_width" : null,
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "blabel" : "Download the PDF ",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "text" : "Download the PDF and take this resource with you.",
+    "button" : {
+      "blabel" : "Download the PDF ",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }
+  }
+} ]

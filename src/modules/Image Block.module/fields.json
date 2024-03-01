@@ -1,0 +1,22 @@
+[ {
+  "id" : "dd4df674-4a8e-b58b-907d-c46317d3e1bc",
+  "name" : "image",
+  "display_width" : null,
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Embark2024/images/imgblock.png",
+    "alt" : "imgblock",
+    "loading" : "lazy",
+    "width" : 1440,
+    "height" : 810,
+    "max_width" : 1440,
+    "max_height" : 810
+  }
+} ]

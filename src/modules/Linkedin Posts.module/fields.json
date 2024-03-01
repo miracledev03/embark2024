@@ -1,0 +1,443 @@
+[ {
+  "id" : "6260fd3f-c510-0d54-26cb-eb8528d3d488",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "LinkedIn Posts"
+}, {
+  "id" : "54623e86-dcb5-6aeb-b1df-520a37074b1e",
+  "name" : "heading_choice",
+  "display_width" : null,
+  "label" : "Heading type choice",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "h1", "H1" ], [ "h2", "H2" ], [ "h3", "H3" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "default" : "h2"
+}, {
+  "id" : "17c2c58b-d05f-8078-fd7c-9331259edb15",
+  "name" : "enable_button",
+  "display_width" : null,
+  "label" : "Enable Button (Top Pane)",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "default" : true
+}, {
+  "id" : "59afadcb-458d-299f-7061-e1b35cbab2ff",
+  "name" : "top_pane_button",
+  "display_width" : null,
+  "label" : "Top pane Button",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : null,
+    "controlling_field_path" : "enable_button",
+    "controlling_value_regex" : "true",
+    "property" : null,
+    "operator" : "EQUAL",
+    "access" : null
+  },
+  "children" : [ {
+    "id" : "4bd930b5-cd6c-ada4-21e1-1bf6e9276d23",
+    "name" : "button_label",
+    "display_width" : null,
+    "label" : "Button label",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "View all"
+  }, {
+    "id" : "c082d6d3-9bd2-0f4c-f4d1-42ed2004e3af",
+    "name" : "link",
+    "display_width" : null,
+    "label" : "Button Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "button_label" : "View all",
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+}, {
+  "id" : "d45ab76b-af17-700d-031f-f939466812c7",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "c02ae161-a5fb-d661-c8cb-8f4546f02f40",
+    "name" : "background_color",
+    "display_width" : null,
+    "label" : "Background color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#fff",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "e2efda6c-e3a2-63cd-45e0-fff34e843f33",
+    "name" : "desktop_spacing",
+    "display_width" : null,
+    "label" : "Desktop spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 60,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  }, {
+    "id" : "32328e7b-c2c1-5906-214e-8dc13fd855c4",
+    "name" : "mobile_spacing",
+    "display_width" : null,
+    "label" : "Mobile spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 120,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "background_color" : {
+      "color" : "#fff",
+      "opacity" : 100
+    },
+    "desktop_spacing" : {
+      "padding" : {
+        "top" : {
+          "value" : 60,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    },
+    "mobile_spacing" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 120,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  }
+}, {
+  "id" : "d1c4d77b-79c6-10f6-a4a8-ce9e8e2ba53e",
+  "name" : "post_column_contents",
+  "display_width" : null,
+  "label" : "Post Column Contents",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "165d4011-25ed-9947-9447-235ffc403fb6",
+    "default" : 2
+  },
+  "children" : [ {
+    "id" : "d38f2929-134d-dd76-976d-d1eaec2c464b",
+    "name" : "author",
+    "display_width" : null,
+    "label" : "Author",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Embark2024/images/author_embark.svg",
+      "alt" : "author_embark",
+      "loading" : "lazy",
+      "width" : 44,
+      "height" : 45,
+      "max_width" : 44,
+      "max_height" : 45
+    }
+  }, {
+    "id" : "165d4011-25ed-9947-9447-235ffc403fb6",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Quyn Phan"
+  }, {
+    "id" : "7165eeac-6e67-e98a-8f41-b49e142ba932",
+    "name" : "content",
+    "display_width" : null,
+    "label" : "Content",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Migrating to #NetSuite? Good timing 🙌 – John Warner just wrote a blog covering the planning, tools, mapping, testing, cutover, and post-go-live best practices involved. So dig in🍴.</p>"
+  }, {
+    "id" : "84d19bcf-7cba-b571-d488-c2bb88ab91f4",
+    "name" : "featured_image",
+    "display_width" : null,
+    "label" : "Featured image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Embark2024/images/cpewebinar.png",
+      "alt" : "cpewebinar",
+      "loading" : "lazy",
+      "width" : 275,
+      "height" : 345,
+      "max_width" : 275,
+      "max_height" : 345
+    }
+  }, {
+    "id" : "b7860691-8595-6911-167d-64100105b1fd",
+    "name" : "like",
+    "display_width" : null,
+    "label" : "Like",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Embark2024/images/like.svg",
+      "alt" : "like",
+      "loading" : "lazy",
+      "width" : 100,
+      "height" : 42,
+      "max_width" : 100,
+      "max_height" : 42
+    }
+  }, {
+    "id" : "51ad7b0c-d875-53df-f899-7f139a29f42b",
+    "name" : "comment",
+    "display_width" : null,
+    "label" : "Comment",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "56 comments"
+  }, {
+    "id" : "93929521-fa71-f4ce-42c7-2e2567c641d1",
+    "name" : "link",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "author" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Embark2024/images/author_embark.svg",
+      "alt" : "author_embark",
+      "loading" : "lazy",
+      "width" : 44,
+      "height" : 45,
+      "max_width" : 44,
+      "max_height" : 45
+    },
+    "title" : "Quyn Phan",
+    "content" : "<p>Migrating to #NetSuite? Good timing 🙌 – John Warner just wrote a blog covering the planning, tools, mapping, testing, cutover, and post-go-live best practices involved. So dig in🍴.</p>",
+    "featured_image" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Embark2024/images/cpewebinar.png",
+      "alt" : "cpewebinar",
+      "loading" : "lazy",
+      "width" : 275,
+      "height" : 345,
+      "max_width" : 275,
+      "max_height" : 345
+    },
+    "like" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Embark2024/images/like.svg",
+      "alt" : "like",
+      "loading" : "lazy",
+      "width" : 100,
+      "height" : 42,
+      "max_width" : 100,
+      "max_height" : 42
+    },
+    "comment" : "56 comments",
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "author" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Embark2024/images/author_embark.svg",
+      "alt" : "author_embark",
+      "loading" : "lazy",
+      "width" : 44,
+      "height" : 45,
+      "max_width" : 44,
+      "max_height" : 45
+    },
+    "title" : "Quyn Phan",
+    "content" : "<p>Migrating to #NetSuite? Good timing 🙌 – John Warner just wrote a blog covering the planning, tools, mapping, testing, cutover, and post-go-live best practices involved. So dig in🍴.</p>",
+    "featured_image" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Embark2024/images/cpewebinar.png",
+      "alt" : "cpewebinar",
+      "loading" : "lazy",
+      "width" : 275,
+      "height" : 345,
+      "max_width" : 275,
+      "max_height" : 345
+    },
+    "like" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Embark2024/images/like.svg",
+      "alt" : "like",
+      "loading" : "lazy",
+      "width" : 100,
+      "height" : 42,
+      "max_width" : 100,
+      "max_height" : 42
+    },
+    "comment" : "56 comments",
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ]
+} ]
