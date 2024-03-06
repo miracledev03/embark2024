@@ -1,0 +1,471 @@
+[ {
+  "id" : "565a4fd2-28fd-9f3d-ca7d-568af5b70898",
+  "name" : "section_heading",
+  "display_width" : null,
+  "label" : "Section Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Explore our podcasts."
+}, {
+  "id" : "5b8c19e2-ccb8-2d53-e4ad-015deec4578b",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "ca4a48e1-859c-3f60-fb65-f06de939fabc",
+    "name" : "card_background_color",
+    "display_width" : null,
+    "label" : "Card Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#EDE8E3",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "card_background_color" : {
+      "color" : "#EDE8E3",
+      "opacity" : 100
+    }
+  }
+}, {
+  "id" : "04f0290d-cb4e-78c5-de3d-22a10770decb",
+  "name" : "podcasts_card",
+  "display_width" : null,
+  "label" : "Podcasts Card",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "bd878f50-0a74-661f-63d2-c0052510bc9f",
+    "name" : "podcasts_name",
+    "display_width" : null,
+    "label" : "Podcasts Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Jane Doe, Steven Miller"
+  }, {
+    "id" : "432dd15b-f9d9-df0a-1baa-2afb32318969",
+    "name" : "card_title",
+    "display_width" : null,
+    "label" : "Card Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Fanatical"
+  }, {
+    "id" : "05aad19f-19d4-b4bb-90a8-bfc8ee6d390d",
+    "name" : "card_description",
+    "display_width" : null,
+    "label" : "Card Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>"
+  }, {
+    "id" : "4caa097e-5433-f2b1-9a64-6a04a75c928f",
+    "name" : "podcasts_icon_group",
+    "display_width" : null,
+    "label" : "Podcasts Icon Group",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 3
+    },
+    "children" : [ {
+      "id" : "3d96d823-1ad1-7e28-3bfb-fb22ed88dfa2",
+      "name" : "podcasts_icons",
+      "display_width" : null,
+      "label" : "Podcasts Icons",
+      "required" : false,
+      "locked" : false,
+      "responsive" : true,
+      "resizable" : true,
+      "show_loading" : false,
+      "type" : "image",
+      "default" : {
+        "size_type" : "auto",
+        "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Apple%20Podcasts.png",
+        "alt" : "Apple Podcasts",
+        "loading" : "lazy",
+        "width" : 40,
+        "height" : 40,
+        "max_width" : 40,
+        "max_height" : 40
+      }
+    }, {
+      "id" : "d5e3cad4-6e4b-aa7d-71b1-01c4842b8c04",
+      "name" : "podcasts_icon_link",
+      "display_width" : null,
+      "label" : "Podcasts Icon Link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : [ {
+      "podcasts_icons" : {
+        "size_type" : "auto",
+        "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Apple%20Podcasts.png",
+        "alt" : "Apple Podcasts",
+        "loading" : "lazy",
+        "width" : 40,
+        "height" : 40,
+        "max_width" : 40,
+        "max_height" : 40
+      },
+      "podcasts_icon_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "podcasts_icons" : {
+        "size_type" : "auto",
+        "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Apple%20Podcasts.png",
+        "alt" : "Apple Podcasts",
+        "loading" : "lazy",
+        "width" : 40,
+        "height" : 40,
+        "max_width" : 40,
+        "max_height" : 40
+      },
+      "podcasts_icon_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "podcasts_icons" : {
+        "size_type" : "auto",
+        "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Apple%20Podcasts.png",
+        "alt" : "Apple Podcasts",
+        "loading" : "lazy",
+        "width" : 40,
+        "height" : 40,
+        "max_width" : 40,
+        "max_height" : 40
+      },
+      "podcasts_icon_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "podcasts_name" : "Jane Doe, Steven Miller",
+    "card_title" : "Fanatical",
+    "card_description" : "<p>Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+    "podcasts_icon_group" : [ {
+      "podcasts_icons" : {
+        "size_type" : "auto",
+        "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Apple%20Podcasts.png",
+        "alt" : "Apple Podcasts",
+        "loading" : "lazy",
+        "width" : 40,
+        "height" : 40,
+        "max_width" : 40,
+        "max_height" : 40
+      },
+      "podcasts_icon_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "podcasts_icons" : {
+        "size_type" : "auto",
+        "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Apple%20Podcasts.png",
+        "alt" : "Apple Podcasts",
+        "loading" : "lazy",
+        "width" : 40,
+        "height" : 40,
+        "max_width" : 40,
+        "max_height" : 40
+      },
+      "podcasts_icon_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "podcasts_icons" : {
+        "size_type" : "auto",
+        "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Apple%20Podcasts.png",
+        "alt" : "Apple Podcasts",
+        "loading" : "lazy",
+        "width" : 40,
+        "height" : 40,
+        "max_width" : 40,
+        "max_height" : 40
+      },
+      "podcasts_icon_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }, {
+    "podcasts_name" : "Jane Doe, Steven Miller",
+    "card_title" : "Fanatical",
+    "card_description" : "<p>Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+    "podcasts_icon_group" : [ {
+      "podcasts_icons" : {
+        "size_type" : "auto",
+        "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Apple%20Podcasts.png",
+        "alt" : "Apple Podcasts",
+        "loading" : "lazy",
+        "width" : 40,
+        "height" : 40,
+        "max_width" : 40,
+        "max_height" : 40
+      },
+      "podcasts_icon_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "podcasts_icons" : {
+        "size_type" : "auto",
+        "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Apple%20Podcasts.png",
+        "alt" : "Apple Podcasts",
+        "loading" : "lazy",
+        "width" : 40,
+        "height" : 40,
+        "max_width" : 40,
+        "max_height" : 40
+      },
+      "podcasts_icon_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "podcasts_icons" : {
+        "size_type" : "auto",
+        "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Apple%20Podcasts.png",
+        "alt" : "Apple Podcasts",
+        "loading" : "lazy",
+        "width" : 40,
+        "height" : 40,
+        "max_width" : 40,
+        "max_height" : 40
+      },
+      "podcasts_icon_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }, {
+    "podcasts_name" : "Jane Doe, Steven Miller",
+    "card_title" : "Fanatical",
+    "card_description" : "<p>Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+    "podcasts_icon_group" : [ {
+      "podcasts_icons" : {
+        "size_type" : "auto",
+        "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Apple%20Podcasts.png",
+        "alt" : "Apple Podcasts",
+        "loading" : "lazy",
+        "width" : 40,
+        "height" : 40,
+        "max_width" : 40,
+        "max_height" : 40
+      },
+      "podcasts_icon_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "podcasts_icons" : {
+        "size_type" : "auto",
+        "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Apple%20Podcasts.png",
+        "alt" : "Apple Podcasts",
+        "loading" : "lazy",
+        "width" : 40,
+        "height" : 40,
+        "max_width" : 40,
+        "max_height" : 40
+      },
+      "podcasts_icon_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "podcasts_icons" : {
+        "size_type" : "auto",
+        "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Apple%20Podcasts.png",
+        "alt" : "Apple Podcasts",
+        "loading" : "lazy",
+        "width" : 40,
+        "height" : 40,
+        "max_width" : 40,
+        "max_height" : 40
+      },
+      "podcasts_icon_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }, {
+    "podcasts_name" : "Jane Doe, Steven Miller",
+    "card_title" : "Fanatical",
+    "card_description" : "<p>Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+    "podcasts_icon_group" : [ {
+      "podcasts_icons" : {
+        "size_type" : "auto",
+        "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Apple%20Podcasts.png",
+        "alt" : "Apple Podcasts",
+        "loading" : "lazy",
+        "width" : 40,
+        "height" : 40,
+        "max_width" : 40,
+        "max_height" : 40
+      },
+      "podcasts_icon_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "podcasts_icons" : {
+        "size_type" : "auto",
+        "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Apple%20Podcasts.png",
+        "alt" : "Apple Podcasts",
+        "loading" : "lazy",
+        "width" : 40,
+        "height" : 40,
+        "max_width" : 40,
+        "max_height" : 40
+      },
+      "podcasts_icon_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "podcasts_icons" : {
+        "size_type" : "auto",
+        "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Apple%20Podcasts.png",
+        "alt" : "Apple Podcasts",
+        "loading" : "lazy",
+        "width" : 40,
+        "height" : 40,
+        "max_width" : 40,
+        "max_height" : 40
+      },
+      "podcasts_icon_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  } ]
+} ]

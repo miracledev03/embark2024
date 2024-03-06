@@ -1,0 +1,117 @@
+[ {
+  "id" : "28fd6c8d-88bb-e262-9f84-2cadbb8fb5a2",
+  "name" : "section_title",
+  "display_width" : null,
+  "label" : "Section Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Enjoy two flavors of Accounting Matters"
+}, {
+  "id" : "d604deee-800e-5db0-56aa-dbd8982667cf",
+  "name" : "section_content",
+  "display_width" : null,
+  "label" : "Section Content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<h5>Accounting Matters</h5>\n<p>Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>\n<h5>Accounting Matter NOW</h5>\n<p>Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>"
+}, {
+  "id" : "a47c04d9-5982-74f1-26ff-49cdd50235b3",
+  "name" : "right_col_text",
+  "display_width" : null,
+  "label" : "Right Col Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Check out what makes Accounting Matters so good"
+}, {
+  "id" : "587509a3-a9ea-3961-f0be-2784fee7c866",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "4a7c6f73-09e6-7a85-27c7-ed5d736cb4b9",
+    "name" : "background_color",
+    "display_width" : null,
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#EDE8E3",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "background_color" : {
+      "color" : "#EDE8E3",
+      "opacity" : 100
+    }
+  }
+}, {
+  "id" : "4f2e2a88-adf2-fe9d-590d-99ca30becb19",
+  "name" : "play_video_button",
+  "display_width" : null,
+  "label" : "Play Video Button",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "e58bf4c4-5d30-c053-0363-f680f3452d1a",
+    "name" : "play_button_text",
+    "display_width" : null,
+    "label" : "Play Button Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Play Video"
+  }, {
+    "id" : "cf741143-a3ce-57b5-241e-4bd7e9a0c443",
+    "name" : "play_button_link",
+    "display_width" : null,
+    "label" : "Play Button Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "play_button_text" : "Play Video",
+    "play_button_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+} ]

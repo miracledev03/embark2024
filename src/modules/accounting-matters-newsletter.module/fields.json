@@ -1,0 +1,213 @@
+[ {
+  "id" : "73653ead-ac13-9d66-8bf4-02b9f5d38d2c",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "6228eac0-5e4a-15b8-b5f6-cf44dfdb081e",
+    "name" : "background_color",
+    "display_width" : null,
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#F277C6",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "background_color" : {
+      "color" : "#F277C6",
+      "opacity" : 100
+    }
+  }
+}, {
+  "id" : "8857f7c3-4a8c-c990-7bcf-ccc202c83efe",
+  "name" : "section_title",
+  "display_width" : null,
+  "label" : "Section Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Sign up for the Accounting Matters newsletter"
+}, {
+  "id" : "ab588ff1-02d9-047e-96ba-1f9bf38e0e0b",
+  "name" : "newsletter_form",
+  "display_width" : null,
+  "label" : "Newsletter Form",
+  "required" : false,
+  "locked" : false,
+  "type" : "form",
+  "default" : {
+    "form_id" : "0103fb83-be30-4391-bf8a-20cb11eb026a",
+    "response_type" : "inline",
+    "message" : "Thanks for submitting the form.",
+    "gotowebinar_webinar_key" : null,
+    "form_type" : "HUBSPOT"
+  }
+}, {
+  "id" : "70421f0a-6d7c-b0c2-9049-9b7eefc548f0",
+  "name" : "social_icon_group",
+  "display_width" : null,
+  "label" : "Social Icon Group",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 7
+  },
+  "children" : [ {
+    "id" : "e5c068f0-cf34-6a44-dbd3-18fec4d9ac0b",
+    "name" : "social_icon_link",
+    "display_width" : null,
+    "label" : "Social Icon Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "13e50f6f-770f-d644-eb77-1b469069b736",
+    "name" : "social_icons",
+    "display_width" : null,
+    "label" : "Social Icons",
+    "required" : false,
+    "locked" : false,
+    "icon_set" : "fontawesome-5.14.0",
+    "type" : "icon",
+    "default" : {
+      "name" : "LinkedIn In",
+      "unicode" : "f0e1",
+      "type" : "REGULAR"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "social_icon_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "social_icons" : {
+      "name" : "LinkedIn In",
+      "unicode" : "f0e1",
+      "type" : "REGULAR"
+    }
+  }, {
+    "social_icon_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "social_icons" : {
+      "name" : "LinkedIn In",
+      "unicode" : "f0e1",
+      "type" : "REGULAR"
+    }
+  }, {
+    "social_icon_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "social_icons" : {
+      "name" : "LinkedIn In",
+      "unicode" : "f0e1",
+      "type" : "REGULAR"
+    }
+  }, {
+    "social_icon_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "social_icons" : {
+      "name" : "LinkedIn In",
+      "unicode" : "f0e1",
+      "type" : "REGULAR"
+    }
+  }, {
+    "social_icon_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "social_icons" : {
+      "name" : "LinkedIn In",
+      "unicode" : "f0e1",
+      "type" : "REGULAR"
+    }
+  }, {
+    "social_icon_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "social_icons" : {
+      "name" : "LinkedIn In",
+      "unicode" : "f0e1",
+      "type" : "REGULAR"
+    }
+  }, {
+    "social_icon_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "social_icons" : {
+      "name" : "LinkedIn In",
+      "unicode" : "f0e1",
+      "type" : "REGULAR"
+    }
+  } ]
+} ]

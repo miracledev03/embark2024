@@ -1,0 +1,100 @@
+<div class="{{name}}">
+  <div class="content-wrapper"> 
+    <div class="row-inner">
+      <div class="left-col">
+        <h1>
+          {{ module.section_title }}
+        </h1>
+        <div class="section-content">
+          {{ module.section_content }}
+        </div>
+      </div>
+      <div class="right-col">
+        <h3>
+          {{ module.right_col_text }}
+        </h3>
+        {% set href = module.play_video_button.play_button_link.url.href %}
+        {% if module.play_video_button.play_button_link.url.type is equalto "EMAIL_ADDRESS" %}
+        {% set href = "mailto:" + href %}
+        {% endif %}
+        <a href="{{ href }}" class="custom-transparent-btn" 
+           {% if module.play_video_button.play_button_link.open_in_new_tab %}target="_blank"{% endif %}
+           {% if module.play_video_button.play_button_link.rel %}rel="{{ module.play_video_button.play_button_link.rel }}"{% endif %}
+           >
+          {{ module.play_video_button.play_button_text }}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% require_css %}
+<style>
+  .{{name}}{
+    background: rgba({{ module.style.background_color.color|convert_rgb }},{{ module.style.background_color.opacity * 0.01 }});
+    padding: 60px 0 75px;
+  }
+  .{{name}} .row-inner{
+    display: flex;
+    flex-wrap: wrap;
+/*     justify-content: space-between; */
+    align-items: flex-end;
+    column-gap: 5.5rem;
+  }
+  .{{name}} .row-inner .left-col, .{{name}} .row-inner .right-col{width: 45%;}
+  .{{name}} .row-inner .right-col{width: 36%;}
+  .{{name}} .row-inner .left-col h1, .{{name}} .section-content h5{
+    font-family: 'Embark Sans Headline', sans-serif;
+    font-size: 48px;
+    padding-bottom: 1.8rem;
+  }
+  .{{name}} .section-content h5{
+    font-size: 28px;
+    color: #027FF1;
+    padding-bottom: .8rem;
+  }
+  .{{name}} .section-content p:last-child{margin-bottom: 0;}
+  .{{name}} .custom-transparent-btn{
+    border: 1px solid #027FF1;
+    border-radius: 100px;
+    color: #027FF1;
+    line-height: 15.4px;
+    font-size: 20px;
+    padding: 11px 32px;
+    position: relative;
+    text-decoration: none;
+    display: inline-flex;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    text-align: center;
+    align-items: center;
+    column-gap: 0.35rem;
+  }
+  .{{name}} .custom-transparent-btn:after{
+    content: '\f061';
+    font-family: "Font Awesome 6 Pro";
+    position: relative;
+    color: #027FF1;
+  }
+  .{{name}} .custom-transparent-btn:hover {
+    background: #027FF1;
+    color: #fff;
+  }
+  .{{name}} .custom-transparent-btn:hover:after{color: #fff;}
+  @media screen and (max-width: 768px){
+    .{{name}} .row-inner{column-gap: 2.5rem;}
+    .{{name}} .row-inner .left-col {width: 55%}
+    .{{name}} .row-inner .right-col{width: 36%}
+  }
+  @media screen and (max-width: 600px){
+    .{{name}} .row-inner .left-col h1{font-size: 32px;}
+    .{{name}} .row-inner .right-col h3{font-size: 26px;}
+    .{{name}} .section-content h5{font-size: 20px;}
+    .{{name}} {padding: 300px 0 75px;}
+    .{{name}} .row-inner{row-gap: 2rem;}
+    .{{name}} .row-inner .left-col, .{{name}} .row-inner .right-col{width: 100%}
+    .{{name}} .custom-transparent-btn{width: 100%;justify-content: center;}
+  }
+</style>
+{% end_require_css %}

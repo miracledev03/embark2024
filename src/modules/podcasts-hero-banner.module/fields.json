@@ -1,0 +1,370 @@
+[ {
+  "id" : "0e6bad5a-3571-c53e-27f0-6257e06824f5",
+  "name" : "section_title",
+  "display_width" : null,
+  "label" : "Section Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Accounting Matters"
+}, {
+  "id" : "e868aa91-6fb6-e361-deea-4b5afdebd45a",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "4de9abd5-0630-3098-ea8e-fe2e94e21930",
+    "name" : "background_color",
+    "display_width" : null,
+    "label" : "Background color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#FEDD00",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "1d99e570-2722-7c35-ec6c-06b0b3275566",
+    "name" : "desktop_spacing",
+    "display_width" : null,
+    "label" : "Desktop spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 100,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 25,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  }, {
+    "id" : "17802fc0-d05a-c25a-024a-b468257c59ca",
+    "name" : "mobile_spacing",
+    "display_width" : null,
+    "label" : "Mobile spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 100,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 175,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "background_color" : {
+      "color" : "#FEDD00",
+      "opacity" : 100
+    },
+    "desktop_spacing" : {
+      "padding" : {
+        "top" : {
+          "value" : 100,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 25,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    },
+    "mobile_spacing" : {
+      "padding" : {
+        "top" : {
+          "value" : 100,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 175,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 0,
+          "units" : "px"
+        }
+      }
+    }
+  }
+}, {
+  "id" : "b8b07a48-afb0-529d-f948-596df14e0b0d",
+  "name" : "section_description",
+  "display_width" : null,
+  "label" : "Section Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>Accounting Matters lives up to its title, covering vital accounting topics that actually matter to professionals in the accounting trenches. We start with a new topic and definition every episode, then highlight and discuss the key areas, from evaluation to reporting. Accounting Matters is hosted by public accounting veterans Adam Olsen &amp; Zac Smith from advisory firm Embark.</p>"
+}, {
+  "id" : "cb483083-1049-c1c4-c4eb-d3d117d2d844",
+  "name" : "enable_primary_button",
+  "display_width" : null,
+  "label" : "Enable Primary Button",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "07548085-5650-0fe1-a971-ea951a6db6da",
+  "name" : "primary_button",
+  "display_width" : null,
+  "label" : "Primary Button",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : null,
+    "controlling_field_path" : "enable_primary_button",
+    "controlling_value_regex" : "true",
+    "property" : null,
+    "operator" : "EQUAL",
+    "access" : null
+  },
+  "children" : [ {
+    "id" : "080fb2c3-b05d-376c-9fd6-41b6a97307ac",
+    "name" : "button_text",
+    "display_width" : null,
+    "label" : "Button text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Download the PDF"
+  }, {
+    "id" : "37657423-2a08-883b-e80c-8dc171c38a7c",
+    "name" : "button_link",
+    "display_width" : null,
+    "label" : "Button link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "button_text" : "Download the PDF",
+    "button_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+}, {
+  "id" : "22f66f63-2b7e-b339-0340-ae440b801bd0",
+  "name" : "image",
+  "display_width" : null,
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/case-study-hero-img-1.png",
+    "alt" : "case-study-hero-img-1",
+    "loading" : "lazy",
+    "width" : 664,
+    "height" : 980,
+    "max_width" : 664,
+    "max_height" : 980
+  }
+}, {
+  "id" : "e8fc13a3-8ddf-ed64-281c-f6dda38cf925",
+  "name" : "listen_text",
+  "display_width" : null,
+  "label" : "Listen Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Listen on"
+}, {
+  "id" : "4f9ef975-b65b-197c-a224-4203816eff41",
+  "name" : "listen_logos",
+  "display_width" : null,
+  "label" : "Listen Logos",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "2da85f79-2f77-0c5a-91ba-81d7a2d3f595",
+    "name" : "listen_logo",
+    "display_width" : null,
+    "label" : "Listen Logo",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Apple%20Podcasts.png",
+      "alt" : "Apple Podcasts",
+      "loading" : "lazy",
+      "width" : 40,
+      "height" : 40,
+      "max_width" : 40,
+      "max_height" : 40
+    }
+  }, {
+    "id" : "670543b4-85c3-1530-ca8a-192d521566f9",
+    "name" : "listen_logo_link",
+    "display_width" : null,
+    "label" : "Listen Logo Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "listen_logo" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Apple%20Podcasts.png",
+      "alt" : "Apple Podcasts",
+      "loading" : "lazy",
+      "width" : 40,
+      "height" : 40,
+      "max_width" : 40,
+      "max_height" : 40
+    },
+    "listen_logo_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "listen_logo" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Apple%20Podcasts.png",
+      "alt" : "Apple Podcasts",
+      "loading" : "lazy",
+      "width" : 40,
+      "height" : 40,
+      "max_width" : 40,
+      "max_height" : 40
+    },
+    "listen_logo_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "listen_logo" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Apple%20Podcasts.png",
+      "alt" : "Apple Podcasts",
+      "loading" : "lazy",
+      "width" : 40,
+      "height" : 40,
+      "max_width" : 40,
+      "max_height" : 40
+    },
+    "listen_logo_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ]
+} ]

@@ -1,0 +1,37 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Podcasts
+  screenshotPath: ../images/template-previews/home.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+
+{# All templates are recommended to have an h1 present for both accessibility and SEO best practice. This should be at the top of the template before any other textual content. The h1 element below is within a dnd area to allow content editors the ability to adjust the content and alignment of the text. #}
+
+    {% dnd_area "dnd_area" label="Main section", class="body-container body-container--resource-post" %}
+     
+      {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
+        {% dnd_module "module_rhs" path="./../modules/podcasts-hero-banner", label="podcasts-hero-banner" %}{% end_dnd_module %}
+      {% end_dnd_section %}
+        
+      {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
+        {% dnd_module "module_bookmark" path="./../modules/podcasts-accounting-matters", label="podcasts-accounting-matters" %}{% end_dnd_module %}
+      {% end_dnd_section %}
+        
+      {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
+        {% dnd_module "module_bookmark" path="./../modules/meet-your-hosts", label="meet-your-hosts" %}{% end_dnd_module %}
+      {% end_dnd_section %}      
+        
+      {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
+        {% dnd_module "module_bookmark" path="./../modules/explore-our-podcasts", label="explore-our-podcasts" %}{% end_dnd_module %}
+      {% end_dnd_section %}      
+        
+      {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
+        {% dnd_module "module_bookmark" path="./../modules/accounting-matters-newsletter", label="accounting-matters-newsletter" %}{% end_dnd_module %}
+      {% end_dnd_section %}
+      
+
+{% end_dnd_area %}
+{% endblock body %}

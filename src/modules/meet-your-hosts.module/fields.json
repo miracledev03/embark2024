@@ -1,0 +1,516 @@
+[ {
+  "id" : "3062d475-3e0a-1771-8bf2-a02cffe3b1ff",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "a7508421-6548-cb72-0e8c-a40e0a66912c",
+    "name" : "background_color",
+    "display_width" : null,
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#ffffff",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "background_color" : {
+      "color" : "#ffffff",
+      "opacity" : 100
+    }
+  }
+}, {
+  "id" : "200a2b26-9bc4-e804-443d-8412d3b07ddc",
+  "name" : "section_title",
+  "display_width" : null,
+  "label" : "Section Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Meet your hosts"
+}, {
+  "id" : "d1ece8f4-a6de-813c-ae3b-44a1be583884",
+  "name" : "left_col_group",
+  "display_width" : null,
+  "label" : "Left Col group",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "f987380e-5237-07c8-7510-0c50c63b72d9",
+    "name" : "left_col_image",
+    "display_width" : null,
+    "label" : "Left Col Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/host-img01.png",
+      "alt" : "host-img01",
+      "loading" : "lazy",
+      "width" : 400,
+      "height" : 251,
+      "max_width" : 400,
+      "max_height" : 251
+    }
+  }, {
+    "id" : "8efec6a9-ea40-1102-237f-28b5f8cd7d13",
+    "name" : "background_color",
+    "display_width" : null,
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#FF8200",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "17aa8474-8876-1c1e-8748-7457cc37652b",
+    "name" : "text_color",
+    "display_width" : null,
+    "label" : "Text Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "3ff55b31-455d-f7aa-0acb-645648d743b8",
+    "name" : "host_name",
+    "display_width" : null,
+    "label" : "Host name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Eric Ramirez"
+  }, {
+    "id" : "aa33d1e2-2d19-8caf-206c-beded4c2cbf7",
+    "name" : "host_title",
+    "display_width" : null,
+    "label" : "Host Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "CPA Senior Associate"
+  }, {
+    "id" : "6b446861-a04e-d4e2-a02f-359c9592fcbc",
+    "name" : "about_host_one_liner",
+    "display_width" : null,
+    "label" : "About Host One Liner",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem"
+  }, {
+    "id" : "2863bda1-9a04-4da4-652c-99474251bb96",
+    "name" : "host_social",
+    "display_width" : null,
+    "label" : "Host Social",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 2
+    },
+    "children" : [ {
+      "id" : "f228013a-a3ae-cf51-803f-3a75b26a946e",
+      "name" : "social_icon",
+      "display_width" : null,
+      "label" : "Social Icon",
+      "required" : false,
+      "locked" : false,
+      "icon_set" : "fontawesome-5.14.0",
+      "type" : "icon",
+      "default" : {
+        "name" : "LinkedIn In",
+        "unicode" : "f0e1",
+        "type" : "REGULAR"
+      }
+    }, {
+      "id" : "82408fb9-ab13-cda6-6fbb-20054e75f660",
+      "name" : "social_link",
+      "display_width" : null,
+      "label" : "Social Link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : [ {
+      "social_icon" : {
+        "name" : "LinkedIn In",
+        "unicode" : "f0e1",
+        "type" : "REGULAR"
+      },
+      "social_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "social_icon" : {
+        "name" : "LinkedIn In",
+        "unicode" : "f0e1",
+        "type" : "REGULAR"
+      },
+      "social_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }, {
+    "id" : "671cd2fa-8b34-a569-fab0-80c12b18e5fd",
+    "name" : "host_description",
+    "display_width" : null,
+    "label" : "Host Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Lorem ipsum dolor sit amet consectetur. Eget at elementum ut nisl nulla tortor odio. Sed sollicitudin consectetur urna sit. Eleifend felis pulvinar volutpat gravida risus sed semper viverra. Sit elementum eget</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "left_col_image" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/host-img01.png",
+      "alt" : "host-img01",
+      "loading" : "lazy",
+      "width" : 400,
+      "height" : 251,
+      "max_width" : 400,
+      "max_height" : 251
+    },
+    "background_color" : {
+      "color" : "#FF8200",
+      "opacity" : 100
+    },
+    "text_color" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    },
+    "host_name" : "Eric Ramirez",
+    "host_title" : "CPA Senior Associate",
+    "about_host_one_liner" : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",
+    "host_social" : [ {
+      "social_icon" : {
+        "name" : "LinkedIn In",
+        "unicode" : "f0e1",
+        "type" : "REGULAR"
+      },
+      "social_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "social_icon" : {
+        "name" : "LinkedIn In",
+        "unicode" : "f0e1",
+        "type" : "REGULAR"
+      },
+      "social_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "host_description" : "<p>Lorem ipsum dolor sit amet consectetur. Eget at elementum ut nisl nulla tortor odio. Sed sollicitudin consectetur urna sit. Eleifend felis pulvinar volutpat gravida risus sed semper viverra. Sit elementum eget</p>"
+  }
+}, {
+  "id" : "73e8a71f-8544-e4e0-edd5-26741574f37c",
+  "name" : "right_col_group",
+  "display_width" : null,
+  "label" : "Right Col group",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "c2835448-3a5c-5a1f-00ba-b8fe3a386d1f",
+    "name" : "left_col_image",
+    "display_width" : null,
+    "label" : "Left Col Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/img.png",
+      "alt" : "img",
+      "loading" : "lazy",
+      "width" : 300,
+      "height" : 311,
+      "max_width" : 300,
+      "max_height" : 311
+    }
+  }, {
+    "id" : "00c1e1e6-2683-6474-0c22-43bb8d8c95dc",
+    "name" : "background_color",
+    "display_width" : null,
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#027FF1",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "06b6af64-acec-d4d5-220a-613a79a70bea",
+    "name" : "text_color",
+    "display_width" : null,
+    "label" : "Text Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "b242678c-5564-3645-e42f-e402decab072",
+    "name" : "host_name",
+    "display_width" : null,
+    "label" : "Host name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Adam Smith"
+  }, {
+    "id" : "3470bb79-a369-d1d9-0bb6-ed54b5279499",
+    "name" : "host_title",
+    "display_width" : null,
+    "label" : "Host Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "CPA Senior Associate"
+  }, {
+    "id" : "612c35e4-e4e7-8fda-325c-d4122bddc159",
+    "name" : "about_host_one_liner",
+    "display_width" : null,
+    "label" : "About Host One Liner",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem"
+  }, {
+    "id" : "5d2b05a8-9193-22d6-026d-02c65e972a1f",
+    "name" : "host_social",
+    "display_width" : null,
+    "label" : "Host Social",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 2
+    },
+    "children" : [ {
+      "id" : "ef69aaa1-1746-0891-c391-cc85c5362245",
+      "name" : "social_icon",
+      "display_width" : null,
+      "label" : "Social Icon",
+      "required" : false,
+      "locked" : false,
+      "icon_set" : "fontawesome-5.14.0",
+      "type" : "icon",
+      "default" : {
+        "name" : "LinkedIn In",
+        "unicode" : "f0e1",
+        "type" : "REGULAR"
+      }
+    }, {
+      "id" : "f6a6773d-35ea-9756-fca0-3fccb166a564",
+      "name" : "social_link",
+      "display_width" : null,
+      "label" : "Social Link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : [ {
+      "social_icon" : {
+        "name" : "LinkedIn In",
+        "unicode" : "f0e1",
+        "type" : "REGULAR"
+      },
+      "social_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "social_icon" : {
+        "name" : "LinkedIn In",
+        "unicode" : "f0e1",
+        "type" : "REGULAR"
+      },
+      "social_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }, {
+    "id" : "183d9b98-7b59-8aa0-a37f-604a9c5fc4e2",
+    "name" : "host_description",
+    "display_width" : null,
+    "label" : "Host Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Lorem ipsum dolor sit amet consectetur. Eget at elementum ut nisl nulla tortor odio. Sed sollicitudin consectetur urna sit. Eleifend felis pulvinar volutpat gravida risus sed semper viverra. Sit elementum eget</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "left_col_image" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/img.png",
+      "alt" : "img",
+      "loading" : "lazy",
+      "width" : 300,
+      "height" : 311,
+      "max_width" : 300,
+      "max_height" : 311
+    },
+    "background_color" : {
+      "color" : "#027FF1",
+      "opacity" : 100
+    },
+    "text_color" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    },
+    "host_name" : "Adam Smith",
+    "host_title" : "CPA Senior Associate",
+    "about_host_one_liner" : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem",
+    "host_social" : [ {
+      "social_icon" : {
+        "name" : "LinkedIn In",
+        "unicode" : "f0e1",
+        "type" : "REGULAR"
+      },
+      "social_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "social_icon" : {
+        "name" : "LinkedIn In",
+        "unicode" : "f0e1",
+        "type" : "REGULAR"
+      },
+      "social_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "host_description" : "<p>Lorem ipsum dolor sit amet consectetur. Eget at elementum ut nisl nulla tortor odio. Sed sollicitudin consectetur urna sit. Eleifend felis pulvinar volutpat gravida risus sed semper viverra. Sit elementum eget</p>"
+  }
+} ]

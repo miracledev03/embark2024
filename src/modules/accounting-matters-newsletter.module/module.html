@@ -1,0 +1,125 @@
+<div class="{{name}}">
+  <div class="content-wrapper"> 
+    <div class="row-inner">
+      <h2>
+        {{ module.section_title }}
+      </h2>
+      <div class="newsletter-form">
+        {% form
+	form_to_use="{{ module.newsletter_form.form_id }}"
+	response_response_type="{{ module.newsletter_form.response_type }}"
+	response_message="{{ module.newsletter_form.message }}"
+	response_redirect_id="{{ module.newsletter_form.redirect_id }}"
+	response_redirect_url="{{module.newsletter_form.redirect_url}}"
+	gotowebinar_webinar_key="{{ module.newsletter_form.gotowebinar_webinar_key }}"
+%}
+      </div>
+      <div class="social-icons">
+        {% for item in module.social_icon_group %}
+        {% set href = item.social_icon_link.url.href %}
+        {% if item.social_icon_link.url.type is equalto "EMAIL_ADDRESS" %}
+        {% set href = "mailto:" + href %}
+        {% endif %}
+        <a href="{{ href }}"
+           {% if item.social_icon_link.open_in_new_tab %}target="_blank"{% endif %}
+           {% if item.social_icon_link.rel %}rel="{{ item.social_icon_link.rel }}"{% endif %}
+           >
+          {% icon
+            name="{{ item.social_icons.name }}"
+            style="{{ item.social_icons.type }}"
+            unicode="{{ item.social_icons.unicode }}"
+            icon_set="{{ item.social_icons.icon_set }}"
+          %}
+        </a>
+
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% require_css %}
+<style>
+  .{{name}} {
+    background: rgba({{ module.style.background_color.color|convert_rgb }},{{ module.style.background_color.opacity * 0.01 }});
+    border-radius: 20px 20px 0px 0px;
+    padding: 60px 0;
+  }
+  .{{name}} .row-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .{{name}} h2{
+    font-family: "Embark Sans Headline";
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 58px;
+    width: 50%;
+    max-width: 100%;
+  }
+  .{{name}} .newsletter-form {width: 100%;}
+  .{{name}} .newsletter-form form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 12px;
+    width: 90%;
+  }
+  .{{name}} .newsletter-form form fieldset{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+    width: 80%;
+  }
+  .{{name}} .newsletter-form form input[type=email], .{{name}} .newsletter-form form input[type=file], .{{name}} .newsletter-form form input[type=number], .{{name}} .newsletter-form form input[type=password],
+  .{{name}} .newsletter-form form input[type=search], .{{name}} .newsletter-form form input[type=tel], .{{name}} .newsletter-form form input[type=text], .{{name}} .newsletter-form form select,
+  .{{name}} .newsletter-form form textarea, .{{name}} .newsletter-form form .hs-button.primary{
+    border-radius: 50px;
+  }
+  .{{name}} .newsletter-form form .hs-button.primary{
+    background: #027FF1;
+    color: #fff;
+    transition: all .3s ease;
+  }
+  .{{name}} .newsletter-form form .hs-button.primary:hover{
+    background: #fff;
+    color: #027FF1;
+  }
+  .{{name}} .newsletter-form form li{margin: 0;}
+  .{{name}} .newsletter-form form .hs-error-msg {
+    color: #fafafa;
+    margin-top: 0;
+    font-size: .5rem;
+    position: absolute;
+    text-indent: 1rem;
+  }
+  .{{name}} .social-icons{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 0.7rem;
+    margin-left: 0.5rem;
+  }
+  .{{name}} .social-icons svg{width: 26px;fill: #fff}
+  @media screen and (max-width: 1024px){
+    .{{name}} h2{width: 70%}
+    .{{name}} .newsletter-form form{width: 100%;}
+    .{{name}} .newsletter-form form fieldset{width: 80%;}
+  }
+  @media screen and (max-width: 991px){
+    .{{name}} h2 {width: 100%;}
+    .{{name}} .newsletter-form form fieldset {width: 100%;gap: 0;}
+  }
+  @media screen and (max-width: 600px){
+    .{{name}} h2 {
+      font-size: 32px;
+      line-height: 38px;
+    }
+    .{{name}} .newsletter-form form fieldset .hs-form-field{width: 100%}
+  }
+</style>
+{% end_require_css %}
