@@ -1,0 +1,64 @@
+<div class="{{name}}">
+  <div class="content-wrapper"> 
+    <div class="row-inner">
+      <div class="left-col">
+        {{ module.section_description }}
+        {% set href = module.section_button.button_link.url.href %}
+        {% if module.section_button.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+        {% set href = "mailto:" + href %}
+        {% endif %}
+        <a href="{{ href }}" class="secondary-btn"
+           {% if module.section_button.button_link.open_in_new_tab %}target="_blank"{% endif %}
+           {% if module.section_button.button_link.rel %}rel="{{ module.section_button.button_link.rel }}"{% endif %}
+           >
+          {{ module.section_button.button_text }}
+        </a>
+      </div>
+      
+      <div class="right-col">
+        <h2>
+          {{ module.section_title }}
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% require_css %}
+<style>
+  .{{name}} {
+    background: rgba({{ module.style.background_color.color|convert_rgb }},{{ module.style.background_color.opacity * 0.01 }});
+    padding: 60px 0;
+  }
+  .{{name}} .row-inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  .{{name}} .row-inner .left-col{
+    width: 53%;
+  }
+  .{{name}} .row-inner .right-col{
+    width: 35%;
+  }
+  .{{name}} h2{
+    font-family: Embark Sans Headline;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 53px;
+  }
+  .{{name}} p{
+    font-family: Embark Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+  }
+  @media screen and (max-width: 991px){
+    .{{name}} h2{font-size: 32px;line-height: 35px;}
+  }
+  @media screen and (max-width: 600px){
+    .{{name}} .row-inner{flex-direction: column;}
+    .{{name}} .row-inner .left-col, .{{name}} .row-inner .right-col{width: 100%;}
+    .{{name}} .row-inner .left-col{order: 2;margin-top:.5rem;}
+  }
+</style>
+{% end_require_css %}

@@ -1,0 +1,124 @@
+<div class="casestudy-section pr oh fullwidth main-sec">
+  <div class="cs-slider fullwidth">
+    {% for item in module.add_case_study %}
+    <div class="css-slides">
+      <div class="wrapper  fl rr js z1">
+        <div class="cs-left">
+          <div class="csl-image">
+              {% if item.image.src %}
+                {% set sizeAttrs = 'width="{{ item.image.width }}" height="{{ item.image.height }}"' %}
+                {% if item.image.size_type == 'auto' %}
+                  {% set sizeAttrs = 'width="{{ item.image.width }}" height="{{ item.image.height }}" style="max-width: 100%; height: auto;"' %}
+                {% elif item.image.size_type == 'auto_custom_max' %}
+                  {% set sizeAttrs = 'width="{{ item.image.max_width }}" height="{{ item.image.max_height }}" style="max-width: 100%; height: auto;"' %}
+                {% endif %}
+                 {% set loadingAttr = item.image.loading != 'disabled' ? 'loading="{{ item.image.loading }}"' : '' %}
+                <img src="{{ item.image.src }}" alt="{{ item.image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+            </div>
+        </div>
+        <div class="cs-right">
+          <div class="csr-row fullwidth">
+            <div class="cs-toparea fullwidth fl ac jsb">
+               {% if module.title %}
+              <h2>{{ module.title }}</h2>
+              {% endif %}
+              <div class="cs-arrows fl ac">
+                <div class="csleft-arrow">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="20" viewBox="0 0 10 20" fill="none">
+                  <path d="M8.58219 2L1.99549 8.5866C1.62417 8.9633 1.41602 9.471 1.41602 10C1.41602 10.529 1.62417 11.0367 1.99549 11.4134L8.58219 18" stroke="#8F857B" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="csright-arrow">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="20" viewBox="0 0 10 20" fill="none">
+                    <path d="M1.41781 2L8.00451 8.5866C8.37583 8.9633 8.58398 9.471 8.58398 10C8.58398 10.529 8.37583 11.0367 8.00451 11.4134L1.41781 18" stroke="#8F857B" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+              </div>
+            </div>
+           
+            {% if item.logo.src %}
+              <div class="csr-logo fullwidth">
+                {% set sizeAttrs = 'width="{{ item.logo.width }}" height="{{ item.logo.height }}"' %}
+                {% if item.logo.size_type == 'auto' %}
+                  {% set sizeAttrs = 'width="{{ item.logo.width }}" height="{{ item.logo.height }}" style="max-width: 100%; height: auto;"' %}
+                {% elif item.logo.size_type == 'auto_custom_max' %}
+                  {% set sizeAttrs = 'width="{{ item.logo.max_width }}" height="{{ item.logo.max_height }}" style="max-width: 100%; height: auto;"' %}
+                {% endif %}
+                 {% set loadingAttr = item.logo.loading != 'disabled' ? 'loading="{{ item.logo.loading }}"' : '' %}
+                <img src="{{ item.logo.src }}" alt="{{ item.logo.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              </div>
+            {% endif %}
+            {% if item.tag %}<h6>{{ item.tag }}</h6>{% endif %}
+            {% if item.text_copy %}
+              <div class="csr-text fullwidth">
+              {{ item.text_copy }}
+              </div>
+            {% endif %}
+            <div class="csr-btns fullwidth">
+              {% for item2 in item.add_button %}
+                <div class="csr-btn fullwidth {% if item2.select_button_style == 'pill' %}theme-pill-btn{% elif item2.select_button_style == 'border' %}theme-border-btn{% endif %}">
+                  {% set href = item2.link.url.href %}
+                  {% if item2.link.url.type is equalto "EMAIL_ADDRESS" %}
+                    {% set href = "mailto:" + href %}
+                  {% endif %}
+                  <a href="{{ href }}" {% if item2.link.open_in_new_tab %}target="_blank"{% endif %} {% if item2.link.rel %}rel="{{ item2.link.rel }}"{% endif %}>{{ item2.text }}
+                  {% if item2.add_arrow %}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9" fill="none">
+                    <path d="M6.73222 0.381683L11.7431 4.45442L6.73222 8.52716C7.02966 6.85688 7.18983 5.78149 7.23559 5.00356L0.257019 5.48405V3.4248L7.23559 3.90529C7.18983 3.12735 7.05254 2.05196 6.73222 0.381683Z" fill="#027FF1"/>
+                  </svg>
+                  {% endif %}
+                    </a>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+</div> 
+
+{% set moduleid = "#hs_cos_wrapper_" ~ name %}
+{% require_css %}
+<style>
+  {{ moduleid }} .main-sec { {{ module.style.spacing.desktop.css }}; background:rgba({{ module.style.background.color.color|convert_rgb }}, {{ module.style.background.color.opacity }}); color:{{ module.style.color.text.color }}; } 
+  {{ moduleid }} .main-sec h6 { color:{{ module.style.color.tag_color.color }}; } 
+  {{ moduleid }} .main-sec h2 { color:{{ module.style.color.title.color }}; }
+  
+    
+  @media (max-width:991px){
+    {{ moduleid }} .main-sec { {{ module.style.spacing.tablet.css }}; }
+  }
+  
+  @media (max-width:767px){
+    {{ moduleid }} .main-sec { {{ module.style.spacing.mobile.css }}; }
+  }
+</style>
+{% end_require_css %}
+
+
+{% require_js %}
+<script>
+$(document).ready(function(){
+  var slider = $('.cs-slider');
+    $(slider).slick({ 
+       slidesToShow: 1,
+        slidesToScroll: 1,
+      arrows: true,
+      appendArrows: $('.cs-arrows'),
+      prevArrow: $('.csleft-arrow'),
+      nextArrow: $('.csright-arrow'),
+      dots: false,
+      customPaging : function(slider, i) {
+        var thumb = $(slider.$slides[i]).data();
+        return (i + 1);
+      },
+    });
+  
+   });
+</script>
+
+{% end_require_js %}
+

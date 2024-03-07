@@ -1,0 +1,48 @@
+<div class="hero-section-digital fullwidth main-sec">
+  <div class="wrapper">
+    <div class="hs-bmenu fullwidth">
+      {% for item in module.add_breadcrumb_temp_ %}
+      {% set href = item.link.url.href %}
+      {% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+      {% set href = "mailto:" + href %}
+      {% endif %}
+      <a href="{{ href }}" {% if item.link.open_in_new_tab %}target="_blank"{% endif %} {% if item.link.rel %}rel="{{ item.link.rel }}"{% endif %}>
+        {{ item.text }}
+      </a>
+      {% endfor %}
+    </div>
+    <div class="hs-top fullwidth fl rw jsb">
+      <div class="hs-left">
+        {% if module.main_title %}<h1 class="fullwidth">{{ module.main_title }}</h1>{% endif %}
+        {% if module.top_title %}<h3>{{ module.top_title }}</h3>{% endif %}
+      </div>
+      <div class="hs-right">
+        {% if module.text %}{{ module.text }}{% endif %}
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+{% set moduleid = "#hs_cos_wrapper_" ~ name %}
+{% require_css %}
+<style>
+  {{ moduleid }} .main-sec { {{ module.style.spacing.desktop.css }}; background:rgba({{ module.style.background.color.color|convert_rgb }}, {{ module.style.background.color.opacity }}); } 
+  {{ moduleid }} .main-sec .hs-bmenu > a:not(:last-child) { color:{{ module.style.color.breadcrumb_link.color }}; }
+  {{ moduleid }} .main-sec .hs-bmenu > a:not(:last-child):after { border-color:{{ module.style.color.breadcrumb_link.color }}; }
+  {{ moduleid }} .main-sec h1 { color:{{ module.style.color.title.color }}; }
+  {{ moduleid }} .main-sec h3 { color:{{ module.style.color.text.color }}; }
+  {{ moduleid }} .main-sec .hs-right ul li a { color:{{ module.style.color.trending_link.color }}; }
+  
+  @media (max-width:991px){
+    {{ moduleid }} .main-sec { {{ module.style.spacing.tablet.css }}; }
+  }
+  
+  @media (max-width:767px){
+    {{ moduleid }} .main-sec { {{ module.style.spacing.mobile.css }}; }
+  }
+  
+</style>
+{% end_require_css %}
+
+

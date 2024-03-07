@@ -100,11 +100,12 @@
   .{{name}} .social-icons{
     display: flex;
     width: 100%;
-    align-items: center;
+    align-items: flex-end;
     gap: 0.7rem;
     margin-left: 0.5rem;
   }
-  .{{name}} .social-icons svg{width: 26px;fill: #fff}
+  .{{name}} .social-icons a, .{{name}} .social-icons a span{display: inline-flex}
+  .{{name}} .social-icons svg{width: 26px;height: 26px;fill: #fff}
   @media screen and (max-width: 1024px){
     .{{name}} h2{width: 70%}
     .{{name}} .newsletter-form form{width: 100%;}
@@ -120,6 +121,7 @@
       line-height: 38px;
     }
     .{{name}} .newsletter-form form fieldset .hs-form-field{width: 100%}
+    .{{name}} .social-icons{justify-content: space-around;margin-left: 0;}
   }
 </style>
 {% end_require_css %}

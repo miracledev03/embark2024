@@ -1,0 +1,35 @@
+<div class="ourpeople-section pr oh fullwidth main-sec">
+  <div class="wrapper pr z1">
+    <div class="os-inner fl rr js fullwidth">
+      <div class="osi-left">
+        {% if module.title %}<h2>{{ module.title }}</h2>{% endif %}
+      </div>
+      <div class="osi-right">
+        {% if module.text %}
+          <div class="osi-text fullwidth">
+            {{ module.text }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+{% set moduleid = "#hs_cos_wrapper_" ~ name %}
+{% require_css %}
+<style>
+  {{ moduleid }} .main-sec { {{ module.style.spacing.desktop.css }}; background:rgba({{ module.style.background.color.color|convert_rgb }}, {{ module.style.background.color.opacity }}); } 
+  
+    
+  @media (max-width:991px){
+    {{ moduleid }} .main-sec { {{ module.style.spacing.tablet.css }}; }
+  }
+  
+  @media (max-width:767px){
+    {{ moduleid }} .main-sec { {{ module.style.spacing.mobile.css }}; }
+  }
+</style>
+{% end_require_css %}
+
+

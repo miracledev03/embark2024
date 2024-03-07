@@ -1,0 +1,51 @@
+<div class="content-section pr oh fullwidth main-sec">
+  <div class="wrapper pr z1">
+    <div class="cs-inner fullwidth fl rw jsb">
+      {% for item in module.add_content %}
+        <div class="csi-col">
+          <div class="csic-inner fulwidth">
+            <h2>{{ item.title }}</h2>
+            <div class="csic-text fullwidth">
+              {{ item.text }}
+            </div>
+            {% if item.button.text %}
+              <div class="linktext fullwidth">
+                {% set href = item.button.link.url.href %}
+                {% if item.button.link.url.type is equalto "EMAIL_ADDRESS" %}
+                  {% set href = "mailto:" + href %}
+                {% endif %}
+                <a href="{{ href }}" {% if item.button.link.open_in_new_tab %}target="_blank"{% endif %}{% if item.button.link.rel %}rel="{{ item.button.link.rel }}"{% endif %}>
+                  {{ item.button.text }}
+                </a>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    
+  </div>
+</div>
+
+{% set moduleid = "#hs_cos_wrapper_" ~ name %}
+{% require_css %}
+<style>
+  {{ moduleid }} .main-sec { {{ module.style.spacing.desktop.css }}; background:rgba({{ module.style.background.color.color|convert_rgb }}, {{ module.style.background.color.opacity }}); } 
+  
+    
+  @media (max-width:991px){
+    {{ moduleid }} .main-sec { {{ module.style.spacing.tablet.css }}; }
+  }
+  
+  @media (max-width:767px){
+    {{ moduleid }} .main-sec { {{ module.style.spacing.mobile.css }}; }
+  }
+</style>
+{% end_require_css %}
+
+
+
+
+
+
+

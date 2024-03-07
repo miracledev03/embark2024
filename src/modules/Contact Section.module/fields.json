@@ -1,0 +1,325 @@
+[ {
+  "id" : "06a34a06-0480-4e39-48c3-3f15f1d6b4fb",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "7dea5386-da97-0094-ac12-d3b4307582f7",
+    "name" : "spacing",
+    "display_width" : null,
+    "label" : "Spacing",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "a6c5075b-9cb9-49c5-4dbd-c00850a0ebe9",
+      "name" : "desktop",
+      "display_width" : null,
+      "label" : "Desktop",
+      "required" : false,
+      "locked" : false,
+      "type" : "spacing",
+      "default" : {
+        "padding" : {
+          "top" : {
+            "value" : 118,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 154,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : 0,
+            "units" : "px"
+          },
+          "right" : {
+            "value" : 0,
+            "units" : "px"
+          }
+        }
+      }
+    }, {
+      "id" : "7d6ca7eb-3855-1ad0-4f8f-ec6a616dfded",
+      "name" : "tablet",
+      "display_width" : null,
+      "label" : "Tablet",
+      "required" : false,
+      "locked" : false,
+      "type" : "spacing",
+      "default" : {
+        "padding" : {
+          "top" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      }
+    }, {
+      "id" : "63056097-4dfd-3414-0edd-5025e52a9a6a",
+      "name" : "mobile",
+      "display_width" : null,
+      "label" : "Mobile",
+      "required" : false,
+      "locked" : false,
+      "type" : "spacing",
+      "default" : {
+        "padding" : {
+          "top" : {
+            "value" : 45,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 30,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      }
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "desktop" : {
+        "padding" : {
+          "top" : {
+            "value" : 118,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 154,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : 0,
+            "units" : "px"
+          },
+          "right" : {
+            "value" : 0,
+            "units" : "px"
+          }
+        }
+      },
+      "tablet" : {
+        "padding" : {
+          "top" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      },
+      "mobile" : {
+        "padding" : {
+          "top" : {
+            "value" : 45,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 30,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      }
+    }
+  }, {
+    "id" : "1c1e193c-1683-9ade-94be-8b6a4a2fe1d5",
+    "name" : "background",
+    "display_width" : null,
+    "label" : "Background",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "9dacaccf-1b02-8a74-97bf-2c1f28abb5a7",
+      "name" : "color",
+      "display_width" : null,
+      "label" : "Color",
+      "required" : false,
+      "locked" : false,
+      "type" : "color",
+      "default" : {
+        "color" : "#ffffff",
+        "opacity" : 100
+      }
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "color" : {
+        "color" : "#ffffff",
+        "opacity" : 100
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "spacing" : {
+      "desktop" : {
+        "padding" : {
+          "top" : {
+            "value" : 118,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 154,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : 0,
+            "units" : "px"
+          },
+          "right" : {
+            "value" : 0,
+            "units" : "px"
+          }
+        }
+      },
+      "tablet" : {
+        "padding" : {
+          "top" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      },
+      "mobile" : {
+        "padding" : {
+          "top" : {
+            "value" : 45,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 30,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      }
+    },
+    "background" : {
+      "color" : {
+        "color" : "#ffffff",
+        "opacity" : 100
+      }
+    }
+  }
+}, {
+  "id" : "1951d653-6a7b-df1c-9b72-cb9d0c9843b8",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Tell us what you need help with "
+}, {
+  "id" : "c8a91658-7e7e-fa2b-3ba7-8f64094e281e",
+  "name" : "text",
+  "display_width" : null,
+  "label" : "Text",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>All Embark solutions begin with a conversation. Fill out this form and one of our experts will follow up with a call. We can then better understand your needs and craft the right solution for your organization.</p>"
+}, {
+  "id" : "c97ee644-d2a8-52e3-8d79-7bb65dfe7c7f",
+  "name" : "select_form",
+  "display_width" : null,
+  "label" : "Select Form",
+  "required" : false,
+  "locked" : false,
+  "type" : "form",
+  "default" : {
+    "form_id" : "c230b019-a018-448e-9f7b-258a9686ce1c",
+    "response_type" : "inline",
+    "message" : "Thank you for submitting the form.",
+    "gotowebinar_webinar_key" : null,
+    "form_type" : "HUBSPOT"
+  }
+}, {
+  "id" : "64253511-b62a-306f-1d03-473338ea2bee",
+  "name" : "image",
+  "display_width" : null,
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/contact-left.png",
+    "alt" : "contact-left",
+    "loading" : "lazy",
+    "width" : 644,
+    "height" : 951,
+    "max_width" : 644,
+    "max_height" : 951
+  }
+} ]

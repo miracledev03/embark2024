@@ -1,0 +1,197 @@
+<div class="{{name}}">
+  <div class="content-wrapper"> 
+    <div class="row-inner">
+      <div class="left-col">
+        <div class="sub-title">
+          {{ module.sub_title }}
+        </div>
+        <h1>
+          {{ module.section_title }}
+        </h1>
+        {{ module.description }}
+        <div class="date-time">
+          <span>{{ module.webinar_date_time }}</span><span id="downtdown_wrap">Starts in <span id="downtdown"></span></span>
+        </div>
+      </div>
+      <div class="right-col">
+        <div class="register-btn">
+          <p>
+            {{ module.register_button_one_text }}
+          </p>
+          {% set href = module.register_button.button_link.url.href %}
+          {% if module.register_button.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+          {% endif %}
+          <a href="{{ href }}" class="primary-btn"
+             {% if module.register_button.button_link.open_in_new_tab %}target="_blank"{% endif %}
+             {% if module.register_button.button_link.rel %}rel="{{ module.register_button.button_link.rel }}"{% endif %}
+             >
+            {{ module.register_button.button_text }}
+          </a>
+        </div>
+        <div class="social-icons">
+          {% for item in module.social_links %}
+
+          {% set href = item.social_icon_link.url.href %}
+          {% if item.social_icon_link.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+          {% endif %}
+          <a href="{{ href }}"
+             {% if item.social_icon_link.open_in_new_tab %}target="_blank"{% endif %}
+             {% if item.social_icon_link.rel %}rel="{{ item.social_icon_link.rel }}"{% endif %}
+             >
+            {% icon
+              name="{{ item.social_icon.name }}"
+              style="{{ item.social_icon.type }}"
+              unicode="{{ item.social_icon.unicode }}"
+              icon_set="{{ item.social_icon.icon_set }}"
+            %}
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+</div>
+
+{% require_css %}
+<style>
+  .{{name}} {
+    padding: 100px 0 40px
+  }
+  .{{name}} .row-inner{
+    display: flex;
+  }
+  .{{name}} .left-col, .{{name}} .right-col{
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .{{name}} .right-col{text-align: right}
+  .{{name}} .sub-title{
+    font-family: Embark Sans;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    color: #F277C6;
+    margin-bottom: 10px;
+  }
+  .{{name}} h1{
+    font-family: Embark Sans Headline;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 53px;
+    margin-bottom: 1rem;
+  }
+/*   .{{name}} p{} */
+  .{{name}} .date-time{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: Embark Sans;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    color: #027FF1;
+  }
+  .{{name}} .date-time > span:first-child{}
+  .{{name}} .date-time > span:last-child{
+    position: relative;
+    background: #5BC2E74D;
+    border-radius: 20px;
+    padding: 10px 8px;
+    margin-left: 1rem;
+    font-family: Embark Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+  }
+  .{{name}} .date-time > span:last-child:before{
+    content: '\f017';
+    font-family: "Font Awesome 6 Pro";
+    position: relative;
+    left: 0;
+    margin-right: 7px;
+  }
+  
+  .{{name}} .register-btn{
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .{{name}} .register-btn p{
+    font-size: 14px;
+    line-height: 19px;
+    width: 28%;
+  }
+  .{{name}} .social-icons{
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 0.7rem;
+    margin-left: 0.5rem;
+  }
+  .{{name}} .social-icons a, .{{name}} .social-icons a span{display: inline-flex}
+  .{{name}} .social-icons svg{width: 26px;height: 26px;fill: #027FF1;}
+  
+  @media screen and (max-width: 991px){
+    .{{name}} h1{font-size: 32px;line-height: 35px;}
+    .{{name}} .date-time{flex-direction: column;align-items: flex-start;}
+    .{{name}} .date-time span:last-child{margin-left: 0}
+  }
+  @media screen and (max-width: 600px){
+    .{{name}} .row-inner{flex-direction: column;}
+    .{{name}} h1{font-size: 32px;line-height: 35px;}
+    .{{name}} .left-col, .{{name}} .right-col{width: 100%;}
+    .{{name}} .right-col{text-align: left;}
+    .{{name}} .register-btn{align-items: flex-start;margin: 1.5rem 0;}
+    .{{name}} .register-btn p{width: 100%;}
+    .{{name}} .social-icons{justify-content: space-around;margin-left: 0;}
+  }
+</style>
+{% end_require_css %}
+
+{% require_js %}
+<script type="text/javascript">
+  // Converting string to required date format 
+  const webinarTime = "{{ module.set_countdown }}";
+  let deadline = new Date(webinarTime).getTime();
+  console.log(webinarTime, deadline)
+  // To call defined fuction every second
+  let x = setInterval(function () {
+
+    // Getting current time in required format
+    let now = new Date().getTime();
+
+    // Calculating the difference
+    let t = deadline - now;
+
+    // Getting value of days, hours, minutes, seconds
+    let days = Math.floor(t / (1000 * 60 * 60 * 24));
+    let hours = Math.floor(
+      (t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor(
+      (t % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor(
+      (t % (1000 * 60)) / 1000);
+
+    // Output the remaining time
+    document.getElementById("downtdown").innerHTML =
+      ('0' + days).slice(-2) + ":" + ('0' + hours).slice(-2) + ":" + 
+      ('0' + minutes).slice(-2) + ":" + ('0' + seconds).slice(-2) + " ";
+
+    // Output for over time
+    if (t < 0) {
+      clearInterval(x);
+      document.getElementById("downtdown_wrap")
+        .innerHTML = "EXPIRED";
+    }
+  }, 1000);
+</script>
+{% end_require_js %}

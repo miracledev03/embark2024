@@ -1,0 +1,421 @@
+[ {
+  "id" : "06a34a06-0480-4e39-48c3-3f15f1d6b4fb",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "7dea5386-da97-0094-ac12-d3b4307582f7",
+    "name" : "spacing",
+    "display_width" : null,
+    "label" : "Spacing",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "a6c5075b-9cb9-49c5-4dbd-c00850a0ebe9",
+      "name" : "desktop",
+      "display_width" : null,
+      "label" : "Desktop",
+      "required" : false,
+      "locked" : false,
+      "type" : "spacing",
+      "default" : {
+        "padding" : {
+          "top" : {
+            "value" : 80,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 80,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : 0,
+            "units" : "px"
+          },
+          "right" : {
+            "value" : 0,
+            "units" : "px"
+          }
+        }
+      }
+    }, {
+      "id" : "7d6ca7eb-3855-1ad0-4f8f-ec6a616dfded",
+      "name" : "tablet",
+      "display_width" : null,
+      "label" : "Tablet",
+      "required" : false,
+      "locked" : false,
+      "type" : "spacing",
+      "default" : {
+        "padding" : {
+          "top" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      }
+    }, {
+      "id" : "63056097-4dfd-3414-0edd-5025e52a9a6a",
+      "name" : "mobile",
+      "display_width" : null,
+      "label" : "Mobile",
+      "required" : false,
+      "locked" : false,
+      "type" : "spacing",
+      "default" : {
+        "padding" : {
+          "top" : {
+            "value" : 50,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 59,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      }
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "desktop" : {
+        "padding" : {
+          "top" : {
+            "value" : 80,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 80,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : 0,
+            "units" : "px"
+          },
+          "right" : {
+            "value" : 0,
+            "units" : "px"
+          }
+        }
+      },
+      "tablet" : {
+        "padding" : {
+          "top" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      },
+      "mobile" : {
+        "padding" : {
+          "top" : {
+            "value" : 50,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 59,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      }
+    }
+  }, {
+    "id" : "1c1e193c-1683-9ade-94be-8b6a4a2fe1d5",
+    "name" : "background",
+    "display_width" : null,
+    "label" : "Background",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "9dacaccf-1b02-8a74-97bf-2c1f28abb5a7",
+      "name" : "color",
+      "display_width" : null,
+      "label" : "Color",
+      "required" : false,
+      "locked" : false,
+      "type" : "color",
+      "default" : {
+        "color" : "#ffffff",
+        "opacity" : 100
+      }
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "color" : {
+        "color" : "#ffffff",
+        "opacity" : 100
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "spacing" : {
+      "desktop" : {
+        "padding" : {
+          "top" : {
+            "value" : 80,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 80,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : 0,
+            "units" : "px"
+          },
+          "right" : {
+            "value" : 0,
+            "units" : "px"
+          }
+        }
+      },
+      "tablet" : {
+        "padding" : {
+          "top" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      },
+      "mobile" : {
+        "padding" : {
+          "top" : {
+            "value" : 50,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 59,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      }
+    },
+    "background" : {
+      "color" : {
+        "color" : "#ffffff",
+        "opacity" : 100
+      }
+    }
+  }
+}, {
+  "id" : "7237d328-2c93-f5bc-3fb7-1495d195b52d",
+  "name" : "add_content",
+  "display_width" : null,
+  "label" : "Add Content",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "1951d653-6a7b-df1c-9b72-cb9d0c9843b8",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "About us"
+  }, {
+    "id" : "c8a91658-7e7e-fa2b-3ba7-8f64094e281e",
+    "name" : "text",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>We solve complex problems for finance functions with brilliant, amazing people that love what they do.&nbsp;</p>"
+  }, {
+    "id" : "af28459e-1dbe-62b3-0724-225ab4ac8029",
+    "name" : "button",
+    "display_width" : null,
+    "label" : "Link Text",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "104fd4dd-86f2-59d4-3b42-16629aebb7c8",
+      "name" : "text",
+      "display_width" : null,
+      "label" : "Text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Learn more about Embark"
+    }, {
+      "id" : "c2272d47-ada9-9130-ecbd-9fddb6a12c2a",
+      "name" : "link",
+      "display_width" : null,
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "text" : "Learn more about Embark",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "title" : "About us",
+    "text" : "<p>We solve complex problems for finance functions with brilliant, amazing people that love what they do.&nbsp;</p>",
+    "button" : {
+      "text" : "Learn more about Embark",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }
+  }, {
+    "title" : "About us",
+    "text" : "<p>We solve complex problems for finance functions with brilliant, amazing people that love what they do.&nbsp;</p>",
+    "button" : {
+      "text" : "Learn more about Embark",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }
+  }, {
+    "title" : "About us",
+    "text" : "<p>We solve complex problems for finance functions with brilliant, amazing people that love what they do.&nbsp;</p>",
+    "button" : {
+      "text" : "Learn more about Embark",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }
+  }, {
+    "title" : "About us",
+    "text" : "<p>We solve complex problems for finance functions with brilliant, amazing people that love what they do.&nbsp;</p>",
+    "button" : {
+      "text" : "Learn more about Embark",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }
+  } ]
+} ]

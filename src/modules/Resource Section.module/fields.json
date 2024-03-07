@@ -1,0 +1,758 @@
+[ {
+  "id" : "06a34a06-0480-4e39-48c3-3f15f1d6b4fb",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "7dea5386-da97-0094-ac12-d3b4307582f7",
+    "name" : "spacing",
+    "display_width" : null,
+    "label" : "Spacing",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "a6c5075b-9cb9-49c5-4dbd-c00850a0ebe9",
+      "name" : "desktop",
+      "display_width" : null,
+      "label" : "Desktop",
+      "required" : false,
+      "locked" : false,
+      "type" : "spacing",
+      "default" : {
+        "padding" : {
+          "top" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 90,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : 0,
+            "units" : "px"
+          },
+          "right" : {
+            "value" : 0,
+            "units" : "px"
+          }
+        }
+      }
+    }, {
+      "id" : "7d6ca7eb-3855-1ad0-4f8f-ec6a616dfded",
+      "name" : "tablet",
+      "display_width" : null,
+      "label" : "Tablet",
+      "required" : false,
+      "locked" : false,
+      "type" : "spacing",
+      "default" : {
+        "padding" : {
+          "top" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      }
+    }, {
+      "id" : "63056097-4dfd-3414-0edd-5025e52a9a6a",
+      "name" : "mobile",
+      "display_width" : null,
+      "label" : "Mobile",
+      "required" : false,
+      "locked" : false,
+      "type" : "spacing",
+      "default" : {
+        "padding" : {
+          "top" : {
+            "value" : 50,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 100,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      }
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "desktop" : {
+        "padding" : {
+          "top" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 90,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : 0,
+            "units" : "px"
+          },
+          "right" : {
+            "value" : 0,
+            "units" : "px"
+          }
+        }
+      },
+      "tablet" : {
+        "padding" : {
+          "top" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      },
+      "mobile" : {
+        "padding" : {
+          "top" : {
+            "value" : 50,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 100,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      }
+    }
+  }, {
+    "id" : "1c1e193c-1683-9ade-94be-8b6a4a2fe1d5",
+    "name" : "background",
+    "display_width" : null,
+    "label" : "Background",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "9dacaccf-1b02-8a74-97bf-2c1f28abb5a7",
+      "name" : "color",
+      "display_width" : null,
+      "label" : "Color",
+      "required" : false,
+      "locked" : false,
+      "type" : "color",
+      "default" : {
+        "color" : "#ffffff",
+        "opacity" : 100
+      }
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "color" : {
+        "color" : "#ffffff",
+        "opacity" : 100
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "spacing" : {
+      "desktop" : {
+        "padding" : {
+          "top" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 90,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : 0,
+            "units" : "px"
+          },
+          "right" : {
+            "value" : 0,
+            "units" : "px"
+          }
+        }
+      },
+      "tablet" : {
+        "padding" : {
+          "top" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      },
+      "mobile" : {
+        "padding" : {
+          "top" : {
+            "value" : 50,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 100,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      }
+    },
+    "background" : {
+      "color" : {
+        "color" : "#ffffff",
+        "opacity" : 100
+      }
+    }
+  }
+}, {
+  "id" : "1951d653-6a7b-df1c-9b72-cb9d0c9843b8",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Resources"
+}, {
+  "id" : "c8a91658-7e7e-fa2b-3ba7-8f64094e281e",
+  "name" : "text",
+  "display_width" : null,
+  "label" : "Text",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : ""
+}, {
+  "id" : "c97ee644-d2a8-52e3-8d79-7bb65dfe7c7f",
+  "name" : "select_form",
+  "display_width" : null,
+  "label" : "Select Form",
+  "required" : false,
+  "locked" : false,
+  "type" : "form",
+  "default" : {
+    "form_id" : "c230b019-a018-448e-9f7b-258a9686ce1c",
+    "response_type" : "inline",
+    "message" : "Thank you for submitting the form.",
+    "gotowebinar_webinar_key" : null,
+    "form_type" : "HUBSPOT"
+  }
+}, {
+  "id" : "64253511-b62a-306f-1d03-473338ea2bee",
+  "name" : "image",
+  "display_width" : null,
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/contact-left.png",
+    "alt" : "contact-left",
+    "loading" : "lazy",
+    "width" : 644,
+    "height" : 951,
+    "max_width" : 644,
+    "max_height" : 951
+  }
+}, {
+  "id" : "ff60f830-78f8-6e0e-4280-3bd2781cf765",
+  "name" : "button",
+  "display_width" : null,
+  "label" : "Button",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "5b814c07-5ad1-32fa-1754-8d06cd2791cf",
+    "name" : "text",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "View all"
+  }, {
+    "id" : "47501cff-da63-785d-99fe-4329cee48291",
+    "name" : "link",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "text" : "View all",
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+}, {
+  "id" : "4135f1f8-9894-d998-90b6-15fdd7be2b88",
+  "name" : "trending_topics",
+  "display_width" : null,
+  "label" : "Trending Topics",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "7a3ac1c4-3ee1-2080-f620-354442fc180c",
+    "name" : "label_",
+    "display_width" : null,
+    "label" : "Label",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Trending Topics"
+  }, {
+    "id" : "92688163-f757-2c33-4ec5-3e7239bc2200",
+    "name" : "add_link_text",
+    "display_width" : null,
+    "label" : "Add Link Text",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 5
+    },
+    "children" : [ {
+      "id" : "0d64d2d0-22c5-a896-46fa-56e73f13f406",
+      "name" : "text",
+      "display_width" : null,
+      "label" : "Text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Energy"
+    }, {
+      "id" : "f600f184-0c17-de8e-4b77-5334eedae8f7",
+      "name" : "link",
+      "display_width" : null,
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : [ {
+      "text" : "Energy",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "text" : "Energy",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "text" : "Energy",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "text" : "Energy",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "text" : "Energy",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "label_" : "Trending Topics",
+    "add_link_text" : [ {
+      "text" : "Energy",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "text" : "Energy",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "text" : "Energy",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "text" : "Energy",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "text" : "Energy",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }
+}, {
+  "id" : "4d72f037-6fd5-56f1-ca75-99b9778cec31",
+  "name" : "make_two_column",
+  "display_width" : null,
+  "label" : "Make Two Column",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "e00045cd-9cd0-c74b-a3b0-c4de07d3b1b8",
+  "name" : "remove_date",
+  "display_width" : null,
+  "label" : "Remove Date",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "647a2d72-56f7-41c6-fa70-7e89927ad41a",
+  "name" : "add_resource",
+  "display_width" : null,
+  "label" : "Add Resource",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "113aae1a-9de3-fa10-f214-0d58c826e562",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "The Ultimate Pre-IPO Handbook For Accounting & Finance"
+  }, {
+    "id" : "69f38d80-4ec5-f956-bbf0-012d5a330816",
+    "name" : "tag",
+    "display_width" : null,
+    "label" : "Tag",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Accounting Efficiencies"
+  }, {
+    "id" : "5011f5db-8ac9-07de-87af-61da2d35cab6",
+    "name" : "date",
+    "display_width" : null,
+    "label" : "Date",
+    "required" : false,
+    "locked" : false,
+    "step" : 30,
+    "type" : "datetime",
+    "default" : 1704348000000
+  }, {
+    "id" : "fe420b72-43b5-0a54-3f92-629bee453d3c",
+    "name" : "image",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/resource1.png",
+      "alt" : "resource1",
+      "loading" : "lazy",
+      "width" : 410,
+      "height" : 231,
+      "max_width" : 410,
+      "max_height" : 231
+    }
+  }, {
+    "id" : "2755c18f-a219-0e76-371e-e26bc1520d87",
+    "name" : "link",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "68943522-c16c-31ae-eb1d-047cb9fc4c61",
+    "name" : "text",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : ""
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "title" : "The Ultimate Pre-IPO Handbook For Accounting & Finance",
+    "tag" : "Accounting Efficiencies",
+    "date" : 1704348000000,
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/resource1.png",
+      "alt" : "resource1",
+      "loading" : "lazy",
+      "width" : 410,
+      "height" : 231,
+      "max_width" : 410,
+      "max_height" : 231
+    },
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "text" : ""
+  }, {
+    "title" : "The Ultimate Pre-IPO Handbook For Accounting & Finance",
+    "tag" : "Accounting Efficiencies",
+    "date" : 1704348000000,
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/resource1.png",
+      "alt" : "resource1",
+      "loading" : "lazy",
+      "width" : 410,
+      "height" : 231,
+      "max_width" : 410,
+      "max_height" : 231
+    },
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "text" : ""
+  }, {
+    "title" : "The Ultimate Pre-IPO Handbook For Accounting & Finance",
+    "tag" : "Accounting Efficiencies",
+    "date" : 1704348000000,
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/resource1.png",
+      "alt" : "resource1",
+      "loading" : "lazy",
+      "width" : 410,
+      "height" : 231,
+      "max_width" : 410,
+      "max_height" : 231
+    },
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "text" : ""
+  } ]
+} ]

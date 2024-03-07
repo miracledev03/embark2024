@@ -1,0 +1,116 @@
+<div class="expert-section pr oh fullwidth main-sec">
+  <div class="wrapper">
+    <div class="expert-inner">
+      <div class="expert-header  text-center">
+          {% if module.title %}
+            <h2>
+               {{ module.title }}
+            </h2>
+          {% endif %}
+        {% if module.add_button.text %}
+          <div class="expert-btn {% if module.add_button.select_button_style == 'pill' %}theme-pill-btn{% elif module.add_button.select_button_style == 'border' %}}theme-border-btn{% endif %}">
+            {% set href = module.add_button.link.url.href %}
+            {% if module.add_button.link.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+            {% endif %}
+            <a href="{{ href }}"
+              {% if module.add_button.link.open_in_new_tab %}target="_blank"{% endif %}
+              {% if module.add_button.link.rel %}rel="{{ module.add_button.link.rel }}"{% endif %}
+              >
+               {{ module.add_button.text }}
+                  {% if  module.add_button.add_arrow %}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9" fill="none">
+                    <path d="M6.73222 0.381683L11.7431 4.45442L6.73222 8.52716C7.02966 6.85688 7.18983 5.78149 7.23559 5.00356L0.257019 5.48405V3.4248L7.23559 3.90529C7.18983 3.12735 7.05254 2.05196 6.73222 0.381683Z" fill="#027FF1"/>
+                  </svg>
+                  {% endif %}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+      
+      <div class="expert-team-outer">
+      <div class="expert-team fullwidth fl ac rw">
+       {% for item in module.add_team_here %}
+        <div class="expert-box">
+          <div class="expert-img">
+            
+          </div>
+          <div class="expert-intro">
+            {% if item.tname %}
+            <h4>
+              {{ item.tname }}
+            </h4>
+            {% endif %}
+            {% if item.designation %}
+            <div class="expert-designation">
+              {{ item.designation }}
+            </div>
+             {% endif %}
+            {% if item.short_text %}
+            <div class="expert-dshort-desc">
+              {{ item.short_text }}
+            </div>
+             {% endif %}
+            <div class="expert-social">
+              {% for item2 in item.add_social_here %}
+               {% set href = item2.link_field.url.href %}
+                {% if item2.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+                  {% set href = "mailto:" + href %}
+                {% endif %}
+                <a href="{{ href }}"
+                  {% if item2.link_field.open_in_new_tab %}target="_blank"{% endif %}
+                  {% if item2.link_field.rel %}rel="{{ item2.link_field.rel }}"{% endif %}
+                  >
+                  {% icon
+                    name="{{ item2.icon_field.name }}"
+                    style="{{ item2.icon_field.type }}"
+                    unicode="{{ item2.icon_field.unicode }}"
+                    icon_set="{{ item2.icon_field.icon_set }}"
+                  %}
+                </a>
+              {% endfor %}
+            </div>
+            {% if item.text_copy %}
+            <div class="expert-text">
+              {{ item.text_copy }}
+            </div>
+            {% endif %}
+          </div>
+        </div>
+       {% endfor %}
+      </div>
+      </div>
+    </div>
+  </div>
+</div> 
+
+{% set moduleid = "#hs_cos_wrapper_" ~ name %}
+{% require_css %}
+<style>
+  {{ moduleid }} .main-sec { {{ module.style.spacing.desktop.css }}; background:rgba({{ module.style.background.color.color|convert_rgb }}, {{ module.style.background.color.opacity }}); color:{{ module.style.color.text.color }}; } 
+  {{ moduleid }} .main-sec h6 { color:{{ module.style.color.tag_color.color }}; } 
+  {{ moduleid }} .main-sec h2 { color:{{ module.style.color.title.color }}; }
+  {% for item in module.add_team_here %}
+  {{ moduleid }} .expert-box:nth-child({{loop.index}}) .expert-img{background-image:url({{ item.image.src }});}
+   {{ moduleid }} .expert-box:nth-child({{loop.index}}){background-color: {{ item.style.background.color }};color:{{ item.style.color.color }};}
+  {{ moduleid }} .expert-box:nth-child({{loop.index}}) h4 {color:{{ item.style.color.color }};}
+  {{ moduleid }} .expert-box:nth-child({{loop.index}}) .expert-social svg { fill: {{ item.style.color.color }}; }
+  {% endfor %}
+  
+    
+  @media (max-width:991px){
+    {{ moduleid }} .main-sec { {{ module.style.spacing.tablet.css }}; }
+  }
+  
+  @media (max-width:767px){
+    {{ moduleid }} .main-sec { {{ module.style.spacing.mobile.css }}; }
+  }
+</style>
+{% end_require_css %}
+
+
+
+
+
+
+

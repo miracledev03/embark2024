@@ -1,0 +1,428 @@
+[ {
+  "id" : "06a34a06-0480-4e39-48c3-3f15f1d6b4fb",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "7dea5386-da97-0094-ac12-d3b4307582f7",
+    "name" : "spacing",
+    "display_width" : null,
+    "label" : "Spacing",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "a6c5075b-9cb9-49c5-4dbd-c00850a0ebe9",
+      "name" : "desktop",
+      "display_width" : null,
+      "label" : "Desktop",
+      "required" : false,
+      "locked" : false,
+      "type" : "spacing",
+      "default" : {
+        "padding" : {
+          "top" : {
+            "value" : 63.5,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 330,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : 0,
+            "units" : "px"
+          },
+          "right" : {
+            "value" : 0,
+            "units" : "px"
+          }
+        }
+      }
+    }, {
+      "id" : "7d6ca7eb-3855-1ad0-4f8f-ec6a616dfded",
+      "name" : "tablet",
+      "display_width" : null,
+      "label" : "Tablet",
+      "required" : false,
+      "locked" : false,
+      "type" : "spacing",
+      "default" : {
+        "padding" : {
+          "top" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      }
+    }, {
+      "id" : "63056097-4dfd-3414-0edd-5025e52a9a6a",
+      "name" : "mobile",
+      "display_width" : null,
+      "label" : "Mobile",
+      "required" : false,
+      "locked" : false,
+      "type" : "spacing",
+      "default" : {
+        "padding" : {
+          "top" : {
+            "value" : 39,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 30,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      }
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "desktop" : {
+        "padding" : {
+          "top" : {
+            "value" : 63.5,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 330,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : 0,
+            "units" : "px"
+          },
+          "right" : {
+            "value" : 0,
+            "units" : "px"
+          }
+        }
+      },
+      "tablet" : {
+        "padding" : {
+          "top" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      },
+      "mobile" : {
+        "padding" : {
+          "top" : {
+            "value" : 39,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 30,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      }
+    }
+  }, {
+    "id" : "1c1e193c-1683-9ade-94be-8b6a4a2fe1d5",
+    "name" : "background",
+    "display_width" : null,
+    "label" : "Background",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "9dacaccf-1b02-8a74-97bf-2c1f28abb5a7",
+      "name" : "color",
+      "display_width" : null,
+      "label" : "Color",
+      "required" : false,
+      "locked" : false,
+      "type" : "color",
+      "default" : {
+        "color" : "#5BC2E7",
+        "opacity" : 100
+      }
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "color" : {
+        "color" : "#5BC2E7",
+        "opacity" : 100
+      }
+    }
+  }, {
+    "id" : "8a8b97e9-c18d-5703-6f9b-f396a2290200",
+    "name" : "color",
+    "display_width" : null,
+    "label" : "Color",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "d91dcc3e-25d2-8d91-0ab8-9dc6e0d330b0",
+      "name" : "title",
+      "display_width" : null,
+      "label" : "Title",
+      "required" : false,
+      "locked" : false,
+      "type" : "color",
+      "default" : {
+        "color" : "#000000",
+        "opacity" : 100
+      }
+    }, {
+      "id" : "3817e850-b586-152c-e776-86e2f74270b4",
+      "name" : "text",
+      "display_width" : null,
+      "label" : "Text",
+      "required" : false,
+      "locked" : false,
+      "type" : "color",
+      "default" : {
+        "color" : "#000000",
+        "opacity" : 100
+      }
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "title" : {
+        "color" : "#000000",
+        "opacity" : 100
+      },
+      "text" : {
+        "color" : "#000000",
+        "opacity" : 100
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "spacing" : {
+      "desktop" : {
+        "padding" : {
+          "top" : {
+            "value" : 63.5,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 330,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : 0,
+            "units" : "px"
+          },
+          "right" : {
+            "value" : 0,
+            "units" : "px"
+          }
+        }
+      },
+      "tablet" : {
+        "padding" : {
+          "top" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      },
+      "mobile" : {
+        "padding" : {
+          "top" : {
+            "value" : 39,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 30,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      }
+    },
+    "background" : {
+      "color" : {
+        "color" : "#5BC2E7",
+        "opacity" : 100
+      }
+    },
+    "color" : {
+      "title" : {
+        "color" : "#000000",
+        "opacity" : 100
+      },
+      "text" : {
+        "color" : "#000000",
+        "opacity" : 100
+      }
+    }
+  }
+}, {
+  "id" : "1951d653-6a7b-df1c-9b72-cb9d0c9843b8",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Our clients are happy.  We’re happy.  Everybody’s happy."
+}, {
+  "id" : "a1057665-0876-d261-8286-c867c4145792",
+  "name" : "add_case_study",
+  "display_width" : null,
+  "label" : "Add Testimonial Here",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "dbaea7ee-fbb9-ef33-bd76-189590eec287",
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "a40152f8-e3eb-2310-42ff-a1706294a251",
+    "name" : "text",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>"
+  }, {
+    "id" : "fbbb29ca-793f-13a4-6cd3-45a21bc96eda",
+    "name" : "name_designation",
+    "display_width" : null,
+    "label" : "Name + Designation",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Sarah Johnson, CFO of Neiman Marcus"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "text" : "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+    "name_designation" : "Sarah Johnson, CFO of Neiman Marcus"
+  }, {
+    "text" : "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+    "name_designation" : "Sarah Johnson, CFO of Neiman Marcus"
+  }, {
+    "text" : "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+    "name_designation" : "Sarah Johnson, CFO of Neiman Marcus"
+  }, {
+    "text" : "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+    "name_designation" : "Sarah Johnson, CFO of Neiman Marcus"
+  } ]
+}, {
+  "id" : "245885a6-7de9-788f-d954-75924862c340",
+  "name" : "icon",
+  "display_width" : null,
+  "label" : "Icon",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Join%20us%20and%20make%20cul.png",
+    "alt" : "Join us and make cul",
+    "loading" : "lazy",
+    "width" : 534,
+    "height" : 397,
+    "max_width" : 534,
+    "max_height" : 397
+  }
+}, {
+  "id" : "b5ec09ff-0c4f-9add-d64d-a315930687af",
+  "name" : "icon_mobile",
+  "display_width" : null,
+  "label" : "Icon Mobile",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Join%20us%20and%20make%20cul%20(2).png",
+    "alt" : "Join us and make cul (2)",
+    "loading" : "lazy",
+    "width" : 305,
+    "height" : 283,
+    "max_width" : 305,
+    "max_height" : 283
+  }
+} ]

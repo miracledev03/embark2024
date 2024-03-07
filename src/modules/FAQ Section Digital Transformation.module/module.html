@@ -1,0 +1,59 @@
+<div class="faq-section pr oh fullwidth main-sec">
+  <div class="wrapper pr fl rr js z1">
+    <div class="faq-right">
+      {% if module.title %}<h2>{{ module.title }}</h2>{% endif %}
+    </div>
+    
+    <div class="faq-left">
+      {% if module.text %}
+        <div class="fl-text fullwidth">
+          {{ module.text }}
+        </div>
+      {% endif %}
+      <div class="fl-rows fullwidth">
+        {% for item in module.add_faq %}
+          <div class="fl-row fullwidth">
+            {% if item.question %}<h6>{{ item.question }}</h6>{% endif %}
+            {% if item.answer %}<div class="flr-text fullwidth">{{ item.answer }}</div>{% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+     
+  </div>
+</div> 
+
+{% set moduleid = "#hs_cos_wrapper_" ~ name %}
+{% require_css %}
+<style>
+  {{ moduleid }} .main-sec { {{ module.style.spacing.desktop.css }}; background:rgba({{ module.style.background.color.color|convert_rgb }}, {{ module.style.background.color.opacity }}); color:{{ module.style.color.text.color }}; } 
+  {{ moduleid }} .main-sec h6 { color:{{ module.style.color.text.color }}; } 
+  {{ moduleid }} .main-sec h2 { color:{{ module.style.color.title.color }}; }
+  
+    
+  @media (max-width:991px){
+    {{ moduleid }} .main-sec { {{ module.style.spacing.tablet.css }}; }
+  }
+  
+  @media (max-width:767px){
+    {{ moduleid }} .main-sec { {{ module.style.spacing.mobile.css }}; }
+  }
+</style>
+{% end_require_css %}
+
+
+
+{% require_js %}
+<script>
+
+$(document).ready(function(){
+  $(".fl-row h6").on("click",function(){
+    $(this).parent().siblings().removeClass("active");
+    $(this).parent().siblings().find(".flr-text").slideUp(200);
+    $(this).parent().toggleClass("active");
+    $(this).next(".flr-text").slideToggle(200);
+  });
+  });
+</script>
+{% end_require_js %}
+

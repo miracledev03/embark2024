@@ -1,0 +1,134 @@
+[ {
+  "id" : "accd8c73-2083-3aac-c8b5-4197f06a843d",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "a1c63ae7-30ac-979b-a62a-673e5088da8d",
+    "name" : "background_color",
+    "display_width" : null,
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#EDE8E3",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "2b6a39d1-5970-8d1f-e355-a8c2889c8d2e",
+    "name" : "right_panel_background_color",
+    "display_width" : null,
+    "label" : "Right Panel Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#F277C6",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "background_color" : {
+      "color" : "#EDE8E3",
+      "opacity" : 100
+    },
+    "right_panel_background_color" : {
+      "color" : "#F277C6",
+      "opacity" : 100
+    }
+  }
+}, {
+  "id" : "3c089b3f-20a5-010e-3385-32a616a35582",
+  "name" : "section_title",
+  "display_width" : null,
+  "label" : "Section Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Participants will earn 1 CPE credit."
+}, {
+  "id" : "8aa483f6-5372-77ff-ef69-1a33f83b4432",
+  "name" : "section_description",
+  "display_width" : null,
+  "label" : "Section Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>Embark is registered with the National Association of State Boards of Accountancy (NASBA) as a sponsor of continuing professional education on the National Registry of CPE Sponsors. State boards of accountancy have final authority on the acceptance of individual courses for CPE credit. Complaints regarding registered sponsors may be submitted to the National Registry of CPE Sponsors through its website:&nbsp;<a href=\"https://www.nasbaregistry.org/\">www.NASBARegistry.org</a>.</p>\n<h6>Record retention policy</h6>\n<p>Embark will maintain participant information in its CPE database for a period of five (5) years.</p>\n<h6>Program cancellation policy</h6>\n<p>Embark may at its discretion cancel a course program, delay a course program offering, or replace a previously announced course program with a course program of similar content. For external participants, Embark will make every effort to provide sufficient notification of a change of title or cancellation via e-mail to registered participants or via other marketing communications.&nbsp; Embark reserves the right to substitute speakers in the case of instructor illness or other unforeseen circumstances.<br>Due to this program being offered free of charge, there will be no refunds issued.</p>"
+}, {
+  "id" : "9f4da487-fa14-a43e-a2fa-a5cdc746332f",
+  "name" : "show_right_panel_on_mobile",
+  "display_width" : null,
+  "label" : "Show Right Panel on Mobile",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "default" : true
+}, {
+  "id" : "d60f1d92-cf71-1c8b-28a8-0cf54e9303d6",
+  "name" : "right_panel_content",
+  "display_width" : null,
+  "label" : "Right Panel Content",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 5
+  },
+  "children" : [ {
+    "id" : "259732e9-032a-8aab-43e0-c0101e525ab8",
+    "name" : "left_col_text",
+    "display_width" : null,
+    "label" : "Left Col Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Field of study"
+  }, {
+    "id" : "916e3cb6-07d5-c927-214d-1748504354b0",
+    "name" : "right_col_text",
+    "display_width" : null,
+    "label" : "Right Col Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Accounting"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "left_col_text" : "Field of study",
+    "right_col_text" : "Accounting"
+  }, {
+    "left_col_text" : "Field of study",
+    "right_col_text" : "Accounting"
+  }, {
+    "left_col_text" : "Field of study",
+    "right_col_text" : "Accounting"
+  }, {
+    "left_col_text" : "Field of study",
+    "right_col_text" : "Accounting"
+  }, {
+    "left_col_text" : "Field of study",
+    "right_col_text" : "Accounting"
+  } ]
+} ]

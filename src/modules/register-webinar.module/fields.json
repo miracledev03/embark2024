@@ -1,0 +1,150 @@
+[ {
+  "id" : "7ac5290a-c217-5ba7-ed29-bfe0bc3fe0d0",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "5048790a-74f1-c0e7-2ee2-c43421c97b51",
+    "name" : "background_color",
+    "display_width" : null,
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#5BC2E7",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "ea3aaab7-41b0-4ba3-f453-75d1f7cb1f32",
+    "name" : "backgroundimage_field",
+    "display_width" : null,
+    "label" : "Background image",
+    "required" : false,
+    "locked" : false,
+    "type" : "backgroundimage",
+    "default" : {
+      "background_position" : "MIDDLE_CENTER",
+      "background_size" : "cover",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/register-webinar-bg.png"
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "background_color" : {
+      "color" : "#5BC2E7",
+      "opacity" : 100
+    },
+    "backgroundimage_field" : {
+      "background_position" : "MIDDLE_CENTER",
+      "background_size" : "cover",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/register-webinar-bg.png"
+    }
+  }
+}, {
+  "id" : "ff6af527-7226-bcd2-c1b9-47816fb622c4",
+  "name" : "section_title",
+  "display_width" : null,
+  "label" : "Section Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Register to attend this webinar"
+}, {
+  "id" : "8baa2118-49e7-ea69-bdf2-7be5fbbb5d5a",
+  "name" : "section_sub_title",
+  "display_width" : null,
+  "label" : "Section Sub Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "If you can't attend live, we'll still send you the recording."
+}, {
+  "id" : "87eb63d9-f9c5-8d58-892c-61f2e44be6b4",
+  "name" : "register_form",
+  "display_width" : null,
+  "label" : "Register Form",
+  "required" : false,
+  "locked" : false,
+  "type" : "form",
+  "default" : {
+    "form_id" : "1ce95148-4cf1-480f-8eff-e33da0f70b71",
+    "response_type" : "inline",
+    "message" : "Thanks for submitting the form.",
+    "gotowebinar_webinar_key" : null,
+    "form_type" : "HUBSPOT"
+  }
+}, {
+  "id" : "1e34b754-aa38-7f22-6f36-3bfe9d128b81",
+  "name" : "accordion_title",
+  "display_width" : null,
+  "label" : "Accordion Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Learning objectives"
+}, {
+  "id" : "1ef1e1df-83a8-585c-6392-b0a7c26c8584",
+  "name" : "faq",
+  "display_width" : null,
+  "label" : "FAQ",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "97d64673-c83b-72c1-7e47-07ac424c5f02",
+    "name" : "faq_question",
+    "display_width" : null,
+    "label" : "FAQ Question",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Using digital tools in areas you’re already familiar with"
+  }, {
+    "id" : "42c43fdf-c796-278c-576f-6c1faa5e1833",
+    "name" : "faq_answer",
+    "display_width" : null,
+    "label" : "FAQ Answer",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "faq_question" : "Using digital tools in areas you’re already familiar with",
+    "faq_answer" : "<p>Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>"
+  }, {
+    "faq_question" : "Using digital tools in areas you’re already familiar with",
+    "faq_answer" : "<p>Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>"
+  }, {
+    "faq_question" : "Using digital tools in areas you’re already familiar with",
+    "faq_answer" : "<p>Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>"
+  }, {
+    "faq_question" : "Using digital tools in areas you’re already familiar with",
+    "faq_answer" : "<p>Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>"
+  } ]
+} ]

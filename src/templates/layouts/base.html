@@ -14,6 +14,8 @@
       {{ require_css(get_asset_url(template_css)) }}
     {% endif %}
     {{ require_css(get_asset_url("../../css/theme-overrides.css")) }}
+    {{ require_css(get_asset_url("../../css/embark2024_hello_style.css")) }}
+    
     {# To see a full list of what is included via standard_header_includes please reference this article: https://developers.hubspot.com/docs/cms/hubl/variables#required-page-template-variables #}
     {{ standard_header_includes }}
     <link
@@ -38,6 +40,7 @@
         {% module 'footer_main_wrapper' path='../../modules/global-footer', label='Footer' %}
       {% endblock footer %}
     </div>
+    {{ require_js(get_asset_url("../../js/slick.js")) }}
     {{ require_js(get_asset_url("../../js/main.js")) }}
     {# To see a full list of what is included via standard_footer_includes please reference this article: https://developers.hubspot.com/docs/cms/hubl/variables#required-page-template-variables #}
     {{ standard_footer_includes }}

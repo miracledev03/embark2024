@@ -1,0 +1,36 @@
+<div class="expertise-challenges pr oh fullwidth main-sec {% if module.style.background.image_field.src %}bg-img-exist{% endif %}">
+  <div class="wrapper pr z1">
+    <div class="ec-inner fullwidth">
+      {% if module.title %}<h2>{{ module.title }}</h2>{% endif %}
+      {% if module.text %}
+        <div class="eci-text fullwidth">
+          {{ module.text }}
+        </div>
+      {% endif %}
+    </div>
+    
+  </div>
+</div>
+
+{% set moduleid = "#hs_cos_wrapper_" ~ name %}
+{% require_css %}
+<style>
+  {{ moduleid }} .main-sec { {{ module.style.spacing.desktop.css }}; background:rgba({{ module.style.background.color.color|convert_rgb }}, {{ module.style.background.color.opacity }}); {% if module.style.background.image_field.src %}background-image:url({{ module.style.background.image_field.src }});{% endif %}} 
+  {% if module.image.src %}
+  {{ moduleid }} .main-sec:after { position:absolute; content:''; top:{{ module.image_position_width.top }}; left:{{ module.image_position_width.left }}; right:{{ module.image_position_width.right }}; bottom:{{ module.image_position_width.bottom }}; width:{{ module.image_position_width.width }}; height:{{ module.image_position_width.height }}; background:url({{ module.image.src }}) no-repeat right bottom/{{ module.image_position_width.background_size }}; }
+  {% endif %}
+  {{ moduleid }} .main-sec .eci-text { max-width:{{ module.style.text_width_px_ ~ "px" }}; }
+  
+    
+  @media (max-width:991px){
+    {{ moduleid }} .main-sec { {{ module.style.spacing.tablet.css }}; }
+  }
+  
+  @media (max-width:767px){
+    {{ moduleid }} .main-sec { {{ module.style.spacing.mobile.css }}; }
+  }
+  
+</style>
+{% end_require_css %}
+
+

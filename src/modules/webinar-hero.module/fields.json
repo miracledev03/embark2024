@@ -1,0 +1,278 @@
+[ {
+  "id" : "3fdd464a-eb25-7ce7-a291-c93e530c25b3",
+  "name" : "sub_title",
+  "display_width" : null,
+  "label" : "Sub Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "WEBINAR"
+}, {
+  "id" : "51d956b0-b0dc-88c7-448a-6fed0c6e0840",
+  "name" : "section_title",
+  "display_width" : null,
+  "label" : "Section Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "From big 4 cpa to data & analytics consultant"
+}, {
+  "id" : "ba118d4a-df23-6006-3302-af3535f93e52",
+  "name" : "description",
+  "display_width" : null,
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>Join data &amp; analytics experts from Embark for a discussion on using Big 4 experience as&nbsp;a springboard for a career as a digital transformation leader.</p>"
+}, {
+  "id" : "4a686b0a-02a4-e4f0-9335-175fc3e54e28",
+  "name" : "register_button_one_text",
+  "display_width" : null,
+  "label" : "Register Button One Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Register to join us for the live run of this webinar"
+}, {
+  "id" : "ec7b19e3-32e2-0617-fd83-150ad34b2e02",
+  "name" : "register_button",
+  "display_width" : null,
+  "label" : "Register Button",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "f6abd087-aceb-584e-5e3e-f33b69d1662e",
+    "name" : "button_text",
+    "display_width" : null,
+    "label" : "Button Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Register now"
+  }, {
+    "id" : "3229bf14-4606-2461-1250-b1d8d534bcc0",
+    "name" : "button_link",
+    "display_width" : null,
+    "label" : "Button Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "button_text" : "Register now",
+    "button_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+}, {
+  "id" : "f8f8e965-1b99-2154-43a3-57f2cf2153df",
+  "name" : "social_links",
+  "display_width" : null,
+  "label" : "Social Links",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 7
+  },
+  "children" : [ {
+    "id" : "0a99bf8c-3236-098b-d8f2-35ae81510d76",
+    "name" : "social_icon",
+    "display_width" : null,
+    "label" : "Social Icon",
+    "required" : false,
+    "locked" : false,
+    "icon_set" : "fontawesome-6.4.2",
+    "type" : "icon",
+    "default" : {
+      "name" : "LinkedIn In",
+      "unicode" : "f0e1",
+      "type" : "REGULAR"
+    }
+  }, {
+    "id" : "88b2be75-e828-ce60-2c00-1f9e73ac16ca",
+    "name" : "social_icon_link",
+    "display_width" : null,
+    "label" : "Social Icon Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "social_icon" : {
+      "name" : "LinkedIn In",
+      "unicode" : "f0e1",
+      "type" : "REGULAR"
+    },
+    "social_icon_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "social_icon" : {
+      "name" : "LinkedIn In",
+      "unicode" : "f0e1",
+      "type" : "REGULAR"
+    },
+    "social_icon_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "social_icon" : {
+      "name" : "LinkedIn In",
+      "unicode" : "f0e1",
+      "type" : "REGULAR"
+    },
+    "social_icon_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "social_icon" : {
+      "name" : "LinkedIn In",
+      "unicode" : "f0e1",
+      "type" : "REGULAR"
+    },
+    "social_icon_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "social_icon" : {
+      "name" : "LinkedIn In",
+      "unicode" : "f0e1",
+      "type" : "REGULAR"
+    },
+    "social_icon_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "social_icon" : {
+      "name" : "LinkedIn In",
+      "unicode" : "f0e1",
+      "type" : "REGULAR"
+    },
+    "social_icon_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "social_icon" : {
+      "name" : "LinkedIn In",
+      "unicode" : "f0e1",
+      "type" : "REGULAR"
+    },
+    "social_icon_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ]
+}, {
+  "id" : "06fe4914-89ad-be00-3caa-9edb07a9207b",
+  "name" : "set_countdown",
+  "display_width" : null,
+  "label" : "Set Countdown",
+  "required" : false,
+  "locked" : false,
+  "step" : 60,
+  "type" : "datetime",
+  "default" : 1715371200000
+}, {
+  "id" : "4ca8ae31-db11-e83b-3eb1-676e69ad1cb1",
+  "name" : "webinar_date_time",
+  "display_width" : null,
+  "label" : "Webinar Date Time",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "May 10th 2:00 - 3:00pm PST"
+} ]

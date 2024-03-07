@@ -16,6 +16,49 @@ button:disabled,
   color: #E6E6E6;
 }
 
+form .hs-button.primary, form .hs-button.primary:active, form .hs-button.primary:focus, .primary-btn{
+  background: #027FF1;
+  color: #fff;
+  transition: all .3s ease;
+
+  border: 1px solid #027FF1;
+  border-radius: 6px;
+  color: #fff;
+  font-family: Embark Sans, sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  padding: 15px 53px;
+  text-decoration: none;
+  text-transform: none;
+}
+form .hs-button.primary:hover, .primary-btn:hover{
+  background: #fff;
+  color: #027FF1;
+  
+  text-decoration: none;
+}
+
+.secondary-btn{
+  background: transparent;
+  color: #027FF1;
+  transition: all .3s ease;
+  display: inline-block;
+  border: 1px solid #027FF1;
+  border-radius: 100px;
+  font-family: Embark Sans, sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  padding: 15px 53px;
+  text-decoration: none;
+  text-transform: none;
+}
+.secondary-btn:hover{
+  background: #027FF1;
+  color: #fff;  
+  text-decoration: none;
+}
 /* No button */
 
 .no-button,

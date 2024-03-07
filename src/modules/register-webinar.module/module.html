@@ -1,0 +1,179 @@
+<div class="{{name}}">
+  <div class="content-wrapper"> 
+    <div class="row-inner">
+      <div class="register-form-wrapper">
+
+        <h2>
+          {{ module.section_title }}
+        </h2>
+        <div class="sub-title">
+          {{ module.section_sub_title }}
+        </div>
+        <div class="register-form">
+          {% form
+	form_to_use="{{ module.register_form.form_id }}"
+	response_response_type="{{ module.register_form.response_type }}"
+	response_message="{{ module.register_form.message }}"
+	response_redirect_id="{{ module.register_form.redirect_id }}"
+	response_redirect_url="{{module.register_form.redirect_url}}"
+	gotowebinar_webinar_key="{{ module.register_form.gotowebinar_webinar_key }}"
+%}
+        </div>
+      </div>
+      
+      <div class="accord-wrapper">
+        <h2>
+          {{ module.accordion_title }}
+        </h2>
+        
+        {% for item in module.faq %}
+        <div class="faq-question">
+          <h5>{{ item.faq_question }}</h5>
+          <div class="faq-ans">
+            {{ item.faq_answer }}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% require_css %}
+<style>
+  .{{name}}{
+    background-color: rgba({{ module.style.background_color.color|convert_rgb }},{{ module.style.background_color.opacity * 0.01 }});
+    /*     background-image: {{ module.style.backgroundimage_field }}; */
+    background-image: url("{{ module.style.backgroundimage_field.src }}");
+      background-size: auto;
+      background-repeat: no-repeat;
+      background-position: top right;
+    border-radius: 20px 20px 0px 0px;
+    padding: 60px 0 80px;
+  }
+  .{{name}} .row-inner{width: 55%;}
+  .{{name}} h2{
+    font-family: Embark Sans Headline;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 53px;
+  }
+  .{{name}} .sub-title{
+    font-family: Embark Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+  }
+  .{{name}} .register-form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 7px;
+    width: 80%;
+    margin-bottom: 80px;
+  }
+  .{{name}} .register-form form .inputs-list>li{margin: 0}
+  .{{name}} .register-form .hs-error-msg {
+    color: #dbc3c3;
+    margin: 0;
+    font-size: .6rem;
+    text-indent: 1rem;
+  }
+  .{{name}} .register-form form label, .{{name}} .register-form form legend {
+    color: #dbc3c3;
+    font-size: .65rem;
+  }
+  .{{name}} .register-form form .hs-form-field {
+    margin-bottom: 0.4rem;
+  }
+  .{{name}} .register-form form .hs-button.primary{margin-top: 1rem;}
+
+  .accord-wrapper h2{margin-bottom: 1rem;}
+  .faq-question{
+    position: relative;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 0.85rem;
+  }
+  .faq-question h5{
+    font-family: Embark Sans;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    color: #000;
+    margin: 0;
+    cursor: pointer;
+    user-select: none;
+  }
+  .faq-ans{
+    font-family: Embark Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    mix-blend-mode: normal;
+    opacity: 0.8;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.15s ease-out;
+  }
+  .faq-question.active > .faq-ans{
+    max-height: 500px;
+    transition: max-height 0.25s ease-in;
+    overflow: auto;
+  }
+  .faq-question:after {
+    top: 0;
+    position: absolute;
+    content: "\002B";
+    font-family: Embark Sans;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1;
+    color: #027FF1;
+    float: right;
+    margin-left: 5px;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+  }
+
+  .faq-question.active:after {
+    content: "\2212";
+  }
+  
+  @media screen and (max-width: 1200px){
+    .{{name}}{background-size: 83% auto;}
+    .{{name}} .row-inner {width: 60%;}
+  }
+  @media screen and (max-width: 991px){
+    .{{name}} h2{font-size: 32px;line-height: 35px;}
+    .{{name}} .register-form{width: 100%;}
+  }
+  @media screen and (max-width: 600px){
+    .{{name}}{background-image: none;}
+    .{{name}} .row-inner {width: 100%;}
+    .faq-question h5{padding-right: 0.85rem;}
+  }
+</style>
+{% end_require_css %}
+
+{% require_js %}
+<script type="text/javascript">
+	$('.faq-question:first').addClass('active');
+  
+	$('.faq-question h5').on("click", function(){
+    
+	  if($(this).parents('.faq-question').hasClass('active')){
+	    $(this).parents('.faq-question').toggleClass('active');
+	    // $(this).closest('.subContent').toggleClass('active');
+	  }else{
+	    if($('.faq-question').hasClass('active')){
+	      $('.faq-question').removeClass('active');
+	     } 
+	    $(this).parents('.faq-question').toggleClass('active');
+	  }
+	  
+	});
+
+</script>
+{% end_require_js %}

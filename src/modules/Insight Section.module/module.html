@@ -1,0 +1,79 @@
+<div class="insight-section pr oh fullwidth main-sec">
+  <div class="wrapper pr z1">
+    <div class="os-top is-top fullwidth fl rw js fullwidth">
+      <div class="ost-left">
+        {% if module.title %}<h2>{{ module.title }}</h2>{% endif %}
+      </div>
+      <div class="ost-right">
+        {% set href = module.button.link.url.href %}
+        {% if module.button.link.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+        {% endif %}
+        <a href="{{ href }}" {% if module.button.link.open_in_new_tab %}target="_blank"{% endif %} {% if module.button.link.rel %}rel="{{ module.button.link.rel }}"{% endif %}>
+          {{ module.button.text }}
+        </a>
+      </div>
+    </div>
+    
+    <div class="os-bottom is-bottom fl rw js fullwidth">
+      {% for item in module.add_content_column %}
+        {% set href = item.link.url.href %}
+        {% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+        {% set href = "mailto:" + href %}
+        {% endif %}
+        <div class="osb-row">
+          <div class="osbr-image oh fullwidth">
+            <a href="{{ href }}" {% if item.link.open_in_new_tab %}target="_blank"{% endif %} {% if item.link.rel %}rel="{{ item.link.rel }}"{% endif %}>
+            {% if item.image.src %}
+              {% set sizeAttrs = 'width="{{ item.image.width }}" height="{{ item.image.height }}"' %}
+              {% if item.image.size_type == 'auto' %}
+                {% set sizeAttrs = 'width="{{ item.image.width }}" height="{{ item.image.height }}" style="max-width: 100%; height: auto;"' %}
+              {% elif item.image.size_type == 'auto_custom_max' %}
+                {% set sizeAttrs = 'width="{{ item.image.max_width }}" height="{{ item.image.max_height }}" style="max-width: 100%; height: auto;"' %}
+              {% endif %}
+               {% set loadingAttr = item.image.loading != 'disabled' ? 'loading="{{ item.image.loading }}"' : '' %}
+              <img src="{{ item.image.src }}" alt="{{ item.image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+            {% endif %}
+            </a>
+          </div>
+          
+          <div class="osb-tagdate fullwidth">
+            <span>{{ item.tag }}</span>
+            <span>{{ item.date|format_datetime('dd MMM YYYY') }}</span>
+          </div>
+          
+          {% if item.title %}<h5>
+            <a href="{{ href }}" {% if item.link.open_in_new_tab %}target="_blank"{% endif %} {% if item.link.rel %}rel="{{ item.link.rel }}"{% endif %}>
+              {{ item.title }}
+            </a>
+          </h5>{% endif %}
+         
+        </div>
+      {% endfor %}
+    </div>
+    
+  </div>
+</div>
+
+{% set moduleid = "#hs_cos_wrapper_" ~ name %}
+{% require_css %}
+<style>
+  {{ moduleid }} .main-sec { {{ module.style.spacing.desktop.css }}; background:rgba({{ module.style.background.color.color|convert_rgb }}, {{ module.style.background.color.opacity }}); } 
+  
+    
+  @media (max-width:991px){
+    {{ moduleid }} .main-sec { {{ module.style.spacing.tablet.css }}; }
+  }
+  
+  @media (max-width:767px){
+    {{ moduleid }} .main-sec { {{ module.style.spacing.mobile.css }}; }
+  }
+</style>
+{% end_require_css %}
+
+
+
+
+
+
+

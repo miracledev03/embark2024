@@ -1,0 +1,240 @@
+<div class="resource-section pr oh fullwidth main-sec {% if module.make_two_column %}rs-two-column{% endif %}">
+  <div class="wrapper">
+    <div class="os-top fullwidth">
+      <div class="ost-left">
+        {% if module.title %}<h2>{{ module.title }}</h2>{% endif %}
+        {% set module_add_resource = [] %}
+        {% for item in module.add_resource %}
+          {% do module_add_resource.append(item.tag) %}
+        {% endfor %}
+        <div class="ostl-col ostl-resource">
+          <input type="text" class="quicksearch" placeholder="Search resources">
+        </div>
+        <div class="ostl-col ostl-solution pr z1">
+          <label>Browse by Solution</label>
+          <ul>
+            <li class="button" data-filter="*">All</li>
+            
+            {% for item in module_add_resource|unique %}
+              {% if item %}<li class="button" data-filter=".{{ item|lower|regex_replace("[^a-zA-Z]", "") }}">{{ item }}</li>{% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="ost-right">
+        {% set href = module.button.link.url.href %}
+        {% if module.button.link.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+        {% endif %}
+        <a href="{{ href }}" {% if module.button.link.open_in_new_tab %}target="_blank"{% endif %} {% if module.button.link.rel %}rel="{{ module.button.link.rel }}"{% endif %}>
+          {{ module.button.text }}
+        </a>
+        
+        <div class="rst-links fullwidth">
+          {% if module.trending_topics.label_ %}<label>{{ module.trending_topics.label_ }}</label>{% endif %}
+          <div class="rstl-inner fullwidth">
+            {% for item in module.trending_topics.add_link_text %}
+              {% if item.text %}
+                {% set href = item.link.url.href %}
+                {% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+                  {% set href = "mailto:" + href %}
+                {% endif %}
+                <a href="{{ href }}" {% if item.link.open_in_new_tab %}target="_blank"{% endif %} {% if item.link.rel %}rel="{{ item.link.rel }}"{% endif %}>
+                  {{ item.text }}
+                </a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  
+    <div class="os-bottom is-bottom fl rw js fullwidth">
+      {% for item in module.add_resource %}
+        {% set href = item.link.url.href %}
+        {% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+        {% set href = "mailto:" + href %}
+        {% endif %}
+        <div class="osb-row {{ item.tag|lower|regex_replace("[^a-zA-Z]", "") }}">
+          <div class="osbr-image oh fullwidth">
+            <a href="{{ href }}" {% if item.link.open_in_new_tab %}target="_blank"{% endif %} {% if item.link.rel %}rel="{{ item.link.rel }}"{% endif %}>
+            {% if item.image.src %}
+              {% set sizeAttrs = 'width="{{ item.image.width }}" height="{{ item.image.height }}"' %}
+              {% if item.image.size_type == 'auto' %}
+                {% set sizeAttrs = 'width="{{ item.image.width }}" height="{{ item.image.height }}" style="max-width: 100%; height: auto;"' %}
+              {% elif item.image.size_type == 'auto_custom_max' %}
+                {% set sizeAttrs = 'width="{{ item.image.max_width }}" height="{{ item.image.max_height }}" style="max-width: 100%; height: auto;"' %}
+              {% endif %}
+               {% set loadingAttr = item.image.loading != 'disabled' ? 'loading="{{ item.image.loading }}"' : '' %}
+              <img src="{{ item.image.src }}" alt="{{ item.image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+            {% endif %}
+            </a>
+          </div>
+          
+          <div class="osb-tagdate fullwidth">
+            <span>{{ item.tag }}</span>
+            {% if module.remove_date %}
+            {% else %}
+            <span>{{ item.date|format_datetime('dd MMM YYYY') }}</span>
+            {% endif %}
+          </div>
+          
+          {% if item.title %}<h5>
+            <a href="{{ href }}" {% if item.link.open_in_new_tab %}target="_blank"{% endif %} {% if item.link.rel %}rel="{{ item.link.rel }}"{% endif %}>
+              {{ item.title }}
+            </a>
+          </h5>{% endif %}
+           {% if item.text %}
+          <div class="osb-desc">
+           {{ item.text }}
+          </div>
+          {% endif %}
+         
+        </div>
+      {% endfor %}
+      
+      <div class="no-result hide">
+        No result found
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+{% set moduleid = "#hs_cos_wrapper_" ~ name %}
+{% require_css %}
+<style>
+  {{ moduleid }} .main-sec { {{ module.style.spacing.desktop.css }}; background:rgba({{ module.style.background.color.color|convert_rgb }}, {{ module.style.background.color.opacity }}); } 
+  {{ moduleid }} .cs-left { background:url({{ module.image.src }}) no-repeat left bottom/contain; }
+  
+    
+  @media (max-width:991px){
+    {{ moduleid }} .main-sec { {{ module.style.spacing.tablet.css }}; }
+  }
+  
+  @media (max-width:767px){
+    {{ moduleid }} .main-sec { {{ module.style.spacing.mobile.css }}; }
+  }
+</style>
+{% end_require_css %}
+
+
+{% require_js %}
+<script src="//npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+<script>
+  // external js: isotope.pkgd.js
+
+// store filter for each group
+var buttonFilters = {};
+var buttonFilter;
+// quick search regex
+var qsRegex;
+var $filterButtons = $('.ostl-solution .button');
+  
+// init Isotope
+var $grid = $('.resource-section .os-bottom').isotope({
+  itemSelector: '.resource-section .osb-row',
+  filter: function() {
+    var $this = $(this);
+    var searchResult = qsRegex ? $this.text().match( qsRegex ) : true;
+    var buttonResult = buttonFilter ? $this.is( buttonFilter ) : true;
+    return searchResult && buttonResult;
+  },
+});
+
+$('.ostl-solution').on( 'click', '.button', function() {
+  var $this = $(this);
+  // get group key
+  var $buttonGroup = $this.parents('.button-group');
+  var filterGroup = $buttonGroup.attr('data-filter-group');
+  // set filter for group
+  buttonFilters[ filterGroup ] = $this.attr('data-filter');
+  // combine filters
+  buttonFilter = concatValues( buttonFilters );
+  // Isotope arrange
+  $grid.isotope();
+  updateFilterCounts();
+});
+
+function updateFilterCounts()  {
+  // get filtered item elements
+  var itemElems = $grid.isotope('getFilteredItemElements');
+  var $itemElems = $( itemElems );
+  $filterButtons.each( function( i, button ) {
+    var $button = $( button );
+    var filterValue = $button.attr('data-filter');
+    if ( !filterValue ) {
+      // do not update 'any' buttons
+      return;
+    }
+    var count = $itemElems.filter( filterValue ).length;
+    if(count != 0){
+      $(".no-result").addClass("hide");
+      return false;
+    }else{
+      $(".no-result").removeClass("hide");
+    }
+  });
+}
+
+  
+// use value of search field to filter
+var $quicksearch = $('.quicksearch').keyup( debounce( function() {
+  qsRegex = new RegExp( $quicksearch.val(), 'gi' );
+  $grid.isotope();
+  updateFilterCounts();
+}) );
+
+// change is-checked class on buttons
+$('.ostl-solution').each( function( i, buttonGroup ) {
+  var $buttonGroup = $( buttonGroup );
+  $buttonGroup.on( 'click', '.button', function() {
+    $buttonGroup.find('.is-checked').removeClass('is-checked');
+    $( this ).addClass('is-checked');
+  });
+});
+  
+// flatten object by concatting values
+function concatValues( obj ) {
+  var value = '';
+  for ( var prop in obj ) {
+    value += obj[ prop ];
+  }
+  return value;
+}
+
+// debounce so filtering doesn't happen every millisecond
+function debounce( fn, threshold ) {
+  var timeout;
+  threshold = threshold || 100;
+  return function debounced() {
+    clearTimeout( timeout );
+    var args = arguments;
+    var _this = this;
+    function delayed() {
+      fn.apply( _this, args );
+    }
+    timeout = setTimeout( delayed, threshold );
+  };
+}
+
+$(".ostl-solution label").on("click",function(){
+  $(this).next("ul").slideToggle(200);
+  $(this).parent().toggleClass("active");
+});
+  
+$(".ostl-solution ul li").on("click",function(){
+  $(this).parent().slideUp(200);
+  $(this).parents(".ostl-solution").removeClass("active");
+});
+  
+</script>
+{% end_require_js %}
+
+
+
+
+
+
+

@@ -1,0 +1,139 @@
+<div class="{{name}}">
+  <div class="content-wrapper"> 
+    <div class="row-inner">
+      <div class="left-col">
+        <h2>
+          {{ module.section_title }}
+        </h2>
+        {{ module.section_description }}
+      </div>
+      
+      {% if module.show_right_panel_on_mobile %}
+      <!-- HTML to show when checked -->
+      {% endif %}
+      
+      <div class="right-col right_panel">
+        {% for item in module.right_panel_content %}
+        <div class="row">
+          <div class="left-colmn">
+            {{ item.left_col_text }}
+          </div>          
+          <div class="right-colmn">
+            {{ item.right_col_text }}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% require_css %}
+<style>
+  .{{name}} {
+    background: rgba({{ module.style.background_color.color|convert_rgb }},{{ module.style.background_color.opacity * 0.01 }});
+    padding: 60px 0 0;
+  }
+  .{{name}} h2{
+    font-family: Embark Sans Headline;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 53px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  .{{name}} .row-inner, .{{name}} .row{
+    display: flex;
+    justify-content: space-between;
+  }
+  .{{name}} .left-col{width: 50%}
+  .{{name}} .right-col{
+    width: 35%;
+    background: rgba({{ module.style.right_panel_background_color.color|convert_rgb }},{{ module.style.right_panel_background_color.opacity * 0.01 }});
+    padding: 1.5rem 1.2rem;
+    position: relative;
+  }
+  .{{name}} .right-col:after{
+    top: 0;
+    right: -100vw;
+    bottom: 0;
+    left: 0;
+    background: rgba({{ module.style.right_panel_background_color.color|convert_rgb }},{{ module.style.right_panel_background_color.opacity * 0.01 }});
+    content: '';
+    position: absolute;
+  }
+  .{{name}} .left-col p{
+    font-family: Embark Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  .{{name}} .left-col p:first-child{
+    font-family: Embark Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  .{{name}} a{
+    color: #027FF1;
+    text-decoration: none;
+  }
+  .{{name}} h6{
+    font-family: Embark Sans;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #027FF1;
+  }
+  .{{name}} .row{
+    margin-bottom: .7rem;
+    position: relative;
+    z-index: 1;
+  }
+  .{{name}} .row .left-colmn, .{{name}} .row .right-colmn{
+    font-family: Embark Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #fff;
+    width: 50%;
+  }
+  .{{name}} .row .right-colmn{color: #000;}
+  
+  @media screen and (max-width: 991px){
+    .{{name}} h2{font-size: 32px;line-height: 35px;}
+    .{{name}} .row-inner{flex-wrap: wrap;}
+    .{{name}} .right-col{width: 45%;}
+  }
+  @media screen and (max-width: 600px){
+    .{{name}} .left-col, .{{name}} .right-col {
+      width: 100%;
+    }
+    .{{name}} .right-col{margin-top: 1rem;}
+    .{{name}} .row .left-colmn, .{{name}} .row .right-colmn{font-size: 14px}
+    .{{name}} .right-col{padding: 1rem 0.5rem;}
+  }
+</style>
+{% end_require_css %}
+
+{% require_js %}
+<script>
+  const showRP = {{module.show_right_panel_on_mobile}};
+//   console.log(showRP)
+  if ($(window).width() < 600) {
+    if(showRP){
+      $('.right_panel').show();
+    }else{
+      $('.right_panel').hide();
+    }
+  }
+</script>
+{% end_require_js %}

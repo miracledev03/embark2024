@@ -40,6 +40,13 @@ form textarea {
   width: 100%;
 }
 
+form input[type=email], form input[type=file], form input[type=number], form input[type=password],
+form input[type=search], form input[type=tel], form input[type=text], form select,
+form textarea, form .hs-button.primary, .primary-btn{
+  border-radius: 50px !important;
+  outline: none;
+}
+
 form textarea {
   resize: vertical;
 }
