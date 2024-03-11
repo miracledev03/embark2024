@@ -1,0 +1,634 @@
+[ {
+  "id" : "06a34a06-0480-4e39-48c3-3f15f1d6b4fb",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "7dea5386-da97-0094-ac12-d3b4307582f7",
+    "name" : "spacing",
+    "display_width" : null,
+    "label" : "Spacing",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "a6c5075b-9cb9-49c5-4dbd-c00850a0ebe9",
+      "name" : "desktop",
+      "display_width" : null,
+      "label" : "Desktop",
+      "required" : false,
+      "locked" : false,
+      "type" : "spacing",
+      "default" : {
+        "padding" : {
+          "top" : {
+            "value" : 100,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 100,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : 0,
+            "units" : "px"
+          },
+          "right" : {
+            "value" : 0,
+            "units" : "px"
+          }
+        }
+      }
+    }, {
+      "id" : "7d6ca7eb-3855-1ad0-4f8f-ec6a616dfded",
+      "name" : "tablet",
+      "display_width" : null,
+      "label" : "Tablet",
+      "required" : false,
+      "locked" : false,
+      "type" : "spacing",
+      "default" : {
+        "padding" : {
+          "top" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      }
+    }, {
+      "id" : "63056097-4dfd-3414-0edd-5025e52a9a6a",
+      "name" : "mobile",
+      "display_width" : null,
+      "label" : "Mobile",
+      "required" : false,
+      "locked" : false,
+      "type" : "spacing",
+      "default" : {
+        "padding" : {
+          "top" : {
+            "value" : 60,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 60,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      }
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "desktop" : {
+        "padding" : {
+          "top" : {
+            "value" : 100,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 100,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : 0,
+            "units" : "px"
+          },
+          "right" : {
+            "value" : 0,
+            "units" : "px"
+          }
+        }
+      },
+      "tablet" : {
+        "padding" : {
+          "top" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      },
+      "mobile" : {
+        "padding" : {
+          "top" : {
+            "value" : 60,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 60,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      }
+    }
+  }, {
+    "id" : "1c1e193c-1683-9ade-94be-8b6a4a2fe1d5",
+    "name" : "background",
+    "display_width" : null,
+    "label" : "Background",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "9dacaccf-1b02-8a74-97bf-2c1f28abb5a7",
+      "name" : "color",
+      "display_width" : null,
+      "label" : "Color",
+      "required" : false,
+      "locked" : false,
+      "type" : "color",
+      "default" : {
+        "color" : "#ffffff",
+        "opacity" : 100
+      }
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "color" : {
+        "color" : "#ffffff",
+        "opacity" : 100
+      }
+    }
+  }, {
+    "id" : "26b8e279-0a4f-1eaf-07ff-819e34f2eaeb",
+    "name" : "color",
+    "display_width" : null,
+    "label" : "Color",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "9ec3a1e3-6e78-6d39-1188-fce223277571",
+      "name" : "color",
+      "display_width" : null,
+      "label" : "Main Title",
+      "required" : false,
+      "locked" : false,
+      "type" : "color",
+      "default" : {
+        "color" : "#000",
+        "opacity" : 100
+      }
+    }, {
+      "id" : "b02feb9a-0be6-5f24-410f-e4bc8c3e8c6b",
+      "name" : "column_title",
+      "display_width" : null,
+      "label" : "Column Title",
+      "required" : false,
+      "locked" : false,
+      "type" : "color",
+      "default" : {
+        "color" : "#000",
+        "opacity" : 100
+      }
+    }, {
+      "id" : "fbb30719-0513-f6ec-0eef-b3f72b349b2d",
+      "name" : "text",
+      "display_width" : null,
+      "label" : "Text",
+      "required" : false,
+      "locked" : false,
+      "type" : "color",
+      "default" : {
+        "color" : "#000",
+        "opacity" : 100
+      }
+    }, {
+      "id" : "5f3042cc-9b6f-fc36-6c7e-2ca8d2556ce1",
+      "name" : "date_color",
+      "display_width" : null,
+      "label" : "Date Color",
+      "required" : false,
+      "locked" : false,
+      "type" : "color",
+      "default" : {
+        "color" : "#000000",
+        "opacity" : 50
+      }
+    }, {
+      "id" : "c9dba671-878b-c00f-f61d-1987581b6631",
+      "name" : "tag_color",
+      "display_width" : null,
+      "label" : "Tag Color",
+      "required" : false,
+      "locked" : false,
+      "type" : "color",
+      "default" : {
+        "color" : "#F277C6",
+        "opacity" : 100
+      }
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "color" : {
+        "color" : "#000",
+        "opacity" : 100
+      },
+      "column_title" : {
+        "color" : "#000",
+        "opacity" : 100
+      },
+      "text" : {
+        "color" : "#000",
+        "opacity" : 100
+      },
+      "date_color" : {
+        "color" : "#000000",
+        "opacity" : 50
+      },
+      "tag_color" : {
+        "color" : "#F277C6",
+        "opacity" : 100
+      }
+    }
+  }, {
+    "id" : "f195cbd7-292e-448a-ba8e-7dc5eff5a681",
+    "name" : "border",
+    "display_width" : null,
+    "label" : "Border",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "cff36478-259b-7b64-115b-d4a6372817a5",
+      "name" : "color",
+      "display_width" : null,
+      "label" : "Top",
+      "required" : false,
+      "locked" : false,
+      "type" : "color",
+      "default" : {
+        "color" : "#00b74f",
+        "opacity" : 100
+      }
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "color" : {
+        "color" : "#00b74f",
+        "opacity" : 100
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "spacing" : {
+      "desktop" : {
+        "padding" : {
+          "top" : {
+            "value" : 100,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 100,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : 0,
+            "units" : "px"
+          },
+          "right" : {
+            "value" : 0,
+            "units" : "px"
+          }
+        }
+      },
+      "tablet" : {
+        "padding" : {
+          "top" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 70,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      },
+      "mobile" : {
+        "padding" : {
+          "top" : {
+            "value" : 60,
+            "units" : "px"
+          },
+          "bottom" : {
+            "value" : 60,
+            "units" : "px"
+          },
+          "left" : {
+            "value" : null,
+            "units" : null
+          },
+          "right" : {
+            "value" : null,
+            "units" : null
+          }
+        }
+      }
+    },
+    "background" : {
+      "color" : {
+        "color" : "#ffffff",
+        "opacity" : 100
+      }
+    },
+    "color" : {
+      "color" : {
+        "color" : "#000",
+        "opacity" : 100
+      },
+      "column_title" : {
+        "color" : "#000",
+        "opacity" : 100
+      },
+      "text" : {
+        "color" : "#000",
+        "opacity" : 100
+      },
+      "date_color" : {
+        "color" : "#000000",
+        "opacity" : 50
+      },
+      "tag_color" : {
+        "color" : "#F277C6",
+        "opacity" : 100
+      }
+    },
+    "border" : {
+      "color" : {
+        "color" : "#00b74f",
+        "opacity" : 100
+      }
+    }
+  }
+}, {
+  "id" : "1951d653-6a7b-df1c-9b72-cb9d0c9843b8",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Embark brings deep industry expertise to our solutions."
+}, {
+  "id" : "af28459e-1dbe-62b3-0724-225ab4ac8029",
+  "name" : "button",
+  "display_width" : null,
+  "label" : "Button",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "104fd4dd-86f2-59d4-3b42-16629aebb7c8",
+    "name" : "text",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Explore who we serve"
+  }, {
+    "id" : "c2272d47-ada9-9130-ecbd-9fddb6a12c2a",
+    "name" : "link",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "d566cdc8-7c87-a992-eb8e-97535b9553e2",
+    "name" : "border_text_hover_background_color",
+    "display_width" : null,
+    "label" : "Border/Text/Hover Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#027ff1",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "73dcdebe-56fd-916c-143c-9d9c3e1bc697",
+    "name" : "hover_text_color",
+    "display_width" : null,
+    "label" : "Hover Text Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "text" : "Explore who we serve",
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "border_text_hover_background_color" : {
+      "color" : "#027ff1",
+      "opacity" : 100
+    },
+    "hover_text_color" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  }
+}, {
+  "id" : "d4b2be41-861d-970d-96b6-21fef6623953",
+  "name" : "add_content_column",
+  "display_width" : null,
+  "label" : "Add Content Column",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "8f4b1a3d-110f-9edd-b3a0-383f7972e474",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Healthcare"
+  }, {
+    "id" : "0ad89c8e-6134-efb3-7ddd-613abcc5930e",
+    "name" : "date",
+    "display_width" : null,
+    "label" : "Date",
+    "required" : false,
+    "locked" : false,
+    "step" : 30,
+    "type" : "datetime",
+    "default" : 1704348000000
+  }, {
+    "id" : "1dfcd305-fc0b-b8f0-726f-50603d15fed7",
+    "name" : "tag",
+    "display_width" : null,
+    "label" : "Tag",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "ESG    HEALTHCARE"
+  }, {
+    "id" : "a228776a-e8f4-0ff9-912c-89ff86974e3b",
+    "name" : "text",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem &nbsp;doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>"
+  }, {
+    "id" : "8ef678c2-8436-09af-36d2-3620faaf8329",
+    "name" : "link_text",
+    "display_width" : null,
+    "label" : "Link Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Learn More"
+  }, {
+    "id" : "0f1d1b0f-5c33-e275-835f-ab1e8f462939",
+    "name" : "link",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "title" : "Healthcare",
+    "text" : "<p>Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem &nbsp;doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+    "link_text" : "Learn More",
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "tag" : "ESG    HEALTHCARE",
+    "date" : 1704348000000
+  } ]
+}, {
+  "id" : "64c3c2f7-e97a-becf-a460-b2f5fbc90831",
+  "name" : "content_max_width_px_",
+  "display_width" : null,
+  "label" : "Content Max Width [px]",
+  "required" : false,
+  "locked" : false,
+  "display" : "text",
+  "step" : 1,
+  "type" : "number",
+  "default" : 678
+} ]

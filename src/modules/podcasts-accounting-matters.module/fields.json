@@ -20,17 +20,26 @@
   "type" : "richtext",
   "default" : "<h5>Accounting Matters</h5>\n<p>Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>\n<h5>Accounting Matter NOW</h5>\n<p>Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>"
 }, {
-  "id" : "a47c04d9-5982-74f1-26ff-49cdd50235b3",
-  "name" : "right_col_text",
+  "id" : "feb6fd5c-5743-4840-2c15-8516b2293ace",
+  "name" : "right_col_image",
   "display_width" : null,
-  "label" : "Right Col Text",
+  "label" : "Right Col Image",
   "required" : false,
   "locked" : false,
-  "validation_regex" : "",
-  "allow_new_line" : false,
-  "show_emoji_picker" : false,
-  "type" : "text",
-  "default" : "Check out what makes Accounting Matters so good"
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/accounting-btn-img.png",
+    "alt" : "accounting-btn-img",
+    "loading" : "lazy",
+    "width" : 578,
+    "height" : 324,
+    "max_width" : 578,
+    "max_height" : 324
+  }
 }, {
   "id" : "587509a3-a9ea-3961-f0be-2784fee7c866",
   "name" : "style",
@@ -78,7 +87,7 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : "Play Video"
+    "default" : "What makes Accounting Matters so good?"
   }, {
     "id" : "cf741143-a3ce-57b5-241e-4bd7e9a0c443",
     "name" : "play_button_link",
@@ -103,7 +112,7 @@
   "expanded" : false,
   "type" : "group",
   "default" : {
-    "play_button_text" : "Play Video",
+    "play_button_text" : "What makes Accounting Matters so good?",
     "play_button_link" : {
       "url" : {
         "content_id" : null,

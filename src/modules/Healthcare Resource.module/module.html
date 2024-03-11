@@ -1,0 +1,79 @@
+<div class="oursolution-section hr pr oh fullwidth main-sec">
+  <div class="wrapper pr z1">
+    <div class="os-top fullwidth fl rw js fullwidth">
+      <div class="ost-left">
+        {% if module.title %}<h6>{{ module.title }}</h6>{% endif %}
+      </div>
+      <div class="ost-right">
+        {% set href = module.button.link.url.href %}
+        {% if module.button.link.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+        {% endif %}
+        <a href="{{ href }}" {% if module.button.link.open_in_new_tab %}target="_blank"{% endif %} {% if module.button.link.rel %}rel="{{ module.button.link.rel }}"{% endif %}>
+          {{ module.button.text }}
+          
+          <span><svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6.73222 0.381683L11.7431 4.45442L6.73222 8.52716C7.02966 6.85688 7.18983 5.78149 7.23559 5.00356L0.257019 5.48405V3.4248L7.23559 3.90529C7.18983 3.12735 7.05254 2.05196 6.73222 0.381683Z" fill="#027FF1"/>
+          </svg></span>
+        </a>
+      </div>
+    </div>
+    
+    <div class="os-bottom fl rw js fullwidth">
+      {% for item in module.add_content_column %}
+        <div class="osb-row">
+          {% if item.title %}<h3>{{ item.title }}</h3>{% endif %}
+          <h6>{{ item.date|format_datetime('dd MMM YYYY') }}
+            <span class="fullwidth">{{ item.tag }}</span>
+          </h6>
+          {% if item.text %}
+          <div class="osbr-text fullwidth">
+            {{ item.text }}
+          </div>
+          {% endif %}
+          <div class="osbr-btn theme-pill-btn fullwidth">
+            {% set href = item.link.url.href %}
+            {% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+            {% endif %}
+            <a href="{{ href }}" {% if item.link.open_in_new_tab %}target="_blank"{% endif %} {% if item.link.rel %}rel="{{ item.link.rel }}"{% endif %}>{{ item.link_text }}</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    
+  </div>
+</div>
+
+{% set moduleid = "#hs_cos_wrapper_" ~ name %}
+{% require_css %}
+<style>
+  {{ moduleid }} .main-sec { {{ module.style.spacing.desktop.css }}; background:rgba({{ module.style.background.color.color|convert_rgb }}, {{ module.style.background.color.opacity }}); border-top-color:{{ module.style.border.color.color }}; }  
+  {{ moduleid }} .main-sec h2 { color:{{ module.style.color.color.color }}; }
+  {{ moduleid }} .main-sec h5 { color:{{ module.style.color.column_title.color }}; }
+  {{ moduleid }} .column_4 .osb-row { width: 21.2%; }
+  {{ moduleid }} .osbr-text { color:{{ module.style.color.text.color }}; }
+  {{ moduleid }} .ost-right a { padding:8px 20px; border-color:{{ module.button.border_text_hover_background_color.color }}; color:{{ module.button.border_text_hover_background_color.color }}; }
+  {{ moduleid }} .ost-right a svg, {{ moduleid }} .ost-right a svg * { fill:{{ module.button.border_text_hover_background_color.color }}; }
+  {{ moduleid }} .ost-right > a:hover { background:{{ module.button.border_text_hover_background_color.color }}; color:{{ module.button.hover_text_color.color }}; } 
+  {{ moduleid }} .ost-right > a:hover svg, {{ moduleid }} .ost-right > a:hover svg * { fill:{{ module.button.hover_text_color.color }}; } 
+  {{ moduleid }} .ost-right > a:after { display:none; }
+  {{ moduleid }} .ost-right > a > span { margin: 0 0 0 5px; line-height: 18px; display: inline-block; vertical-align: top; }
+  
+  {{ moduleid }} .os-bottom { max-width:{{ module.content_max_width_px_ ~ "px" }}; }
+  {{ moduleid }} .os-bottom h6 { color:rgba({{ module.style.color.date_color.color|convert_rgb }}, {{ module.style.color.date_color.opacity ~ "%" }}); }
+  {{ moduleid }} .os-bottom h6 > span { color:rgba({{ module.style.color.tag_color.color|convert_rgb }}, {{ module.style.color.tag_color.opacity ~ "%" }}); }
+    
+  @media (max-width:991px){
+    {{ moduleid }} .main-sec { {{ module.style.spacing.tablet.css }}; }
+    {{ moduleid }} .column_4 .osb-row { width: 47.5%; }
+  }
+  
+  @media (max-width:767px){
+    {{ moduleid }} .main-sec { {{ module.style.spacing.mobile.css }}; }
+    {{ moduleid }} .column_4 .osb-row { width: 100%; }
+  }
+</style>
+{% end_require_css %}
+
+

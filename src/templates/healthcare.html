@@ -1,0 +1,65 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Healthcare
+  screenshotPath: ../images/template-previews/home.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+
+{# All templates are recommended to have an h1 present for both accessibility and SEO best practice. This should be at the top of the template before any other textual content. The h1 element below is within a dnd area to allow content editors the ability to adjust the content and alignment of the text. #}
+
+
+{% dnd_area "dnd_area" label="Main section", class="body-container body-container--home" %}
+
+  {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
+    {% dnd_module "module_17086047725071" path="/Embark2024/modules/Hero Section", label="Hero Section" %}{% end_dnd_module %}
+  {% end_dnd_section %}
+
+  {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
+    {% dnd_module "module_170861447413217" path="/Embark2024/modules/Expertise Challenge Section", label="Expertise Challenge Section" %}{% end_dnd_module %}
+  {% end_dnd_section %}
+
+  {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
+    {% dnd_module "module_17091239256119" path="/Embark2024/modules/FAQ Section Digital Transformation", label="FAQ Section Digital Transformation" %}{% end_dnd_module %}
+  {% end_dnd_section %}
+  
+  {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
+    {% dnd_module "module_17091342849687" path="/Embark2024/modules/Case Study Section", label="Case Study Section" %}{% end_dnd_module %}
+  {% end_dnd_section %}
+
+  {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
+    {% dnd_module "module_17095395860809" path="/Embark2024/modules/Expert Section", label="Expert Section" %}{% end_dnd_module %}
+  {% end_dnd_section %}
+
+  {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
+    {% dnd_module "module_170954819482138" path="/Embark2024/modules/Client Testimonial Section", label="Client Testimonial Section" %}{% end_dnd_module %}
+  {% end_dnd_section %}
+
+  {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
+    {% dnd_module "module_17096398066596" path="/Embark2024/modules/Healthcare Resource", label="Healthcare Resource" %}{% end_dnd_module %}
+  {% end_dnd_section %}
+
+  {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
+    {% dnd_module "module_170955021043951" path="/Embark2024/modules/Logo Section", label="Logo Section" %}{% end_dnd_module %}
+  {% end_dnd_section %}
+
+  {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
+    {% dnd_module "module_170868137388617" path="/Embark2024/modules/Our Solution Section", label="Our Solution Section" %}{% end_dnd_module %}
+  {% end_dnd_section %}
+
+  {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
+    {% dnd_module "module_170868793755525" path="/Embark2024/modules/Insight Section", label="Insight Section" %}{% end_dnd_module %}
+  {% end_dnd_section %}
+
+  {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
+    {% dnd_module "module_170869254064934" path="/Embark2024/modules/Content Section", label="Content Section" %}{% end_dnd_module %}
+  {% end_dnd_section %}
+
+  {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
+    {% dnd_module "module_17087573380803" path="/Embark2024/modules/Contact Section", label="Contact Section" %}{% end_dnd_module %}
+  {% end_dnd_section %}
+
+{% end_dnd_area %}
+{% endblock body %}

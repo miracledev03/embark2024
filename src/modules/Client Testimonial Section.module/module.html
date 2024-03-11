@@ -79,7 +79,35 @@
 </style>
 {% end_require_css %}
 
+{% require_js %}
+<script>
+$(document).ready(function(){
+var slider2 = $('.testimonial-slider');
+    $(slider2).slick({ 
+       slidesToShow: 1,
+        slidesToScroll: 1,
+      arrows: true,
+      appendArrows: $('.cs-arrows'),
+      prevArrow: $('.tsleft-arrow'),
+      nextArrow: $('.tsright-arrow'),
+      dots: false,
+      customPaging : function(slider, i) {
+        var thumb2 = $(slider2.$slides[i]).data();
+        return (i + 1);
+      },
+       responsive: [
+          {
+            breakpoint: 767,
+            settings: {
+               autoplay:true,
+            }
+          }
+        ]
+    });
+   });
+</script>
 
+{% end_require_js %}
 
 
 

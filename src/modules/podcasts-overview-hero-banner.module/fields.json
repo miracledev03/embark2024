@@ -1,86 +1,15 @@
 [ {
-  "id" : "a0843666-0adb-7c95-61cf-53521b894e77",
-  "name" : "add_breadcrumb_temp_",
-  "display_width" : null,
-  "label" : "Add Breadcrumb [Temp]",
-  "required" : false,
-  "locked" : false,
-  "occurrence" : {
-    "min" : null,
-    "max" : null,
-    "sorting_label_field" : "4c0a6b63-ca10-c474-7f84-987bc4d2a8dc",
-    "default" : 2
-  },
-  "children" : [ {
-    "id" : "4c0a6b63-ca10-c474-7f84-987bc4d2a8dc",
-    "name" : "text",
-    "display_width" : null,
-    "label" : "Text",
-    "required" : false,
-    "locked" : false,
-    "validation_regex" : "",
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "default" : "Home"
-  }, {
-    "id" : "5f0ca23d-bc72-d203-6b7a-4a88546f5525",
-    "name" : "link",
-    "display_width" : null,
-    "label" : "Link",
-    "required" : false,
-    "locked" : false,
-    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
-    "show_advanced_rel_options" : false,
-    "type" : "link",
-    "default" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    }
-  } ],
-  "tab" : "CONTENT",
-  "expanded" : false,
-  "type" : "group",
-  "default" : [ {
-    "text" : "Home",
-    "link" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    }
-  }, {
-    "text" : "Home",
-    "link" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    }
-  } ]
-}, {
   "id" : "0e6bad5a-3571-c53e-27f0-6257e06824f5",
-  "name" : "title",
+  "name" : "section_title",
   "display_width" : null,
-  "label" : "Title",
+  "label" : "Section Title",
   "required" : false,
   "locked" : false,
   "validation_regex" : "",
   "allow_new_line" : false,
   "show_emoji_picker" : false,
   "type" : "text",
-  "default" : "HelloFresh's reporting process was reduced from 50 hours per week to 4 hours per week"
+  "default" : "Podcasts"
 }, {
   "id" : "e868aa91-6fb6-e361-deea-4b5afdebd45a",
   "name" : "style",
@@ -97,8 +26,8 @@
     "locked" : false,
     "type" : "color",
     "default" : {
-      "color" : "#fff",
-      "opacity" : 0
+      "color" : "#FEDD00",
+      "opacity" : 100
     }
   }, {
     "id" : "1d99e570-2722-7c35-ec6c-06b0b3275566",
@@ -143,7 +72,7 @@
           "units" : "px"
         },
         "bottom" : {
-          "value" : 25,
+          "value" : 175,
           "units" : "px"
         },
         "left" : {
@@ -162,8 +91,8 @@
   "type" : "group",
   "default" : {
     "background_color" : {
-      "color" : "#fff",
-      "opacity" : 0
+      "color" : "#FEDD00",
+      "opacity" : 100
     },
     "desktop_spacing" : {
       "padding" : {
@@ -192,7 +121,7 @@
           "units" : "px"
         },
         "bottom" : {
-          "value" : 25,
+          "value" : 175,
           "units" : "px"
         },
         "left" : {
@@ -207,26 +136,14 @@
     }
   }
 }, {
-  "id" : "38d8fca2-27e0-87d2-18ec-ee6e5bc4c76b",
-  "name" : "logo",
+  "id" : "b8b07a48-afb0-529d-f948-596df14e0b0d",
+  "name" : "section_description",
   "display_width" : null,
-  "label" : "Logo",
+  "label" : "Section Description",
   "required" : false,
   "locked" : false,
-  "responsive" : true,
-  "resizable" : true,
-  "show_loading" : false,
-  "type" : "image",
-  "default" : {
-    "size_type" : "auto",
-    "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Embark2024/images/HelloFresh_l.svg",
-    "alt" : "HelloFresh",
-    "loading" : "lazy",
-    "width" : 194,
-    "height" : 96,
-    "max_width" : 194,
-    "max_height" : 96
-  }
+  "type" : "richtext",
+  "default" : "<p>Embark has the best podcasts in the business.</p>"
 }, {
   "id" : "cb483083-1049-c1c4-c4eb-d3d117d2d844",
   "name" : "enable_primary_button",
@@ -236,7 +153,7 @@
   "locked" : false,
   "display" : "toggle",
   "type" : "boolean",
-  "default" : true
+  "default" : false
 }, {
   "id" : "07548085-5650-0fe1-a971-ea951a6db6da",
   "name" : "primary_button",
@@ -312,12 +229,12 @@
   "type" : "image",
   "default" : {
     "size_type" : "auto",
-    "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Embark2024/images/lemon.png",
-    "alt" : "lemon",
+    "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/case-study-hero-img-1.png",
+    "alt" : "case-study-hero-img-1",
     "loading" : "lazy",
-    "width" : 740,
-    "height" : 416,
-    "max_width" : 740,
-    "max_height" : 416
+    "width" : 664,
+    "height" : 980,
+    "max_width" : 664,
+    "max_height" : 980
   }
 } ]

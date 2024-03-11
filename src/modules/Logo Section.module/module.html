@@ -1,0 +1,75 @@
+<div class="client-logo-section pr oh fullwidth main-sec">
+  <div class="wrapper">
+    <div class="client-logo-slider fullwidth oh pr">
+      {% for item in module.add_case_study %}
+      {% if item.icon.src %}
+      <div class="sls-box">
+        {% if item.icon.src %}
+          {% set sizeAttrs = 'width="{{ item.icon.width }}" height="{{ item.icon.height }}"' %}
+          {% if item.icon.size_type == 'auto' %}
+            {% set sizeAttrs = 'width="{{ item.icon.width }}" height="{{ item.icon.height }}" style="max-width: 100%; height: auto;"' %}
+          {% elif item.icon.size_type == 'auto_custom_max' %}
+            {% set sizeAttrs = 'width="{{ item.icon.max_width }}" height="{{ item.icon.max_height }}" style="max-width: 100%; height: auto;"' %}
+          {% endif %}
+           {% set loadingAttr = item.icon.loading != 'disabled' ? 'loading="{{ item.icon.loading }}"' : '' %}
+          <img src="{{ item.icon.src }}" alt="{{ item.icon.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+        {% endif %}
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div> 
+
+{% set moduleid = "#hs_cos_wrapper_" ~ name %}
+{% require_css %}
+<style>
+  {{ moduleid }} .main-sec { {{ module.style.spacing.desktop.css }}; background:rgba({{ module.style.background.color.color|convert_rgb }}, {{ module.style.background.color.opacity }}); color:{{ module.style.color.text.color }}; } 
+   
+  @media (max-width:991px){
+    {{ moduleid }} .main-sec { {{ module.style.spacing.tablet.css }}; }
+  }
+  
+  @media (max-width:767px){
+    {{ moduleid }} .main-sec { {{ module.style.spacing.mobile.css }}; }
+  }
+</style>
+{% end_require_css %}
+
+
+{% require_js %}
+<script>
+$(document).ready(function(){
+   if($(".client-logo-slider .sls-box").length <6){
+   $(".client-logo-slider .sls-box").each(function(){
+    $(this).clone().insertAfter(".client-logo-slider .sls-box:last-child");
+   });
+  }
+  
+    $('.client-logo-slider').slick({
+  infinite: true,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  arrows: false,
+  dots: false,
+    cssEase: 'linear',
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 5000,
+     responsive: [
+          {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 3,
+              slidesToScroll: 1,
+            }
+          }
+        ]
+  });
+  
+  });
+</script>
+
+{% end_require_js %}
+
+

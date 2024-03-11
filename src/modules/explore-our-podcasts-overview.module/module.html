@@ -1,0 +1,161 @@
+<div class="{{name}}">
+  <div class="content-wrapper"> 
+    <div class="row-inner">
+      <h1>
+        {{ module.section_heading }}
+      </h1>
+
+       <div class="podcasts-card-wrapper">
+        {% for item in module.podcasts_card %}
+        <div class="podcasts-card">
+          {% if item.cards_image.src %}
+    {% set sizeAttrs = 'width="{{ item.cards_image.width }}" height="{{ item.cards_image.height }}"' %}
+    {% if item.cards_image.size_type == 'auto' %}
+      {% set sizeAttrs = 'width="{{ item.cards_image.width }}" height="{{ item.cards_image.height }}" style="max-width: 100%; height: auto;"' %}
+    {% elif item.cards_image.size_type == 'auto_custom_max' %}
+      {% set sizeAttrs = 'width="{{ item.cards_image.max_width }}" height="{{ item.cards_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+    {% endif %}
+     {% set loadingAttr = item.cards_image.loading != 'disabled' ? 'loading="{{ item.cards_image.loading }}"' : '' %}
+    <img src="{{ item.cards_image.src }}" alt="{{ item.cards_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+  {% endif %}
+          <div class="content-area">
+            <div class="card-title">
+              {{ item.card_title }}
+            </div>
+            {{ item.card_description }}
+            {% set href = item.card_link.card_link.url.href %}
+              {% if item.card_link.card_link.url.type is equalto "EMAIL_ADDRESS" %}
+                {% set href = "mailto:" + href %}
+              {% endif %}
+              <a href="{{ href }}" class="card-link"
+                {% if item.card_link.card_link.open_in_new_tab %}target="_blank"{% endif %}
+                {% if item.card_link.card_link.rel %}rel="{{ item.card_link.card_link.rel }}"{% endif %}
+                >
+                {{ item.card_link.card_text }}
+              </a>
+            <div class="podcast-icons">
+              {% for item2 in item.podcasts_icon_group %}
+
+              {% set href = item2.podcasts_icon_link.url.href %}
+              {% if item2.podcasts_icon_link.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+              {% endif %}
+              <a href="{{ href }}"
+                 {% if item2.podcasts_icon_link.open_in_new_tab %}target="_blank"{% endif %}
+                 {% if item2.podcasts_icon_link.rel %}rel="{{ item2.podcasts_icon_link.rel }}"{% endif %}
+                 >
+                {% if item2.podcasts_icons.src %}
+                {% set sizeAttrs = 'width="{{ item2.podcasts_icons.width }}" height="{{ item2.podcasts_icons.height }}"' %}
+                {% if item2.podcasts_icons.size_type == 'auto' %}
+                {% set sizeAttrs = 'width="{{ item2.podcasts_icons.width }}" height="{{ item2.podcasts_icons.height }}" style="max-width: 100%; height: auto;"' %}
+                {% elif item2.podcasts_icons.size_type == 'auto_custom_max' %}
+                {% set sizeAttrs = 'width="{{ item2.podcasts_icons.max_width }}" height="{{ item2.podcasts_icons.max_height }}" style="max-width: 100%; height: auto;"' %}
+                {% endif %}
+                {% set loadingAttr = item2.podcasts_icons.loading != 'disabled' ? 'loading="{{ item2.podcasts_icons.loading }}"' : '' %}
+                <img src="{{ item2.podcasts_icons.src }}" alt="{{ item2.podcasts_icons.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                {% endif %}
+              </a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% require_css %}
+<style>
+  .{{name}} {padding: 60px 0}
+  .{{name}} .row-inner h1{
+    font-family: 'Embark Sans Headline', sans-serif;
+    font-size: 48px;
+    padding-bottom: 1.8rem;
+  }
+  .{{name}} .row-inner .podcasts-card-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .{{name}} .podcasts-card{
+    display: flex;
+/*     flex-direction: column; */
+    background: rgba({{ module.style.card_background_color.color|convert_rgb }},{{ module.style.card_background_color.opacity * 0.01 }});
+    width: 49%;
+    max-width: 631px;
+    color: #000;    
+    padding: 24px;
+    gap: 32px;
+    border-radius: 6px;
+  }
+  .{{name}} .content-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    gap: 0.7rem;
+  }
+  .{{name}}  .podcasts-card > img{
+    width: 50%;
+    object-fit: cover;
+  }
+  .{{name}} .podcasts-card .card-title{
+    font-family: Embark Sans;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+  }
+  .{{name}} .podcasts-card p{
+    font-family: Embark Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 0;
+  }
+  .{{name}} .podcasts-card a.card-link{
+    font-family: Embark Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #027FF1;
+    text-decoration: none;
+  }
+  .{{name}} .podcasts-card a.card-link:hover{text-decoration: none;}
+  .{{name}} .podcasts-card .podcast-icons{
+    display: flex;
+    background: #fff;
+    width: fit-content;
+    padding: 12px;
+    gap: 20px;
+    border-radius: 10px;
+  }
+  .{{name}} .podcasts-card .podcast-icons a{display: inline-grid;}
+  
+  @media screen and (max-width: 1200px){
+    .{{name}} .podcasts-card{max-width: 560px;width: 49%;}
+  }
+  @media screen and (max-width: 1024px){
+    .{{name}} .row-inner .podcasts-card-wrapper{flex-wrap: wrap;}
+    .{{name}} .podcasts-card{width: 49%;}
+  }
+  @media screen and (max-width: 991px){
+    .{{name}} .row-inner .podcasts-card-wrapper{gap: 13px;}
+    .{{name}} .podcasts-card{flex-direction: column;}
+    .{{name}} .content-area, .{{name}}  .podcasts-card > img{width: 100%}
+    .{{name}} .podcasts-card > img{max-height: 300px;}
+  }
+  @media screen and (max-width: 768px){
+    .{{name}} .row-inner .podcasts-card-wrapper{justify-content: space-between;}
+    .dnd_area-module-2 .podcasts-card {
+      flex-direction: column;
+      width: 48%;
+    }
+  }
+  @media screen and (max-width: 600px){
+    .{{name}} .row-inner h1{font-size: 32px;line-height: 35px;}
+    .{{name}} .podcasts-card {width: 100%;}
+  }
+</style>
+{% end_require_css %}

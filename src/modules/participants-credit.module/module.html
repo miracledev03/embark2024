@@ -32,7 +32,7 @@
 <style>
   .{{name}} {
     background: rgba({{ module.style.background_color.color|convert_rgb }},{{ module.style.background_color.opacity * 0.01 }});
-    padding: 60px 0 0;
+    padding: 0;
   }
   .{{name}} h2{
     font-family: Embark Sans Headline;
@@ -46,7 +46,7 @@
     display: flex;
     justify-content: space-between;
   }
-  .{{name}} .left-col{width: 50%}
+  .{{name}} .left-col{width: 50%;padding: 60px 0;}
   .{{name}} .right-col{
     width: 35%;
     background: rgba({{ module.style.right_panel_background_color.color|convert_rgb }},{{ module.style.right_panel_background_color.opacity * 0.01 }});

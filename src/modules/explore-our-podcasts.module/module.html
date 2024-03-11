@@ -9,36 +9,50 @@
         {% for item in module.podcasts_card %}
         <div class="podcasts-card">
           <div class="name">
-            {{ item.podcasts_name }}
+            <span>{{ item.podcasts_date }}</span>
+            <span>{{ item.podcasts_play_time }}</span>
           </div>
           <div class="card-title">
             {{ item.card_title }}
           </div>
           {{ item.card_description }}
+          {% set href = item.card_link.card_link.url.href %}
+          {% if item.card_link.card_link.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+          {% endif %}
+          <a href="{{ href }}" class="card-link"
+             {% if item.card_link.card_link.open_in_new_tab %}target="_blank"{% endif %}
+             {% if item.card_link.card_link.rel %}rel="{{ item.card_link.card_link.rel }}"{% endif %}
+             >
+            {{ item.card_link.card_text }}
+          </a>
+
+            {% if item.show_icon %}
           <div class="podcast-icons">
             {% for item2 in item.podcasts_icon_group %}
-
-            {% set href = item2.podcasts_icon_link.url.href %}
-            {% if item2.podcasts_icon_link.url.type is equalto "EMAIL_ADDRESS" %}
-            {% set href = "mailto:" + href %}
-            {% endif %}
-            <a href="{{ href }}"
-               {% if item2.podcasts_icon_link.open_in_new_tab %}target="_blank"{% endif %}
-               {% if item2.podcasts_icon_link.rel %}rel="{{ item2.podcasts_icon_link.rel }}"{% endif %}
-               >
-              {% if item2.podcasts_icons.src %}
-              {% set sizeAttrs = 'width="{{ item2.podcasts_icons.width }}" height="{{ item2.podcasts_icons.height }}"' %}
-              {% if item2.podcasts_icons.size_type == 'auto' %}
-              {% set sizeAttrs = 'width="{{ item2.podcasts_icons.width }}" height="{{ item2.podcasts_icons.height }}" style="max-width: 100%; height: auto;"' %}
-              {% elif item2.podcasts_icons.size_type == 'auto_custom_max' %}
-              {% set sizeAttrs = 'width="{{ item2.podcasts_icons.max_width }}" height="{{ item2.podcasts_icons.max_height }}" style="max-width: 100%; height: auto;"' %}
-              {% endif %}
-              {% set loadingAttr = item2.podcasts_icons.loading != 'disabled' ? 'loading="{{ item2.podcasts_icons.loading }}"' : '' %}
-              <img src="{{ item2.podcasts_icons.src }}" alt="{{ item2.podcasts_icons.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
-              {% endif %}
-            </a>
-            {% endfor %}
+    
+    {% set href = item2.podcasts_icon_link.url.href %}
+    {% if item2.podcasts_icon_link.url.type is equalto "EMAIL_ADDRESS" %}
+      {% set href = "mailto:" + href %}
+    {% endif %}
+    <a href="{{ href }}"
+      {% if item2.podcasts_icon_link.open_in_new_tab %}target="_blank"{% endif %}
+      {% if item2.podcasts_icon_link.rel %}rel="{{ item2.podcasts_icon_link.rel }}"{% endif %}
+      >
+      {% if item2.podcasts_icons.src %}
+      {% set sizeAttrs = 'width="{{ item2.podcasts_icons.width }}" height="{{ item2.podcasts_icons.height }}"' %}
+      {% if item2.podcasts_icons.size_type == 'auto' %}
+        {% set sizeAttrs = 'width="{{ item2.podcasts_icons.width }}" height="{{ item2.podcasts_icons.height }}" style="max-width: 100%; height: auto;"' %}
+      {% elif item2.podcasts_icons.size_type == 'auto_custom_max' %}
+        {% set sizeAttrs = 'width="{{ item2.podcasts_icons.max_width }}" height="{{ item2.podcasts_icons.max_height }}" style="max-width: 100%; height: auto;"' %}
+      {% endif %}
+       {% set loadingAttr = item2.podcasts_icons.loading != 'disabled' ? 'loading="{{ item2.podcasts_icons.loading }}"' : '' %}
+      <img src="{{ item2.podcasts_icons.src }}" alt="{{ item2.podcasts_icons.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+    {% endif %}
+    </a>
+  {% endfor %}
           </div>
+            {% endif %}
         </div>
         {% endfor %}
       </div>
@@ -57,13 +71,16 @@
   }
   .{{name}} .row-inner .podcasts-card-wrapper{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 16px;
   }
   .{{name}} .podcasts-card{
     display: flex;
     flex-direction: column;
     background: rgba({{ module.style.card_background_color.color|convert_rgb }},{{ module.style.card_background_color.opacity * 0.01 }});
-    width: 307px;
+/*     width: 405px; */
+    width: 32%;
     color: #000;    
     padding: 24px;
     gap: 32px;
@@ -75,7 +92,10 @@
     font-weight: 500;
     line-height: 14px;
     color: #F277C6;
+    display: flex;
+    justify-content: space-between;
   }
+  .{{name}} .podcasts-card .name span:first-child{color: #000;}
   .{{name}} .podcasts-card .card-title{
     font-family: Embark Sans;
     font-size: 18px;
@@ -89,6 +109,16 @@
     line-height: 20px;
     margin-bottom: 0;
   }
+  
+  .{{name}} .podcasts-card a.card-link{
+    font-family: Embark Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #027FF1;
+    text-decoration: none;
+  }
+  .{{name}} .podcasts-card a.card-link:hover{text-decoration: none;}
   .{{name}} .podcasts-card .podcast-icons{
     display: flex;
     background: #fff;
@@ -99,13 +129,19 @@
   }
   .{{name}} .podcasts-card .podcast-icons a{display: inline-grid;}
   
+  @media screen and (max-width: 1200px){
+/*     .row-inner .podcasts-card-wrapper{justify-content: space-between;} */
+  }
+  
   @media screen and (max-width: 1024px){
     .{{name}} .row-inner .podcasts-card-wrapper{flex-wrap: wrap;}
     .{{name}} .podcasts-card{width: 49%;}
   }
   @media screen and (max-width: 991px){
     .{{name}} .row-inner .podcasts-card-wrapper{gap: 13px;}
+    
   }
+  @media screen and (max-width: 768px){.{{name}} .podcasts-card{width: 100%}}
   @media screen and (max-width: 600px){
     .{{name}} .row-inner h1{font-size: 32px;line-height: 35px;}
     .{{name}} .podcasts-card {width: 100%;}

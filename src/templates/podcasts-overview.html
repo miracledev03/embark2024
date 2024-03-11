@@ -1,7 +1,7 @@
 <!--
   templateType: page
   isAvailableForNewContent: true
-  label: Podcasts
+  label: Podcasts Overview
   screenshotPath: ../images/template-previews/home.png
 -->
 {% extends "./layouts/base.html" %}
@@ -13,23 +13,11 @@
     {% dnd_area "dnd_area" label="Main section", class="body-container body-container--resource-post" %}
      
       {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
-        {% dnd_module "module_rhs" path="./../modules/podcasts-hero-banner", label="podcasts-hero-banner" %}{% end_dnd_module %}
+        {% dnd_module "module_rhs" path="./../modules/podcasts-overview-hero-banner", label="podcasts-overview-hero-banner" %}{% end_dnd_module %}
       {% end_dnd_section %}
         
       {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
-        {% dnd_module "module_bookmark" path="./../modules/podcasts-accounting-matters", label="podcasts-accounting-matters" %}{% end_dnd_module %}
-      {% end_dnd_section %}
-        
-      {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
-        {% dnd_module "module_bookmark" path="./../modules/meet-your-hosts-2", label="meet-your-hosts-2" %}{% end_dnd_module %}
-      {% end_dnd_section %}      
-        
-      {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
-        {% dnd_module "module_bookmark" path="./../modules/explore-our-podcasts", label="explore-our-podcasts" %}{% end_dnd_module %}
-      {% end_dnd_section %}      
-        
-      {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}
-        {% dnd_module "module_bookmark" path="./../modules/accounting-matters-newsletter", label="accounting-matters-newsletter" %}{% end_dnd_module %}
+        {% dnd_module "module_bookmark" path="./../modules/explore-our-podcasts-overview", label="explore-our-podcasts-overview" %}{% end_dnd_module %}
       {% end_dnd_section %}
 
       {% dnd_section full_width="true" padding={'top':'0','right':'0','bottom':'0','left':'0'} %}

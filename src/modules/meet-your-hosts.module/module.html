@@ -134,13 +134,13 @@
   .{{name}} .row-inner .left-col .card, .{{name}} .row-inner .right-col .card{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
   }
   .{{name}} .row-inner .right-col .card{
     flex-direction: row;
-    height: 311px;
+/*     height: 311px; */
   }
-  .{{name}} .row-inner .left-col .card img, .{{name}} .row-inner .right-col .card img{width: 100%;min-height:100%;max-height: 311px;}
+  .{{name}} .row-inner .left-col .card img, .{{name}} .row-inner .right-col .card img{width: 100%;min-height:100%;object-fit: cover;}
   .{{name}} .row-inner .left-col .card .content, .{{name}} .row-inner .right-col .card .content{
     background: rgba({{ module.left_col_group.background_color.color|convert_rgb }},{{ module.left_col_group.background_color.opacity * 0.01 }});
     color: rgba({{ module.left_col_group.text_color.color|convert_rgb }},{{ module.left_col_group.text_color.opacity * 0.01 }});
@@ -150,9 +150,9 @@
   .{{name}} .row-inner .right-col .card .content{
      background: rgba({{ module.right_col_group.background_color.color|convert_rgb }},{{ module.right_col_group.background_color.opacity * 0.01 }});
     color: rgba({{ module.right_col_group.text_color.color|convert_rgb }},{{ module.right_col_group.text_color.opacity * 0.01 }});
-    height: 100%;
-    overflow-y: auto;
+    width: 60%;
   }
+  .{{name}} .row-inner .right-col .card img{width: 40%;}
   .{{name}} .row-inner .left-col .card .content .host-name, .{{name}} .row-inner .right-col .card .content .host-name{
     font-size: 24px;
     line-height: 31px;
@@ -190,14 +190,17 @@
       flex-direction: column;
       height: auto;
     }
-    .{{name}} .row-inner .left-col .card img, .{{name}} .row-inner .right-col .card img{max-height: 280px;}
+    .{{name}} .row-inner .right-col .card .content {width: 100%;}
+    .{{name}} .row-inner .left-col .card img, .{{name}} .row-inner .right-col .card img{width: 100%;max-height: 280px;object-fit: cover;}
   }
   @media screen and (max-width: 991px){
     .{{name}} .two-col{row-gap: 1.2rem;}
     .{{name}} .row-inner h1{font-size: 44px}
-    .{{name}} .row-inner .left-col, .{{name}} .row-inner .right-col {width: 100%;}
+    .{{name}} .row-inner .left-col, .{{name}} .row-inner .right-col, .{{name}} .row-inner .right-col .card .content {width: 100%;}
     .{{name}} .row-inner .left-col .card img, .{{name}} .row-inner .right-col .card img {
       max-height: 350px;
+      width: 100%;
+      object-fit: cover;
     }
   }
 </style>

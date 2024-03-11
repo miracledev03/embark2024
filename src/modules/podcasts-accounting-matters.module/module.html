@@ -10,19 +10,19 @@
         </div>
       </div>
       <div class="right-col">
-        <h3>
-          {{ module.right_col_text }}
-        </h3>
-        {% set href = module.play_video_button.play_button_link.url.href %}
-        {% if module.play_video_button.play_button_link.url.type is equalto "EMAIL_ADDRESS" %}
-        {% set href = "mailto:" + href %}
-        {% endif %}
-        <a href="{{ href }}" class="custom-transparent-btn" 
-           {% if module.play_video_button.play_button_link.open_in_new_tab %}target="_blank"{% endif %}
-           {% if module.play_video_button.play_button_link.rel %}rel="{{ module.play_video_button.play_button_link.rel }}"{% endif %}
-           >
-          {{ module.play_video_button.play_button_text }}
-        </a>
+        <div class="right-col-card">
+          {% set href = module.play_video_button.play_button_link.url.href %}
+          {% if module.play_video_button.play_button_link.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+          {% endif %}
+          <a href="{{ href }}" class="custom-transparent-btn" 
+             {% if module.play_video_button.play_button_link.open_in_new_tab %}target="_blank"{% endif %}
+             {% if module.play_video_button.play_button_link.rel %}rel="{{ module.play_video_button.play_button_link.rel }}"{% endif %}
+             >
+            {{ module.play_video_button.play_button_text }}
+          </a>
+        </div>
+        
       </div>
     </div>
   </div>
@@ -43,7 +43,7 @@
     column-gap: 5.5rem;
   }
   .{{name}} .row-inner .left-col, .{{name}} .row-inner .right-col{width: 45%;}
-  .{{name}} .row-inner .right-col{width: 36%;}
+  .{{name}} .row-inner .right-col{width: 40%;}
   .{{name}} .row-inner .left-col h1, .{{name}} .section-content h5{
     font-family: 'Embark Sans Headline', sans-serif;
     font-size: 48px;
@@ -56,9 +56,9 @@
   }
   .{{name}} .section-content p:last-child{margin-bottom: 0;}
   .{{name}} .custom-transparent-btn{
-    border: 1px solid #027FF1;
+    border: 1px solid #fff;
     border-radius: 100px;
-    color: #027FF1;
+    color: #fff;
     line-height: 15.4px;
     font-size: 20px;
     padding: 11px 32px;
@@ -70,22 +70,43 @@
     text-align: center;
     align-items: center;
     column-gap: 0.35rem;
+    height: max-content;
+    align-self: center;
+    margin: 0 auto;
   }
   .{{name}} .custom-transparent-btn:after{
     content: '\f061';
     font-family: "Font Awesome 6 Pro";
     position: relative;
-    color: #027FF1;
+    color: #fff;
   }
   .{{name}} .custom-transparent-btn:hover {
     background: #027FF1;
     color: #fff;
   }
   .{{name}} .custom-transparent-btn:hover:after{color: #fff;}
+  
+  .{{name}} .right-col-card{
+    display: flex;
+    width: 100%;
+    height: 324px;
+    background: url("{{ module.right_col_image.src }}") 50% 50% no-repeat;
+      background-size: contain;
+  }
+  @media screen and (max-width: 1240px){
+    .{{name}} .custom-transparent-btn{font-size: 16px;padding: 11px 15px;}
+  }
+  @media screen and (max-width: 991px){
+    .{{name}} .custom-transparent-btn{font-size: 14px;}
+    .{{name}} .row-inner .left-col, .{{name}} .row-inner .right-col {
+      width: 65%;
+    }
+    .{{name}} .row-inner{gap: 1.5rem}
+  }
   @media screen and (max-width: 768px){
-    .{{name}} .row-inner{column-gap: 2.5rem;}
-    .{{name}} .row-inner .left-col {width: 55%}
-    .{{name}} .row-inner .right-col{width: 36%}
+/*     .{{name}} .row-inner{column-gap: 2.5rem;} */
+    .{{name}} .row-inner .left-col, .{{name}} .row-inner .right-col {width: 55%}
+/*     .{{name}} .row-inner .right-col{width: 36%} */
   }
   @media screen and (max-width: 600px){
     .{{name}} .row-inner .left-col h1{font-size: 32px;}

@@ -1,4 +1,4 @@
-<div class="contact-section pr oh fullwidth main-sec">
+<div class="contact-section pr oh fullwidth main-sec {{name}}">
   <div class="wrapper pr z1">
     <div class="cs-left">
       
@@ -30,7 +30,7 @@
 <style>
   {{ moduleid }} .main-sec { {{ module.style.spacing.desktop.css }}; background:rgba({{ module.style.background.color.color|convert_rgb }}, {{ module.style.background.color.opacity }}); } 
   {{ moduleid }} .cs-left { background:url({{ module.image.src }}) no-repeat left bottom/contain; }
-  
+  .{{name}} .cs-right{width: 55%}
     
   @media (max-width:991px){
     {{ moduleid }} .main-sec { {{ module.style.spacing.tablet.css }}; }

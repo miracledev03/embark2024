@@ -1,0 +1,217 @@
+<div class="{{name}}">
+  <div class="content-wrapper"> 
+    <div class="row-inner">
+      <div class="two-col">
+        <div class="left-col">
+
+          <div class="card car01">
+            <div class="card-img">
+              {% if module.right_col_group.left_col_image.src %}
+              {% set sizeAttrs = 'width="{{ module.right_col_group.left_col_image.width }}" height="{{ module.right_col_group.left_col_image.height }}"' %}
+              {% if module.right_col_group.left_col_image.size_type == 'auto' %}
+              {% set sizeAttrs = 'width="{{ module.right_col_group.left_col_image.width }}" height="{{ module.right_col_group.left_col_image.height }}" style="max-width: 100%; height: auto;"' %}
+              {% elif module.right_col_group.left_col_image.size_type == 'auto_custom_max' %}
+              {% set sizeAttrs = 'width="{{ module.right_col_group.left_col_image.max_width }}" height="{{ module.right_col_group.left_col_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+              {% endif %}
+              {% set loadingAttr = module.right_col_group.left_col_image.loading != 'disabled' ? 'loading="{{ module.right_col_group.left_col_image.loading }}"' : '' %}
+              <img src="{{ module.right_col_group.left_col_image.src }}" alt="{{ module.right_col_group.left_col_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+            </div>
+            
+            <div class="content">
+              <div class="host-name">
+                {{ module.right_col_group.host_name }}
+              </div>
+              <p>
+                {{ module.right_col_group.host_title }}
+              </p>
+              <div class="social-icon">
+                {% for item in module.right_col_group.host_social %}
+
+                {% set href = item.social_link.url.href %}
+                {% if item.social_link.url.type is equalto "EMAIL_ADDRESS" %}
+                {% set href = "mailto:" + href %}
+                {% endif %}
+                <a href="{{ href }}"
+                   {% if item.social_link.open_in_new_tab %}target="_blank"{% endif %}
+                   {% if item.social_link.rel %}rel="{{ item.social_link.rel }}"{% endif %}
+                   >
+                  {% icon
+                      name="{{ item.social_icon.name }}"
+                      style="{{ item.social_icon.type }}"
+                      unicode="{{ item.social_icon.unicode }}"
+                      icon_set="{{ item.social_icon.icon_set }}"
+                    %}
+                </a>
+                {% endfor %}
+              </div>
+              <div class="host-description">
+                {{ module.right_col_group.host_description }}
+              </div>
+            </div>
+          </div>
+          <div class="card car02">
+            <div class="card-img">
+              {% if module.left_col_group.left_col_image.src %}
+              {% set sizeAttrs = 'width="{{ module.left_col_group.left_col_image.width }}" height="{{ module.left_col_group.left_col_image.height }}"' %}
+              {% if module.left_col_group.left_col_image.size_type == 'auto' %}
+              {% set sizeAttrs = 'width="{{ module.left_col_group.left_col_image.width }}" height="{{ module.left_col_group.left_col_image.height }}" style="max-width: 100%; height: auto;"' %}
+              {% elif module.left_col_group.left_col_image.size_type == 'auto_custom_max' %}
+              {% set sizeAttrs = 'width="{{ module.left_col_group.left_col_image.max_width }}" height="{{ module.left_col_group.left_col_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+              {% endif %}
+              {% set loadingAttr = module.left_col_group.left_col_image.loading != 'disabled' ? 'loading="{{ module.left_col_group.left_col_image.loading }}"' : '' %}
+              <img src="{{ module.left_col_group.left_col_image.src }}" alt="{{ module.left_col_group.left_col_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+            </div>
+            
+            <div class="content">
+              <div class="host-name">
+                {{ module.left_col_group.host_name }}
+              </div>
+              <p>
+                {{ module.left_col_group.host_title }}
+              </p>
+              <div class="social-icon">
+                {% for item in module.left_col_group.host_social %}
+
+                {% set href = item.social_link.url.href %}
+                {% if item.social_link.url.type is equalto "EMAIL_ADDRESS" %}
+                {% set href = "mailto:" + href %}
+                {% endif %}
+                <a href="{{ href }}"
+                   {% if item.social_link.open_in_new_tab %}target="_blank"{% endif %}
+                   {% if item.social_link.rel %}rel="{{ item.social_link.rel }}"{% endif %}
+                   >
+                  {% icon
+                    name="{{ item.social_icon.name }}"
+                    style="{{ item.social_icon.type }}"
+                    unicode="{{ item.social_icon.unicode }}"
+                    icon_set="{{ item.social_icon.icon_set }}"
+                  %}
+                </a>
+                {% endfor %}
+              </div>
+              <div class="host-description">
+                {{ module.left_col_group.host_description }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-col">
+          <h1>
+            {{ module.section_title }}
+          </h1>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+{% require_css %}
+<style>
+  .{{name}} {
+    background: rgba({{ module.style.background_color.color|convert_rgb }},{{ module.style.background_color.opacity * 0.01 }});
+    padding: 80px 0 60px;
+  }
+  .{{name}} .two-col{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+/*     column-gap: 1.2rem; */
+  }
+  .{{name}} .row-inner .left-col{
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+  }
+  .{{name}} .row-inner .right-col{width: 37%;}
+  .{{name}} .row-inner h1{
+    font-family: 'Embark Sans Headline', sans-serif;
+    font-size: 60px;
+    line-height: 66px;
+    padding-bottom: 2rem;
+    text-align: center;
+    width: 100%;
+  }
+  .{{name}} .row-inner .left-col .card/*, .{{name}} .row-inner .right-col .card*/{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+/*   .{{name}} .row-inner .right-col .card{
+    flex-direction: row;
+  } */
+  .{{name}} .row-inner .left-col .card .card-img,.{{name}} .row-inner .left-col .card .card-img img /*, .{{name}} .row-inner .right-col .card img*/{width: 100%;min-height:100%;object-fit: cover;}
+  .{{name}} .row-inner .left-col .card .content/*, .{{name}} .row-inner .right-col .card .content*/{
+    
+    font-size: 14px;
+    padding: 1rem;
+  }
+  .{{name}} .row-inner .left-col .card .content{
+    width: 60%;
+  }
+  
+  .{{name}} .row-inner .left-col .card.car01 .content{
+    background: rgba({{ module.left_col_group.background_color.color|convert_rgb }},{{ module.left_col_group.background_color.opacity * 0.01 }});
+    color: rgba({{ module.left_col_group.text_color.color|convert_rgb }},{{ module.left_col_group.text_color.opacity * 0.01 }});
+  }
+  .{{name}} .row-inner .left-col .card.car02 .content{
+    background: rgba({{ module.right_col_group.background_color.color|convert_rgb }},{{ module.right_col_group.background_color.opacity * 0.01 }});
+    color: rgba({{ module.right_col_group.text_color.color|convert_rgb }},{{ module.right_col_group.text_color.opacity * 0.01 }});
+  }
+  .{{name}} .row-inner .left-col .card .card-img{width: 40%;}
+  .{{name}} .row-inner .left-col .card .content .host-name/*, .{{name}} .row-inner .right-col .card .content .host-name*/{
+    font-size: 24px;
+    line-height: 31px;
+    margin-bottom: 0.5rem;
+  }
+  .{{name}} .row-inner .left-col .card .content p/*, .{{name}} .row-inner .right-col .card .content p*/{
+    font-size: 14px;
+    margin-bottom: 0.7rem;
+    line-height: 19px;
+  }
+  .{{name}} .row-inner .left-col .card .content .social-icon/*, .{{name}} .row-inner .right-col .card .content .social-icon*/{
+    margin-bottom: 0.5rem;
+    display: inline-flex;
+    column-gap: .5rem;
+  }
+  .{{name}} .row-inner .left-col .card .content .social-icon svg,
+  .{{name}} .row-inner .right-col .card .content .social-icon svg{
+    fill: rgba({{ module.left_col_group.text_color.color|convert_rgb }},{{ module.left_col_group.text_color.opacity * 0.01 }});
+    width: 16px;
+  }
+  .{{name}} .row-inner .right-col .card .content .social-icon svg{
+    fill: rgba({{ module.right_col_group.text_color.color|convert_rgb }},{{ module.right_col_group.text_color.opacity * 0.01 }});
+  }
+  .{{name}} .row-inner .left-col .card .content .social-icon a,
+  .{{name}} .row-inner .right-col .card .content .social-icon a{text-decoration: none;}
+  
+  .{{name}} .row-inner .left-col .card .content .host-description p, .{{name}} .row-inner .right-col .card .content .host-description p{
+    font-size: 16px;
+    line-height: 19px;
+  }
+  
+  @media screen and (max-width: 1024px){
+    .{{name}} .row-inner .left-col{width: 48%;}
+    .{{name}} .row-inner .left-col .card {
+      flex-direction: column;
+      height: auto;
+    }
+    .{{name}} .row-inner .left-col .card .content {width: 100%;}
+    .{{name}} .row-inner .left-col .card .card-img/*, .{{name}} .row-inner .right-col .card img*/{width: 100%;max-height: 280px;min-height: unset;}
+    .{{name}} .row-inner .left-col .card .card-img img{width: 100%;max-height: 100%;object-fit: cover;}
+  }
+  @media screen and (max-width: 991px){
+    .{{name}} .two-col{row-gap: 1.2rem;}
+    .{{name}} .row-inner h1{font-size: 44px}
+    .{{name}} .row-inner .left-col, .{{name}} .row-inner .left-col .card .content, .{{name}} .row-inner .right-col{width: 100%;}
+    .{{name}} .row-inner .left-col{order: 2;}
+  }
+</style>
+{% end_require_css %}

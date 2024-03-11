@@ -50,32 +50,29 @@
     "min" : null,
     "max" : null,
     "sorting_label_field" : null,
-    "default" : 3
+    "default" : 4
   },
   "children" : [ {
-    "id" : "bd878f50-0a74-661f-63d2-c0052510bc9f",
-    "name" : "podcasts_date",
+    "id" : "6c6723a6-b204-9130-68bb-ddbdc890602c",
+    "name" : "cards_image",
     "display_width" : null,
-    "label" : "Podcasts Date",
+    "label" : "Cards Image",
     "required" : false,
     "locked" : false,
-    "validation_regex" : "",
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "default" : "04 Jan 2024"
-  }, {
-    "id" : "d2a78d90-5606-6075-5daa-f1944c37deef",
-    "name" : "podcasts_play_time",
-    "display_width" : null,
-    "label" : "Podcasts Play Time",
-    "required" : false,
-    "locked" : false,
-    "validation_regex" : "",
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "default" : "30 mins 11 secs"
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/podcasts-card-img01.png",
+      "alt" : "podcasts-card-img01",
+      "loading" : "lazy",
+      "width" : 240,
+      "height" : 240,
+      "max_width" : 240,
+      "max_height" : 240
+    }
   }, {
     "id" : "432dd15b-f9d9-df0a-1baa-2afb32318969",
     "name" : "card_title",
@@ -98,16 +95,6 @@
     "type" : "richtext",
     "default" : "<p>Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>"
   }, {
-    "id" : "f5a0d08c-41bd-df1b-6790-ea017655d739",
-    "name" : "show_icon",
-    "display_width" : null,
-    "label" : "Show Icon",
-    "required" : false,
-    "locked" : false,
-    "display" : "toggle",
-    "type" : "boolean",
-    "default" : false
-  }, {
     "id" : "4caa097e-5433-f2b1-9a64-6a04a75c928f",
     "name" : "podcasts_icon_group",
     "display_width" : null,
@@ -119,14 +106,6 @@
       "max" : null,
       "sorting_label_field" : null,
       "default" : 3
-    },
-    "visibility" : {
-      "controlling_field" : null,
-      "controlling_field_path" : "podcasts_card.show_icon",
-      "controlling_value_regex" : "true",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
     },
     "children" : [ {
       "id" : "3d96d823-1ad1-7e28-3bfb-fb22ed88dfa2",
@@ -234,14 +213,14 @@
       }
     } ]
   }, {
-    "id" : "8a01283e-e700-f895-124d-1901e14286da",
+    "id" : "ca7d7f1f-088e-f758-a486-4978af18a74a",
     "name" : "card_link",
     "display_width" : null,
     "label" : "Card Link",
     "required" : false,
     "locked" : false,
     "children" : [ {
-      "id" : "49e2597e-9979-80b0-8515-4ad65251f7f1",
+      "id" : "d8a09062-6bf8-63e9-c877-002678ec824b",
       "name" : "card_link",
       "display_width" : null,
       "label" : "Card Link",
@@ -260,7 +239,7 @@
         "no_follow" : false
       }
     }, {
-      "id" : "d20052cb-2226-918b-279c-dc8b9f2fb136",
+      "id" : "16ee38cd-eeca-4136-20a2-a7ed6c3793c8",
       "name" : "card_text",
       "display_width" : null,
       "label" : "Card Text",
@@ -270,7 +249,7 @@
       "allow_new_line" : false,
       "show_emoji_picker" : false,
       "type" : "text",
-      "default" : "Play episode"
+      "default" : "About podcast"
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
@@ -285,18 +264,25 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       },
-      "card_text" : "Play episode"
+      "card_text" : "About podcast"
     }
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "type" : "group",
   "default" : [ {
-    "podcasts_date" : "04 Jan 2024",
-    "podcasts_play_time" : "30 mins 11 secs",
+    "cards_image" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/podcasts-card-img01.png",
+      "alt" : "podcasts-card-img01",
+      "loading" : "lazy",
+      "width" : 240,
+      "height" : 240,
+      "max_width" : 240,
+      "max_height" : 240
+    },
     "card_title" : "Fanatical",
     "card_description" : "<p>Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
-    "show_icon" : false,
     "podcasts_icon_group" : [ {
       "podcasts_icons" : {
         "size_type" : "auto",
@@ -368,14 +354,21 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       },
-      "card_text" : "Play episode"
+      "card_text" : "About podcast"
     }
   }, {
-    "podcasts_date" : "04 Jan 2024",
-    "podcasts_play_time" : "30 mins 11 secs",
+    "cards_image" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/podcasts-card-img01.png",
+      "alt" : "podcasts-card-img01",
+      "loading" : "lazy",
+      "width" : 240,
+      "height" : 240,
+      "max_width" : 240,
+      "max_height" : 240
+    },
     "card_title" : "Fanatical",
     "card_description" : "<p>Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
-    "show_icon" : false,
     "podcasts_icon_group" : [ {
       "podcasts_icons" : {
         "size_type" : "auto",
@@ -447,14 +440,21 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       },
-      "card_text" : "Play episode"
+      "card_text" : "About podcast"
     }
   }, {
-    "podcasts_date" : "04 Jan 2024",
-    "podcasts_play_time" : "30 mins 11 secs",
+    "cards_image" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/podcasts-card-img01.png",
+      "alt" : "podcasts-card-img01",
+      "loading" : "lazy",
+      "width" : 240,
+      "height" : 240,
+      "max_width" : 240,
+      "max_height" : 240
+    },
     "card_title" : "Fanatical",
     "card_description" : "<p>Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
-    "show_icon" : false,
     "podcasts_icon_group" : [ {
       "podcasts_icons" : {
         "size_type" : "auto",
@@ -526,7 +526,93 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       },
-      "card_text" : "Play episode"
+      "card_text" : "About podcast"
+    }
+  }, {
+    "cards_image" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/podcasts-card-img01.png",
+      "alt" : "podcasts-card-img01",
+      "loading" : "lazy",
+      "width" : 240,
+      "height" : 240,
+      "max_width" : 240,
+      "max_height" : 240
+    },
+    "card_title" : "Fanatical",
+    "card_description" : "<p>Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+    "podcasts_icon_group" : [ {
+      "podcasts_icons" : {
+        "size_type" : "auto",
+        "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Apple%20Podcasts.png",
+        "alt" : "Apple Podcasts",
+        "loading" : "lazy",
+        "width" : 40,
+        "height" : 40,
+        "max_width" : 40,
+        "max_height" : 40
+      },
+      "podcasts_icon_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "podcasts_icons" : {
+        "size_type" : "auto",
+        "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Apple%20Podcasts.png",
+        "alt" : "Apple Podcasts",
+        "loading" : "lazy",
+        "width" : 40,
+        "height" : 40,
+        "max_width" : 40,
+        "max_height" : 40
+      },
+      "podcasts_icon_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "podcasts_icons" : {
+        "size_type" : "auto",
+        "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Apple%20Podcasts.png",
+        "alt" : "Apple Podcasts",
+        "loading" : "lazy",
+        "width" : 40,
+        "height" : 40,
+        "max_width" : 40,
+        "max_height" : 40
+      },
+      "podcasts_icon_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "card_link" : {
+      "card_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "card_text" : "About podcast"
     }
   } ]
 } ]

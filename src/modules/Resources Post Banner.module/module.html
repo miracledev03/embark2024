@@ -1,5 +1,18 @@
 <div class="resource-post-temp {{ name }}">
   <div class="content-wrapper">
+
+    <div class="hs-bmenu">
+      {% for item in module.add_breadcrumb_temp_ %}
+      {% set href = item.link.url.href %}
+      {% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+      {% set href = "mailto:" + href %}
+      {% endif %}
+      <a href="{{ href }}" {% if item.link.open_in_new_tab %}target="_blank"{% endif %} {% if item.link.rel %}rel="{{ item.link.rel }}"{% endif %}>
+        {{ item.text }}
+      </a>
+      {% endfor %}
+    </div>
+
     <div class="row-inner">
       <div class="left-col">
         <div class="col-inner">

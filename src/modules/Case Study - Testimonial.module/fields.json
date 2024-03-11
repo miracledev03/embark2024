@@ -156,6 +156,12 @@
   "label" : "Testimonial content",
   "required" : false,
   "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "35723137-8e87-3834-c75b-d50a1753426f",
+    "default" : 2
+  },
   "children" : [ {
     "id" : "35723137-8e87-3834-c75b-d50a1753426f",
     "name" : "quote",
@@ -181,8 +187,23 @@
   "tab" : "CONTENT",
   "expanded" : false,
   "type" : "group",
-  "default" : {
+  "default" : [ {
     "quote" : "<h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</h3>",
     "author" : "Jason Larkin, National Head of Hospitality"
-  }
+  }, {
+    "quote" : "<h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</h3>",
+    "author" : "Jason Larkin, National Head of Hospitality"
+  } ]
+}, {
+  "id" : "8d579940-3fd9-b8f9-2619-95d35418c433",
+  "name" : "slider_speed",
+  "display_width" : null,
+  "label" : "Slider Speed",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "5000"
 } ]

@@ -13,6 +13,9 @@
 .faq-section-wrapper .faq-left {
   max-width: 702px;
 }
+.faq-section-wrapper .fullwidth {
+    float: none;
+}
 .faq-section-wrapper .fl-row.active h6:after {
   height: 0;
 }

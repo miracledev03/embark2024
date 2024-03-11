@@ -4,8 +4,14 @@
 }
 .podcasts-hero-banner h1{
   font-family: 'Embark Sans Headline', sans-serif;
-  font-size: 48px;
+  font-size: 75px;
   padding-bottom: 1rem;
+  color: #027FF1;
+}
+.podcasts-hero-banner p{
+  font-size: 32px;
+  line-height: 1.3;
+  color: #000;
 }
 
 .podcasts-hero-banner .content-wrapper .left-col{
@@ -25,11 +31,12 @@
   position: absolute;
   right: 0;
   top: 0;
-  width: 82%;
-  top: -25%;
-  left: 0;
+  width: 90%;
+  top: -17%;
+  left: auto;
   right: 0;
   margin: auto;
+  max-width: 460px !important;
 }
 .podcasts-hero-banner .logo {
   margin-top: auto;
@@ -61,21 +68,6 @@
   background-color:#0444bc;
 }
 
-.podcasts-hero-banner .listen-on{
-  display: flex;
-  align-items: center;
-  padding: .6rem 1rem;
-  background: #fff;
-  border-radius: 70px;
-}
-.podcasts-hero-banner .listen-txt{}
-.podcasts-hero-banner .listen-logos{
-  display: flex;
-  align-items: center;
-  column-gap: 0.5rem;
-  margin-left: 0.5rem;
-}
-.podcasts-hero-banner .listen-logos a{text-decoration: none;display: inline-flex;}
 
 @media screen and (max-width: 1200px){
   .podcasts-hero-banner .content-wrapper .right-col img{top: -5%;}
@@ -84,18 +76,25 @@
 @media screen and (max-width: 1024px){
   .podcasts-hero-banner .content-wrapper .right-col img{
     top: -15%;
-    height: 100vw !important;
+/*     height: 100vw !important; */
   }
 }
 
 @media(max-width:991px){
+  .podcasts-hero-banner {min-height: max-content;}
   .podcasts-hero-banner .content-wrapper .left-col,
   .podcasts-hero-banner .content-wrapper .right-col {
-    width: 100%;
+    width: 65%;
+  }
+  .podcasts-hero-banner .content-wrapper .row-inner {position: relative;}
+  .podcasts-hero-banner .content-wrapper .right-col {
+    width: 56% !important;
+    position: absolute;
+    right: 0;
+    bottom: 3.2rem;
   }
   .podcasts-hero-banner .content-wrapper .right-col img {
     top: -7rem;
-    height: max-content !important;
     width: 50%;
     left: auto;
     bottom: auto;
@@ -104,25 +103,57 @@
     max-width: 137px;
     margin-bottom: 45px;
   }
-/*   .podcasts-hero-banner .content-wrapper .left-col .col-inner {
-    flex-direction: column-reverse;
-  } */
 
   .podcasts-hero-banner .content-wrapper .left-col {
     margin-bottom: 24px;
   }
 }
-@media screen and (max-width: 600px){
-/*   .podcasts-hero-banner{padding-bottom: 175px;} */
-.podcasts-hero-banner h1{font-size: 32px;}
+@media screen and (max-width: 768px){
+  .podcasts-hero-banner .content-wrapper .row-inner{position: relative;}
+  .podcasts-hero-banner {
+    min-height: max-content;
+}
+  .podcasts-hero-banner{padding-bottom: 0 !important;}
+  .podcasts-hero-banner .content-wrapper .right-col {
+    width: 56% !important;
+    position: absolute;
+    right: 0;
+    bottom: 1rem;
+  }
+}
+@media screen and (max-width: 601px){
+  .podcasts-hero-banner{min-height: fit-content; padding-bottom: 0 !important}
+  .podcasts-hero-banner h1{font-size: 32px;}
+  .podcasts-hero-banner .content-wrapper .left-col,
+  .podcasts-hero-banner .content-wrapper .right-col {
+    width: 55% !important;
+  }
+  .podcasts-hero-banner .content-wrapper .row-inner{
+    flex-flow: row wrap;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .podcasts-hero-banner .content-wrapper .right-col{align-self: flex-end;}
   .podcasts-hero-banner .content-wrapper .right-col img{
-    top: -2.5rem;
-    width: 70%;
-    height: 600px !important;
-    left: 0;
+    top: -5.5rem;
+    width: 55% !important;
+    right: 0;
   }
   .podcasts-hero-banner{padding-bottom: 190px;}
 }
+@media screen and (max-width: 500px){
+  .podcasts-hero-banner .content-wrapper .left-col{
+    width: 55%;
+  }
+  .podcasts-hero-banner .content-wrapper .right-col {
+    width: 43% !important;
+  }
+  .podcasts-hero-banner .content-wrapper .right-col img{width: 99% !important;top: -7.5rem;}
+}
 @media screen and (max-width: 400px){
-  .podcasts-hero-banner .content-wrapper .right-col img{width: 100%;}
+  .podcasts-hero-banner p{font-size: 25px;}
+  .podcasts-hero-banner .content-wrapper .right-col {
+    width: 53.5% !important;
+  }
 }

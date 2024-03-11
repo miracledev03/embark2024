@@ -2,33 +2,35 @@
   <div class="content-wrapper">
     <div class="row-inner">
       <div class="left-col title">
-          {% if module.heading %}
-          <{{ module.heading_choice }}>
-          {{ module.heading }}
-          </{{ module.heading_choice }}>
-          {% endif %}
+        {% if module.heading %}
+        <{{ module.heading_choice }}>
+        {{ module.heading }}
+        </{{ module.heading_choice }}>
+        {% endif %}
         <div class="quote_image">
           <img src="{{ get_asset_url('../../images/mobile_quote.svg') }}" alt="Quote">
         </div>
       </div>
       <div class="testimonial-wrapper right-col">
         <div class="col-inner">
+          {% for item in module.testimonial_content %}
           <div class="quote">
-            {{ module.testimonial_content.quote }}
-            {% if module.testimonial_content.author %}
+            {{ item.quote }}
+            {% if item.author %}
             <p>
-              {{ module.testimonial_content.author }}
+              {{ item.author }}
             </p>
             {% endif %}
           </div>
+          {% endfor %}
         </div>
       </div>
     </div>
- </div>
+  </div>
 </div>
-    
+
 <style>
-   {% scope_css %}
+  {% scope_css %}
   .case-study-testimonial {
     background: rgba({{ module.style.background_color.color|convert_rgb }},{{ module.style.background_color.opacity * 0.01 }});
     {{ module.style.desktop_spacing.css }};
@@ -40,3 +42,18 @@
   }
   {% end_scope_css%}    
 </style>
+
+
+{% require_js %}
+<script>
+  $('.{{ name }} .testimonial-wrapper .col-inner').slick({
+    dots: false,
+    arrows:false,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: {{ module.slider_speed }}
+  });
+</script>
+{% end_require_js %}
