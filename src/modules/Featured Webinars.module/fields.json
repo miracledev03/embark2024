@@ -515,6 +515,40 @@
     "type" : "text",
     "default" : "Mastering Workflow: Anaplan Setup & Customization Tips for New Workflow Users"
   }, {
+    "id" : "09510538-4f7c-7c4b-9b8f-fac60c040837",
+    "name" : "tags_lists",
+    "display_width" : null,
+    "label" : "Tags Lists",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : "44f09a49-9246-95a5-3e4c-19c9ce918671",
+      "default" : 2
+    },
+    "children" : [ {
+      "id" : "44f09a49-9246-95a5-3e4c-19c9ce918671",
+      "name" : "tags",
+      "display_width" : null,
+      "label" : "Tags",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "CPE"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : [ {
+      "tags" : "CPE"
+    }, {
+      "tags" : "CPE"
+    } ]
+  }, {
     "id" : "e7758ddb-ac93-451b-fda7-aa47763d74a1",
     "name" : "link_group",
     "display_width" : null,
@@ -573,9 +607,18 @@
   "expanded" : false,
   "type" : "group",
   "default" : [ {
+    "card_background_color" : {
+      "color" : "#EDE8E3",
+      "opacity" : 100
+    },
     "reading_minutes" : "30 mins 11 secs",
     "date" : 1709013600000,
     "title" : "Mastering Workflow: Anaplan Setup & Customization Tips for New Workflow Users",
+    "tags_lists" : [ {
+      "tags" : "CPE"
+    }, {
+      "tags" : "CPE"
+    } ],
     "link_group" : {
       "link" : {
         "url" : {
@@ -587,15 +630,20 @@
         "no_follow" : false
       },
       "link_label" : "View details"
-    },
-    "card_background_color" : {
-      "color" : "#EDE8E3",
-      "opacity" : 100
     }
   }, {
+    "card_background_color" : {
+      "color" : "#EDE8E3",
+      "opacity" : 100
+    },
     "reading_minutes" : "30 mins 11 secs",
     "date" : 1709013600000,
     "title" : "Mastering Workflow: Anaplan Setup & Customization Tips for New Workflow Users",
+    "tags_lists" : [ {
+      "tags" : "CPE"
+    }, {
+      "tags" : "CPE"
+    } ],
     "link_group" : {
       "link" : {
         "url" : {
@@ -607,15 +655,20 @@
         "no_follow" : false
       },
       "link_label" : "View details"
-    },
-    "card_background_color" : {
-      "color" : "#EDE8E3",
-      "opacity" : 100
     }
   }, {
+    "card_background_color" : {
+      "color" : "#EDE8E3",
+      "opacity" : 100
+    },
     "reading_minutes" : "30 mins 11 secs",
     "date" : 1709013600000,
     "title" : "Mastering Workflow: Anaplan Setup & Customization Tips for New Workflow Users",
+    "tags_lists" : [ {
+      "tags" : "CPE"
+    }, {
+      "tags" : "CPE"
+    } ],
     "link_group" : {
       "link" : {
         "url" : {
@@ -627,10 +680,6 @@
         "no_follow" : false
       },
       "link_label" : "View details"
-    },
-    "card_background_color" : {
-      "color" : "#EDE8E3",
-      "opacity" : 100
     }
   } ]
 } ]

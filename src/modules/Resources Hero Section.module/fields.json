@@ -97,7 +97,7 @@
     "locked" : false,
     "type" : "color",
     "default" : {
-      "color" : "#00B74F",
+      "color" : "#fff",
       "opacity" : 100
     }
   }, {
@@ -162,7 +162,7 @@
   "type" : "group",
   "default" : {
     "background_color" : {
-      "color" : "#00B74F",
+      "color" : "#fff",
       "opacity" : 100
     },
     "desktop_spacing" : {
@@ -219,111 +219,104 @@
   "type" : "text",
   "default" : "Resources"
 }, {
-  "id" : "994943b7-7d8b-aea2-c20a-2b08010fc067",
-  "name" : "article",
+  "id" : "7c8494e6-c347-ad85-c2ad-9da118b162d9",
+  "name" : "menu_headline",
   "display_width" : null,
-  "label" : "Article",
+  "label" : "Menu Headline",
   "required" : false,
   "locked" : false,
-  "children" : [ {
-    "id" : "8ba6f359-0fe8-1a08-364c-23acfab733fa",
-    "name" : "image",
-    "display_width" : null,
-    "label" : "Image",
-    "required" : false,
-    "locked" : false,
-    "responsive" : true,
-    "resizable" : true,
-    "show_loading" : false,
-    "type" : "image",
-    "default" : {
-      "size_type" : "auto",
-      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Imported%20images/insight3.png",
-      "alt" : "insight3",
-      "loading" : "lazy",
-      "width" : 410,
-      "height" : 231,
-      "max_width" : 410,
-      "max_height" : 231
-    }
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Discover"
+}, {
+  "id" : "b5ae6b5f-72ea-5f22-3d03-88b30bdea5d9",
+  "name" : "simple_menu",
+  "display_width" : null,
+  "label" : "Simple Menu",
+  "required" : false,
+  "locked" : false,
+  "type" : "simplemenu",
+  "default" : [ {
+    "isPublished" : false,
+    "pageLinkId" : null,
+    "contentGroupId" : null,
+    "pageLinkName" : null,
+    "isDeleted" : null,
+    "categoryId" : null,
+    "subCategory" : null,
+    "contentType" : null,
+    "state" : null,
+    "linkLabel" : "Case Studies",
+    "linkUrl" : null,
+    "linkParams" : null,
+    "linkTarget" : null,
+    "type" : "PAGE_LINK",
+    "children" : [ ]
   }, {
-    "id" : "d9f95215-c8c9-6a91-bf33-8a2a0607b8c2",
-    "name" : "tag",
-    "display_width" : null,
-    "label" : "Tag",
-    "required" : false,
-    "locked" : false,
-    "validation_regex" : "",
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "default" : "Accounting Efficiencies "
+    "isPublished" : false,
+    "pageLinkId" : null,
+    "contentGroupId" : null,
+    "pageLinkName" : null,
+    "isDeleted" : null,
+    "categoryId" : null,
+    "subCategory" : null,
+    "contentType" : null,
+    "state" : null,
+    "linkLabel" : "Guides, Templates & Checklists",
+    "linkUrl" : null,
+    "linkParams" : null,
+    "linkTarget" : null,
+    "type" : "NO_LINK",
+    "children" : [ ]
   }, {
-    "id" : "7c8494e6-c347-ad85-c2ad-9da118b162d9",
-    "name" : "title",
-    "display_width" : null,
-    "label" : "Title",
-    "required" : false,
-    "locked" : false,
-    "validation_regex" : "",
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "default" : "Mastering Workflow: Anaplan Setup & Customization Tips for New Workflow Users"
+    "isPublished" : false,
+    "pageLinkId" : null,
+    "contentGroupId" : null,
+    "pageLinkName" : null,
+    "isDeleted" : null,
+    "categoryId" : null,
+    "subCategory" : null,
+    "contentType" : null,
+    "state" : null,
+    "linkLabel" : "Insights",
+    "linkUrl" : null,
+    "linkParams" : null,
+    "linkTarget" : null,
+    "type" : "NO_LINK",
+    "children" : [ ]
   }, {
-    "id" : "263e76bc-ab17-3e3b-2c85-c071c810cd67",
-    "name" : "date",
-    "display_width" : null,
-    "label" : "Date",
-    "required" : false,
-    "locked" : false,
-    "type" : "date",
-    "default" : 1709100000000
+    "isPublished" : false,
+    "pageLinkId" : null,
+    "contentGroupId" : null,
+    "pageLinkName" : null,
+    "isDeleted" : null,
+    "categoryId" : null,
+    "subCategory" : null,
+    "contentType" : null,
+    "state" : null,
+    "linkLabel" : "Webinars",
+    "linkUrl" : null,
+    "linkParams" : null,
+    "linkTarget" : null,
+    "type" : "NO_LINK",
+    "children" : [ ]
   }, {
-    "id" : "eea37b57-ae58-7daf-84e0-936d9d803f65",
-    "name" : "link_field",
-    "display_width" : null,
-    "label" : "Link",
-    "required" : false,
-    "locked" : false,
-    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
-    "show_advanced_rel_options" : false,
-    "type" : "link",
-    "default" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    }
-  } ],
-  "tab" : "CONTENT",
-  "expanded" : false,
-  "type" : "group",
-  "default" : {
-    "image" : {
-      "size_type" : "auto",
-      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Imported%20images/insight3.png",
-      "alt" : "insight3",
-      "loading" : "lazy",
-      "width" : 410,
-      "height" : 231,
-      "max_width" : 410,
-      "max_height" : 231
-    },
-    "tag" : "Accounting Efficiencies ",
-    "title" : "Mastering Workflow: Anaplan Setup & Customization Tips for New Workflow Users",
-    "date" : 1709100000000,
-    "link_field" : {
-      "url" : {
-        "content_id" : null,
-        "type" : "EXTERNAL",
-        "href" : ""
-      },
-      "open_in_new_tab" : false,
-      "no_follow" : false
-    }
-  }
+    "isPublished" : false,
+    "pageLinkId" : null,
+    "contentGroupId" : null,
+    "pageLinkName" : null,
+    "isDeleted" : null,
+    "categoryId" : null,
+    "subCategory" : null,
+    "contentType" : null,
+    "state" : null,
+    "linkLabel" : "Podcasts",
+    "linkUrl" : null,
+    "linkParams" : null,
+    "linkTarget" : null,
+    "type" : "NO_LINK",
+    "children" : [ ]
+  } ]
 } ]

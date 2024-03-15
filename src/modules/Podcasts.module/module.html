@@ -44,6 +44,16 @@
             {% endif %}
             <div class="b_post_item">
               <div class="col-inner">
+                {% if item.image.src %}
+                  {% set sizeAttrs = 'width="{{ item.image.width|escape_attr }}" height="{{ item.image.height|escape_attr }}"' %}
+                  {% if item.image.size_type == 'auto' %}
+                    {% set sizeAttrs = 'width="{{ item.image.width|escape_attr }}" height="{{ item.image.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+                  {% elif item.image.size_type == 'auto_custom_max' %}
+                    {% set sizeAttrs = 'width="{{ item.image.max_width|escape_attr }}" height="{{ item.image.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+                  {% endif %}
+                   {% set loadingAttr = item.image.loading != 'disabled' ? 'loading="{{ item.image.loading|escape_attr }}"' : '' %}
+                  <img src="{{ item.image.src|escape_url }}" alt="{{ item.image.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                {% endif %}
                 <h6>
                   <a href="{{ href }}"
                      {% if item.link_group.link.open_in_new_tab %}target="_blank"{% endif %}

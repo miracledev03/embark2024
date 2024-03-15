@@ -62,6 +62,9 @@
   background: #EDE8E3;
   border-radius: 6px;
   padding: 24px;
+  height:100%;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .featured-webinars-wrapper .bottom-posts-wrapper  .b_post_item .top_bar {
@@ -82,6 +85,9 @@
 
 .featured-webinars-wrapper .bottom-posts-wrapper .more-link {
   margin: 32px 0 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
 }
 
 .featured-webinars-wrapper .bottom-posts-wrapper .more-link a { 
@@ -179,6 +185,27 @@
 .featured-webinars-wrapper .bottom-posts-wrapper .more-link a:hover::after{
   opacity: 1;
   visibility: visible;
+}
+
+.featured-webinars-wrapper .bottom-posts-wrapper .tags-list span {
+  background: rgb(91 194 231 / 30%);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  display: inline-block;
+  padding: 8px 12px;
+  color: #0047BB;
+  border-radius: 20px;
+}
+
+.featured-webinars-wrapper .bottom-posts-wrapper .tags-list {
+  margin-bottom: 16px;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  column-gap: 7px;
 }
 
 @media(max-width:767px){

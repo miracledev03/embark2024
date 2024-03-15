@@ -114,8 +114,13 @@
     .{{name}} .right-col{width: 45%;}
   }
   @media screen and (max-width: 600px){
+    .{{name}}{overflow: hidden;}
     .{{name}} .left-col, .{{name}} .right-col {
       width: 100%;
+    }
+    .{{name}} .right-col:after{
+      left: -5vw;
+      right: -5vw;
     }
     .{{name}} .right-col{margin-top: 1rem;}
     .{{name}} .row .left-colmn, .{{name}} .row .right-colmn{font-size: 14px}

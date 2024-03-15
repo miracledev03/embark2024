@@ -1,0 +1,77 @@
+<div class="{{name}}">
+  <div class="content-wrapper"> 
+    <div class="row-inner">
+      <div class="left-col">
+        <h2>
+          {{ module.section_heading }}
+        </h2>
+        {{ module.section_description }}
+      </div>
+      {% if module.show_right_panel %}
+      <div class="right-col">
+        Right Panel 
+      </div>
+      {% endif %}
+      
+    </div>
+  </div>
+</div>
+
+{% require_css %}
+<style>
+  .{{name}} {
+    background: rgba({{ module.style.background_color.color|convert_rgb }},{{ module.style.background_color.opacity * 0.01 }});
+    padding: 0;
+  }  
+  .{{name}} h2{
+    font-family: Embark Sans Headline;
+    font-size: 75px;
+    font-weight: 500;
+    line-height: 1;
+    text-align: left;
+    color: rgba({{ module.style.section_heading_color.color|convert_rgb }},{{ module.style.section_heading_color.opacity * 0.01 }});
+  }
+  .{{name}} .row-inner, .{{name}} .row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .{{name}} .left-col{width: 50%;padding: 100px 0 60px;}
+  .{{name}} .right-col{
+    width: 45%;
+    background: rgba({{ module.style.right_panel_background_color.color|convert_rgb }},{{ module.style.right_panel_background_color.opacity * 0.01 }});
+    padding: 1.5rem 1.2rem;
+    position: relative;
+  }
+  .{{name}} .right-col:after{
+    top: 0;
+    right: -100vw;
+    bottom: 0;
+    left: 0;
+    background-color: rgba({{ module.style.right_panel_background_color.color|convert_rgb }},{{ module.style.right_panel_background_color.opacity * 0.01 }});
+    content: '';
+    position: absolute;
+  }
+  .{{name}} .left-col p{
+    font-family: Embark Sans;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    color: rgba({{ module.style.section_description_color.color|convert_rgb }},{{ module.style.section_description_color.opacity * 0.01 }});
+  }
+  
+  @media screen and (max-width: 991px){
+    .{{name}}{overflow: hidden;}
+    .{{name}} .left-col{padding: 100px 0 40px;}
+    .{{name}} .left-col, .{{name}} .right-col{width: 100%;}
+    .{{name}} .right-col:after{
+      left: -5vw;
+      right: -5vw;
+    }    
+    .{{name}} h2{font-size: 46px}    
+    .{{name}} .left-col p{font-size: 16px}
+  }
+  
+</style>
+{% end_require_css %}

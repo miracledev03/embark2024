@@ -235,6 +235,27 @@
     "default" : 3
   },
   "children" : [ {
+    "id" : "2d040c0f-a6a9-b939-d876-7292f9e97773",
+    "name" : "image",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Embark2024/images/big4.png",
+      "alt" : "big4",
+      "loading" : "lazy",
+      "width" : 240,
+      "height" : 240,
+      "max_width" : 240,
+      "max_height" : 240
+    }
+  }, {
     "id" : "165d4011-25ed-9947-9447-235ffc403fb6",
     "name" : "title",
     "display_width" : null,
@@ -330,6 +351,16 @@
         "no_follow" : false
       },
       "link_label" : "Listen"
+    },
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Embark2024/images/big4.png",
+      "alt" : "big4",
+      "loading" : "lazy",
+      "width" : 240,
+      "height" : 240,
+      "max_width" : 240,
+      "max_height" : 240
     }
   }, {
     "title" : "Accounting Matters",
@@ -345,6 +376,16 @@
         "no_follow" : false
       },
       "link_label" : "Listen"
+    },
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Embark2024/images/big4.png",
+      "alt" : "big4",
+      "loading" : "lazy",
+      "width" : 240,
+      "height" : 240,
+      "max_width" : 240,
+      "max_height" : 240
     }
   }, {
     "title" : "Accounting Matters",
@@ -360,6 +401,16 @@
         "no_follow" : false
       },
       "link_label" : "Listen"
+    },
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://8725594.fs1.hubspotusercontent-na1.net/hubfs/8725594/Embark2024/images/big4.png",
+      "alt" : "big4",
+      "loading" : "lazy",
+      "width" : 240,
+      "height" : 240,
+      "max_width" : 240,
+      "max_height" : 240
     }
   } ]
 } ]

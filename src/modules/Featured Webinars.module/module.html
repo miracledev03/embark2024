@@ -105,6 +105,11 @@
             {% endif %}
             <div class="b_post_item">
               <div class="col-inner" style="background:rgba({{ item.card_background_color.color|convert_rgb }},{{ item.card_background_color.opacity * 0.01 }})">
+                <div class="tags-list"> 
+                  {% for item2 in item.tags_lists %}
+                  <span>{{ item2.tags }}</span>{% if not loop.last %} {% endif %}
+                  {% endfor %}
+                </div>
                 <div class="top_bar">
                   {% if item.reading_minutes %}<span class="time">{{ item.reading_minutes }}</span>{% endif %}
                   {% if item.date %}<span class="date">{{ item.date|format_datetime('dd MMM YYYY') }}</span>{% endif %}

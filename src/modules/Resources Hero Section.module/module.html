@@ -16,46 +16,14 @@
         {% if module.bold_paragraph_title %}<div class="bold-paragraph">{{ module.bold_paragraph_title }}</div>{% endif %}
       </div>
       <div class="hs-right">
-        <div class="post-item">
-          <div class="col-inner">
-            <div class="featured-img">
-              {% set href = module.article.link_field.url.href %}
-              {% if module.article.link_field.url.type is equalto "EMAIL_ADDRESS" %}
-              {% set href = "mailto:" + href %}
-              {% endif %}
-              {% if module.article.link_field.url.type is equalto "PHONE_NUMBER" %}
-              {% set href = "tel:" + href %}
-              {% endif %}
-              <a href="{{ href }}"
-                 {% if module.article.link_field.open_in_new_tab %}target="_blank"{% endif %}
-                 {% if module.article.link_field.rel %}rel="{{ module.article.link_field.rel }}"{% endif %}
-                 >
-                {% if module.article.image.src %}
-                {% set sizeAttrs = 'width="{{ module.article.image.width }}" height="{{ module.article.image.height }}"' %}
-                {% if module.article.image.size_type == 'auto' %}
-                {% set sizeAttrs = 'width="{{ module.article.image.width }}" height="{{ module.article.image.height }}" style="max-width: 100%; height: auto;"' %}
-                {% elif module.article.image.size_type == 'auto_custom_max' %}
-                {% set sizeAttrs = 'width="{{ module.article.image.max_width }}" height="{{ module.article.image.max_height }}" style="max-width: 100%; height: auto;"' %}
-                {% endif %}
-                {% set loadingAttr = module.article.image.loading != 'disabled' ? 'loading="{{ module.article.image.loading }}"' : '' %}
-                <img src="{{ module.article.image.src }}" alt="{{ module.article.image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
-                {% endif %}
-              </a>
-            </div>
-            <div class="meta-info">
-              {% if module.article.tag %}
-              <span class="tag">
-                {{ module.article.tag }}  
-              </span>
-              {% endif %}
-              <span class="date">
-                {{ module.article.date|format_datetime('dd MMM YYYY') }}
-              </span>
-            </div>
-            {% if module.article.title %}<h6>{{ module.article.title }}</h6>{% endif %}
-          </div>
+         <div class="headline">
+           {{ module.menu_headline }}
         </div>
+          {% simple_menu menu_tree="{{ module.simple_menu }}" ,no_wrapper="true" , max-levels="1" %}
       </div>
+      
+      
+      
       {% if module.main_title %}<h1 class="fullwidth">{{ module.main_title }}</h1>{% endif %}
     </div>
   </div>
@@ -65,7 +33,7 @@
 <style>
   {% scope_css %}
   .resources-hero-section {
-    background: rgba({{ module.style.background_color.color|convert_rgb }},{{ module.style.background_color.opacity * 0.01 }});
+    background-color: rgba({{ module.style.background_color.color|convert_rgb }},{{ module.style.background_color.opacity * 0.01 }});
     {{ module.style.desktop_spacing.css }};
   }
   @media(max-width:767px){

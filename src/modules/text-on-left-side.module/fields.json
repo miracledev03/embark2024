@@ -1,0 +1,109 @@
+[ {
+  "id" : "e92d4a79-afaa-6cc4-abef-037a02189e85",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "fe4a3987-f54c-9971-7ca4-c700a8307fce",
+    "name" : "background_color",
+    "display_width" : null,
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#5BC2E7",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "48bfbceb-f4db-bc45-1722-726c484cf650",
+    "name" : "right_panel_background_color",
+    "display_width" : null,
+    "label" : "Right Panel Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#5BC2E7",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "c02e4c48-53b5-9f9d-facd-37acefa9cf80",
+    "name" : "section_heading_color",
+    "display_width" : null,
+    "label" : "Section Heading Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "5ad75abf-6fae-992a-4e15-ec5062631f05",
+    "name" : "section_description_color",
+    "display_width" : null,
+    "label" : "Section Description Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#000000",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "background_color" : {
+      "color" : "#5BC2E7",
+      "opacity" : 100
+    },
+    "right_panel_background_color" : {
+      "color" : "#5BC2E7",
+      "opacity" : 100
+    },
+    "section_heading_color" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    },
+    "section_description_color" : {
+      "color" : "#000000",
+      "opacity" : 100
+    }
+  }
+}, {
+  "id" : "3177a934-57f5-acde-fbae-c3622ea9983d",
+  "name" : "section_heading",
+  "display_width" : null,
+  "label" : "Section Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Webinars"
+}, {
+  "id" : "537053fe-81f3-3903-85c0-0e88ecf9c6ca",
+  "name" : "section_description",
+  "display_width" : null,
+  "label" : "Section Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>Embark boasts the most compelling blog posts in the industry, iSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>"
+}, {
+  "id" : "212793fb-a196-ac8f-d106-ce533db1516d",
+  "name" : "show_right_panel",
+  "display_width" : null,
+  "label" : "Show Right Panel",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "default" : false
+} ]
